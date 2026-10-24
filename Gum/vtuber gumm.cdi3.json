@@ -1,0 +1,295 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "ParamAngleX",
+			"GroupId": "",
+			"Name": "Angle X"
+		},
+		{
+			"Id": "ParamAngleY",
+			"GroupId": "",
+			"Name": "Angle Y"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"GroupId": "",
+			"Name": "Angle Z"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"GroupId": "",
+			"Name": "EyeL Open"
+		},
+		{
+			"Id": "ParamEyeLSmile",
+			"GroupId": "",
+			"Name": "EyeL Smile"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"GroupId": "",
+			"Name": "EyeR Open"
+		},
+		{
+			"Id": "ParamEyeRSmile",
+			"GroupId": "",
+			"Name": "EyeR Smile"
+		},
+		{
+			"Id": "ParamEyeBallX",
+			"GroupId": "",
+			"Name": "Eyeball X"
+		},
+		{
+			"Id": "ParamEyeBallY",
+			"GroupId": "",
+			"Name": "Eyeball Y"
+		},
+		{
+			"Id": "ParamBrowLY",
+			"GroupId": "",
+			"Name": "BrowL Y"
+		},
+		{
+			"Id": "Param",
+			"GroupId": "",
+			"Name": "fisicas do olho"
+		},
+		{
+			"Id": "Param2",
+			"GroupId": "",
+			"Name": "fisicas do olho2"
+		},
+		{
+			"Id": "ParamBrowRY",
+			"GroupId": "",
+			"Name": "BrowR Y"
+		},
+		{
+			"Id": "ParamBrowLX",
+			"GroupId": "",
+			"Name": "BrowL X"
+		},
+		{
+			"Id": "ParamBrowRX",
+			"GroupId": "",
+			"Name": "BrowR X"
+		},
+		{
+			"Id": "ParamBrowLAngle",
+			"GroupId": "",
+			"Name": "BrowL Angle"
+		},
+		{
+			"Id": "ParamBrowRAngle",
+			"GroupId": "",
+			"Name": "BrowR Angle"
+		},
+		{
+			"Id": "ParamBrowLForm",
+			"GroupId": "",
+			"Name": "BrowL Form"
+		},
+		{
+			"Id": "ParamBrowRForm",
+			"GroupId": "",
+			"Name": "BrowR Form"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"GroupId": "",
+			"Name": "Mouth Form"
+		},
+		{
+			"Id": "ParamMouthOpenY",
+			"GroupId": "",
+			"Name": "Mouth Open"
+		},
+		{
+			"Id": "ParamCheek",
+			"GroupId": "",
+			"Name": "Cheek"
+		},
+		{
+			"Id": "ParamBodyAngleX",
+			"GroupId": "",
+			"Name": "Body X"
+		},
+		{
+			"Id": "ParamBodyAngleY",
+			"GroupId": "",
+			"Name": "Body Y"
+		},
+		{
+			"Id": "ParamBodyAngleZ",
+			"GroupId": "",
+			"Name": "Body Z"
+		},
+		{
+			"Id": "ParamBreath",
+			"GroupId": "",
+			"Name": "Breath"
+		},
+		{
+			"Id": "ParamHairFront",
+			"GroupId": "",
+			"Name": "Hair Move Front"
+		},
+		{
+			"Id": "Param7",
+			"GroupId": "",
+			"Name": "coelho fisica"
+		},
+		{
+			"Id": "Param10",
+			"GroupId": "",
+			"Name": "coelho fisica"
+		},
+		{
+			"Id": "Param3",
+			"GroupId": "",
+			"Name": "CABELO FISICA"
+		},
+		{
+			"Id": "Param4",
+			"GroupId": "",
+			"Name": "CABELO FISICA"
+		},
+		{
+			"Id": "Param6",
+			"GroupId": "",
+			"Name": "CABELO FISICA"
+		},
+		{
+			"Id": "Param5",
+			"GroupId": "",
+			"Name": "CABELO FISICA"
+		},
+		{
+			"Id": "ParamHairSide",
+			"GroupId": "",
+			"Name": "Hair Move Side"
+		},
+		{
+			"Id": "Param8",
+			"GroupId": "",
+			"Name": "saia fisica"
+		},
+		{
+			"Id": "Param9",
+			"GroupId": "",
+			"Name": "saia fisica"
+		},
+		{
+			"Id": "Param16",
+			"GroupId": "",
+			"Name": "cebelo 1"
+		},
+		{
+			"Id": "Param17",
+			"GroupId": "",
+			"Name": "cebelo 2"
+		},
+		{
+			"Id": "Param11",
+			"GroupId": "",
+			"Name": "braço 1"
+		},
+		{
+			"Id": "Param12",
+			"GroupId": "",
+			"Name": "braço 2"
+		},
+		{
+			"Id": "Param13",
+			"GroupId": "",
+			"Name": "touca 2"
+		},
+		{
+			"Id": "Param14",
+			"GroupId": "",
+			"Name": "touca 1"
+		},
+		{
+			"Id": "ParamHairBack",
+			"GroupId": "",
+			"Name": "Hair Move Back"
+		}
+	],
+	"ParameterGroups": [],
+	"Parts": [
+		{
+			"Id": "Part",
+			"Name": "braço"
+		},
+		{
+			"Id": "capuz",
+			"Name": "capuz"
+		},
+		{
+			"Id": "franja2",
+			"Name": "franja"
+		},
+		{
+			"Id": "Part2",
+			"Name": "cabeça"
+		},
+		{
+			"Id": "cabelo",
+			"Name": "cabelo"
+		},
+		{
+			"Id": "toca",
+			"Name": "toca"
+		},
+		{
+			"Id": "capuz2",
+			"Name": "capuz"
+		},
+		{
+			"Id": "csaco",
+			"Name": "csaco"
+		},
+		{
+			"Id": "corpo",
+			"Name": "corpo"
+		},
+		{
+			"Id": "Part3",
+			"Name": "maria chiquinha"
+		},
+		{
+			"Id": "Part4",
+			"Name": "maria chiquinha"
+		},
+		{
+			"Id": "coelho",
+			"Name": "coelho"
+		},
+		{
+			"Id": "olho3",
+			"Name": "olho"
+		},
+		{
+			"Id": "boca2",
+			"Name": "boca"
+		},
+		{
+			"Id": "olhos",
+			"Name": "olhos"
+		},
+		{
+			"Id": "olhos2",
+			"Name": "olhos"
+		},
+		{
+			"Id": "boca",
+			"Name": "boca"
+		},
+		{
+			"Id": "olho5",
+			"Name": "olho"
+		}
+	]
+}

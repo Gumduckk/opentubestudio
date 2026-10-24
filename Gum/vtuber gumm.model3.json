@@ -1,0 +1,29 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "vtuber gumm.moc3",
+		"Textures": [
+			"vtuber gumm.4096/texture_00.png",
+			"vtuber gumm.4096/texture_01.png",
+			"vtuber gumm.4096/texture_02.png",
+			"vtuber gumm.4096/texture_03.png",
+			"vtuber gumm.4096/texture_04.png",
+			"vtuber gumm.4096/texture_05.png",
+			"vtuber gumm.4096/texture_06.png"
+		],
+		"Physics": "vtuber gumm.physics3.json",
+		"DisplayInfo": "vtuber gumm.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		}
+	]
+}

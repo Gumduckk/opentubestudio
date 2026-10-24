@@ -1,0 +1,756 @@
+{
+	"BUILD_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/Framework_autogen",
+	"CMAKE_BINARY_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/build/Framework",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/CMakeLists.txt"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/gumduck/Documentos/GitHub/seila kk",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/Framework_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "Framework_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismCdiJson.hpp",
+			"Mu",
+			"UVLADIE3JM/moc_CubismCdiJson.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismDefaultParameterId.hpp",
+			"Mu",
+			"UVLADIE3JM/moc_CubismDefaultParameterId.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFramework.hpp",
+			"Mu",
+			"UVLADIE3JM/moc_CubismFramework.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFrameworkConfig.hpp",
+			"Mu",
+			"UVLADIE3JM/moc_CubismFrameworkConfig.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismJsonHolder.hpp",
+			"Mu",
+			"UVLADIE3JM/moc_CubismJsonHolder.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismModelSettingJson.hpp",
+			"Mu",
+			"UVLADIE3JM/moc_CubismModelSettingJson.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismBreath.hpp",
+			"Mu",
+			"HXVBIJNKDB/moc_CubismBreath.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismEyeBlink.hpp",
+			"Mu",
+			"HXVBIJNKDB/moc_CubismEyeBlink.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismLook.hpp",
+			"Mu",
+			"HXVBIJNKDB/moc_CubismLook.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismPose.hpp",
+			"Mu",
+			"HXVBIJNKDB/moc_CubismPose.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismAllocator.hpp",
+			"Mu",
+			"UVLADIE3JM/moc_ICubismAllocator.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismModelSetting.hpp",
+			"Mu",
+			"UVLADIE3JM/moc_ICubismModelSetting.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Id/CubismId.hpp",
+			"Mu",
+			"53IDP3XKPA/moc_CubismId.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Id/CubismIdManager.hpp",
+			"Mu",
+			"53IDP3XKPA/moc_CubismIdManager.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Live2DCubismCore.hpp",
+			"Mu",
+			"UVLADIE3JM/moc_Live2DCubismCore.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismMath.hpp",
+			"Mu",
+			"CIPIICDHUY/moc_CubismMath.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismMatrix44.hpp",
+			"Mu",
+			"CIPIICDHUY/moc_CubismMatrix44.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismModelMatrix.hpp",
+			"Mu",
+			"CIPIICDHUY/moc_CubismModelMatrix.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismTargetPoint.hpp",
+			"Mu",
+			"CIPIICDHUY/moc_CubismTargetPoint.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismVector2.hpp",
+			"Mu",
+			"CIPIICDHUY/moc_CubismVector2.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismViewMatrix.hpp",
+			"Mu",
+			"CIPIICDHUY/moc_CubismViewMatrix.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismMoc.hpp",
+			"Mu",
+			"TJWESXFFYF/moc_CubismMoc.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModel.hpp",
+			"Mu",
+			"TJWESXFFYF/moc_CubismModel.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModelMultiplyAndScreenColor.hpp",
+			"Mu",
+			"TJWESXFFYF/moc_CubismModelMultiplyAndScreenColor.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModelUserData.hpp",
+			"Mu",
+			"TJWESXFFYF/moc_CubismModelUserData.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModelUserDataJson.hpp",
+			"Mu",
+			"TJWESXFFYF/moc_CubismModelUserDataJson.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismUserModel.hpp",
+			"Mu",
+			"TJWESXFFYF/moc_CubismUserModel.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/ACubismMotion.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_ACubismMotion.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismBreathUpdater.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismBreathUpdater.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismExpressionMotion.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismExpressionMotion.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismExpressionMotionManager.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismExpressionMotionManager.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismExpressionUpdater.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismExpressionUpdater.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismEyeBlinkUpdater.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismEyeBlinkUpdater.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismLipSyncUpdater.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismLipSyncUpdater.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismLookUpdater.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismLookUpdater.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotion.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismMotion.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionInternal.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismMotionInternal.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionJson.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismMotionJson.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionManager.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismMotionManager.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionQueueEntry.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismMotionQueueEntry.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionQueueManager.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismMotionQueueManager.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismPhysicsUpdater.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismPhysicsUpdater.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismPoseUpdater.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismPoseUpdater.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismUpdateScheduler.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_CubismUpdateScheduler.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/ICubismUpdater.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_ICubismUpdater.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/IParameterProvider.hpp",
+			"Mu",
+			"BPGHLIKDUS/moc_IParameterProvider.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Physics/CubismPhysics.hpp",
+			"Mu",
+			"MJ5XMNEJGC/moc_CubismPhysics.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Physics/CubismPhysicsInternal.hpp",
+			"Mu",
+			"MJ5XMNEJGC/moc_CubismPhysicsInternal.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Physics/CubismPhysicsJson.hpp",
+			"Mu",
+			"MJ5XMNEJGC/moc_CubismPhysicsJson.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/CubismClippingManager.hpp",
+			"Mu",
+			"UD4N4BNGCY/moc_CubismClippingManager.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/CubismRenderer.hpp",
+			"Mu",
+			"UD4N4BNGCY/moc_CubismRenderer.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/ICubismOffscreenManager.hpp",
+			"Mu",
+			"UD4N4BNGCY/moc_ICubismOffscreenManager.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/ICubismOffscreenRenderTarget.hpp",
+			"Mu",
+			"UD4N4BNGCY/moc_ICubismOffscreenRenderTarget.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.hpp",
+			"Mu",
+			"XLGZQ4BNJ4/moc_CubismOffscreenManager_OpenGLES2.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.hpp",
+			"Mu",
+			"XLGZQ4BNJ4/moc_CubismOffscreenRenderTarget_OpenGLES2.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.hpp",
+			"Mu",
+			"XLGZQ4BNJ4/moc_CubismRenderTarget_OpenGLES2.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismRenderer_OpenGLES2.hpp",
+			"Mu",
+			"XLGZQ4BNJ4/moc_CubismRenderer_OpenGLES2.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismShader_OpenGLES2.hpp",
+			"Mu",
+			"XLGZQ4BNJ4/moc_CubismShader_OpenGLES2.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/csmBlendMode.hpp",
+			"Mu",
+			"UD4N4BNGCY/moc_csmBlendMode.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/CubismBasicType.hpp",
+			"Mu",
+			"TST7L2GW5C/moc_CubismBasicType.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmMap.hpp",
+			"Mu",
+			"TST7L2GW5C/moc_csmMap.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmRectF.hpp",
+			"Mu",
+			"TST7L2GW5C/moc_csmRectF.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmString.hpp",
+			"Mu",
+			"TST7L2GW5C/moc_csmString.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmVector.hpp",
+			"Mu",
+			"TST7L2GW5C/moc_csmVector.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmVectorSort.hpp",
+			"Mu",
+			"TST7L2GW5C/moc_csmVectorSort.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismDebug.hpp",
+			"Mu",
+			"WGYDDRAMTN/moc_CubismDebug.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismJson.hpp",
+			"Mu",
+			"WGYDDRAMTN/moc_CubismJson.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismString.hpp",
+			"Mu",
+			"WGYDDRAMTN/moc_CubismString.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/Framework_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/Framework_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "CSM_TARGET_LINUX_GL" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src",
+		"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Core/include",
+		"/home/gumduck/Documentos/GitHub/seila kk/third_party/glew_shim",
+		"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Core/include",
+		"/usr/include/c++/16",
+		"/usr/include/c++/16/x86_64-pc-linux-gnu",
+		"/usr/include/c++/16/backward",
+		"/usr/lib/gcc/x86_64-pc-linux-gnu/16/include",
+		"/usr/local/include",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-std=gnu++17",
+		"-w",
+		"-dM",
+		"-E",
+		"/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/Framework_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/CMakeFiles/Framework_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 12,
+	"SETTINGS_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/CMakeFiles/Framework_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismCdiJson.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismDefaultParameterId.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFramework.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismModelSettingJson.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismBreath.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismEyeBlink.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismLook.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismPose.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Id/CubismId.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Id/CubismIdManager.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismMath.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismMatrix44.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismModelMatrix.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismTargetPoint.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismVector2.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismViewMatrix.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismMoc.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModel.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModelMultiplyAndScreenColor.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModelUserData.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModelUserDataJson.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismUserModel.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/ACubismMotion.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismBreathUpdater.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismExpressionMotion.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismExpressionMotionManager.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismExpressionUpdater.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismEyeBlinkUpdater.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismLipSyncUpdater.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismLookUpdater.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotion.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionJson.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionManager.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionQueueEntry.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionQueueManager.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismPhysicsUpdater.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismPoseUpdater.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismUpdateScheduler.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/ICubismUpdater.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/IParameterProvider.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Physics/CubismPhysics.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Physics/CubismPhysicsJson.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/CubismRenderer.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/csmBlendMode.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmRectF.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmString.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismDebug.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismJson.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismString.cpp",
+			"Mu",
+			null
+		]
+	],
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}
