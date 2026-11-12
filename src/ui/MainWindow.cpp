@@ -13,6 +13,8 @@
 #include <QHBoxLayout>
 #include <QGridLayout>
 #include <QLabel>
+#include <QPixmap>
+#include <QImage>
 #include <QPushButton>
 #include <QToolButton>
 #include <QCheckBox>
@@ -281,9 +283,27 @@ void MainWindow::buildTrackingTab()
     _chkMouse = new QCheckBox(QStringLiteral("🖱 Mouse (cabeça/olhos seguem o cursor)"), page);
     _chkMic = new QCheckBox(QStringLiteral("🎤 Microfone (lip sync pela voz)"), page);
     _chkWebcam = new QCheckBox(QStringLiteral("📷 Webcam (rastreio facial)"), page);
+    _chkDebugCam = new QCheckBox(QStringLiteral("🔬 Mostrar debug do rastreio (janela com a câmera e os pontos)"), page);
     v->addWidget(_chkMouse);
     v->addWidget(_chkMic);
     v->addWidget(_chkWebcam);
+    v->addWidget(_chkDebugCam);
+
+    // Painel do debug: mostra o frame anotado direto no app
+    _dbgBox = new QWidget(page);
+    auto* dbgLayout = new QVBoxLayout(_dbgBox);
+    dbgLayout->setContentsMargins(0, 4, 0, 0);
+    auto* dbgTitle = new QLabel(QStringLiteral("🔬 Câmera de rastreio (malha + valores)"), _dbgBox);
+    dbgTitle->setStyleSheet(QStringLiteral("color: gray;"));
+    dbgLayout->addWidget(dbgTitle);
+    _dbgImg = new QLabel(_dbgBox);
+    _dbgImg->setFixedSize(320, 180);
+    _dbgImg->setScaledContents(true);
+    _dbgImg->setStyleSheet(QStringLiteral(
+        "border: 1px solid #555; border-radius: 6px; background: #111;"));
+    dbgLayout->addWidget(_dbgImg);
+    _dbgBox->setVisible(false);
+    v->addWidget(_dbgBox);
 
     _comboCam = new QComboBox(page);
     _comboMic = new QComboBox(page);
@@ -334,12 +354,25 @@ void MainWindow::buildTrackingTab()
         _settings.webcamEnabled = on;
         applySettings();
         if (on) {
+            _view->webcam()->setDebugCam(_settings.debugCam);
             startWebcamIfEnabled();
         } else {
             // Libera a câmera imediatamente (o LED apaga e o daemon encerra).
             _view->webcam()->stop();
             _lblCalibStatus->setText(QStringLiteral("Rastreio facial desligado."));
         }
+    });
+    connect(_view->webcam(), &WebcamTracker::debugFrame, this, [this](const QImage& img) {
+        if (!_dbgBox || !_dbgBox->isVisible() || !_dbgImg)
+            return;
+        _dbgImg->setPixmap(QPixmap::fromImage(img));
+    });
+    connect(_chkDebugCam, &QCheckBox::toggled, this, [this](bool on) {
+        _settings.debugCam = on;
+        _persistDebounce.start();
+        if (_dbgBox)
+            _dbgBox->setVisible(on);
+        _view->webcam()->setDebugCam(on);
     });
     connect(_comboCam, &QComboBox::currentIndexChanged, this, [this](int i) {
         if (_rebuildingUi || i < 0)
@@ -895,6 +928,7 @@ void MainWindow::runWizard()
         }
         temp.webcamDevice = QString::fromUtf8(cams[camIdx].id());
         temp.webcamEnabled = true;
+        _view->webcam()->setDebugCam(_settings.debugCam);
         _view->webcam()->start(pythonExecutable(), trackerScriptPath(),
                                faceModelPath(), camIdx);
         QTimer::singleShot(1800, this, [&w, this]() {
@@ -961,6 +995,12 @@ void MainWindow::applySettings()
     _chkMouse->setChecked(_settings.mouseEnabled);
     _chkMic->setChecked(_settings.micEnabled);
     _chkWebcam->setChecked(_settings.webcamEnabled);
+    if (_chkDebugCam) {
+        _chkDebugCam->setChecked(_settings.debugCam);
+        if (_dbgBox)
+            _dbgBox->setVisible(_settings.debugCam);
+        _view->webcam()->setDebugCam(_settings.debugCam);
+    }
     _chkInvertX->setChecked(_settings.invertHeadX);
     _chkInvertY->setChecked(_settings.invertHeadY);
     _chkBreath->setChecked(_settings.breathing);
@@ -1035,6 +1075,7 @@ void MainWindow::startWebcamIfEnabled()
         return;
     }
     _lblCalibStatus->setText(QStringLiteral("Iniciando rastreio facial..."));
+    _view->webcam()->setDebugCam(_settings.debugCam);
     _view->webcam()->start(pythonExecutable(), trackerScriptPath(), model,
                            _settings.webcamIndex,
                            _settings.webcamWidth.toInt(),

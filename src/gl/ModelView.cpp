@@ -369,8 +369,21 @@ Channels ModelView::composeChannels(float dt)
             const float hi = closed ? 0.70f : 0.55f;
             return clampf(1.0f - (v - lo) / (hi - lo), 0.0f, 1.0f);
         };
-        camCh.eyeOpenL = eyeOpenHyst(f.blinkL, _blinkClosedL);
-        camCh.eyeOpenR = eyeOpenHyst(f.blinkR, _blinkClosedR);
+        // Fusão blendshape+EAR: o EAR (geometria dos landmarks) detecta o
+        // fechamento melhor que o blendshape; sem EAR calibrado, usa só blend.
+        const float earNeuL = n.valid ? n.earL : f.earL;
+        const float earNeuR = n.valid ? n.earR : f.earR;
+        auto earClosure = [](float ear, float neutral) {
+            if (!(neutral > 1e-4f)) return 0.0f;
+            // fechado quando ear cai abaixo de ~30% do neutro
+            return clampf((neutral - ear) / (neutral * 0.70f), 0.0f, 1.0f);
+        };
+        const float blinkFusedL = n.valid ? std::max(f.blinkL * 0.85f, earClosure(f.earL, earNeuL))
+                                          : f.blinkL;
+        const float blinkFusedR = n.valid ? std::max(f.blinkR * 0.85f, earClosure(f.earR, earNeuR))
+                                          : f.blinkR;
+        camCh.eyeOpenL = eyeOpenHyst(blinkFusedL, _blinkClosedL);
+        camCh.eyeOpenR = eyeOpenHyst(blinkFusedR, _blinkClosedR);
         camCh.eyeSmileL = clampf(f.eyeSmileL, 0.0f, 1.0f);
         camCh.eyeSmileR = clampf(f.eyeSmileR, 0.0f, 1.0f);
         // Íris: deadzone circular (ignora micro-tremor quando olhando reto)
@@ -382,7 +395,12 @@ Channels ModelView::composeChannels(float dt)
         // brow agora é uma razão de distâncias (~0.4..0.8); ganho calibrado
         // pelo neutro salvo. Sensibilidade alta, clamps seguram os limites.
         camCh.brows    = clampf(0.5f + (f.brow - browOff) * 7.0f, 0.0f, 1.0f);
-        camCh.mouthOpen= clampf((f.jaw - mouthOff) / 0.55f, 0.0f, 1.0f);
+        // Boca: fusão blendshape + MAR (razão altura/largura pela geometria,
+        // calibrada pelo neutro capturado; mandíbula real + lábios ambos).
+        const float openBlend = clampf((f.jaw - mouthOff) / 0.55f, 0.0f, 1.0f);
+        const float marNeutral = n.valid ? n.mar : 0.15f;
+        const float openGeo = clampf((f.mar - marNeutral) / 0.28f, 0.0f, 1.0f);
+        camCh.mouthOpen = std::max(openBlend, openGeo);
         camCh.mouthSmile = clampf(0.5f + f.smile, 0.0f, 1.0f);
         camCh.mouthPucker  = clampf(f.pucker, 0.0f, 1.0f);
         camCh.mouthFunnel  = clampf(f.funnel, 0.0f, 1.0f);
@@ -394,6 +412,10 @@ Channels ModelView::composeChannels(float dt)
         camCh.noseSneer   = clampf(f.noseSneer, 0.0f, 1.0f);
         camCh.mouthDimple = clampf(f.mouthDimple, 0.0f, 1.0f);
         camCh.mouthPress  = clampf(f.mouthPress, 0.0f, 1.0f);
+        camCh.mouthX = clampf((f.mouthX - (n.valid ? n.mouthX : 0.0f)) * 4.5f, -1.0f, 1.0f);
+        camCh.mouthY = clampf(-(f.mouthY - (n.valid ? n.mouthY : 0.0f)) * 4.5f, -1.0f, 1.0f);
+        camCh.browL = clampf(0.5f + (f.browL - browOff) * 7.0f, 0.0f, 1.0f);
+        camCh.browR = clampf(0.5f + (f.browR - browOff) * 7.0f, 0.0f, 1.0f);
         camCh.tongueOut   = clampf(f.tongueOut, 0.0f, 1.0f);
         camCh.browDown     = clampf(f.browDown, 0.0f, 1.0f);
         camCh.jawSide      = clampf(f.jawSide, -1.0f, 1.0f);
@@ -448,6 +470,10 @@ Channels ModelView::composeChannels(float dt)
     c.browDown     = camCh.browDown * a;
     c.jawSide      = camCh.jawSide * a;
     c.tongueOut    = camCh.tongueOut * a;
+    c.mouthX       = camCh.mouthX * a;
+    c.mouthY       = camCh.mouthY * a;
+    c.browL        = (0.5f * (1 - a)) + camCh.browL * a;
+    c.browR        = (0.5f * (1 - a)) + camCh.browR * a;
     c.facePosX     = camCh.facePosX * a;
     c.facePosY     = camCh.facePosY * a;
     c.facePosZ     = camCh.facePosZ * a;

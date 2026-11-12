@@ -79,6 +79,9 @@ private:
     QCheckBox* _chkMouse = nullptr;
     QCheckBox* _chkMic = nullptr;
     QCheckBox* _chkWebcam = nullptr;
+    QCheckBox* _chkDebugCam = nullptr;
+    QWidget*   _dbgBox = nullptr;        // painel com a imagem do rastreio
+    QLabel*    _dbgImg = nullptr;        // QLabel que mostra o frame anotado
     QComboBox* _comboCam = nullptr;
     QComboBox* _comboMic = nullptr;
     QComboBox* _comboScreen = nullptr;

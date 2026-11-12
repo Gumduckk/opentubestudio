@@ -514,6 +514,7 @@ GummVTuber_autogen/timestamp: /home/gumduck/Documentos/GitHub/seila\ kk/opentube
   /usr/include/qt6/QtCore/qxptype_traits.h \
   /usr/include/qt6/QtCore/qyieldcpu.h \
   /usr/include/qt6/QtGui/QColor \
+  /usr/include/qt6/QtGui/QImage \
   /usr/include/qt6/QtGui/QSurfaceFormat \
   /usr/include/qt6/QtGui/qaction.h \
   /usr/include/qt6/QtGui/qbitmap.h \
@@ -7572,8 +7573,6 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/float.h:
 
-/usr/include/qt6/QtGui/QImage:
-
 /usr/include/qt6/QtCore/QSet:
 
 /usr/include/qt6/QtCore/QMap:
@@ -7685,6 +7684,8 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o:
 /usr/include/c++/16/codecvt:
 
 /usr/include/c++/16/bits/quoted_string.h:
+
+/usr/include/c++/16/bits/ostream.tcc:
 
 /usr/include/qt6/QtGui/qtguiglobal.h:
 
@@ -7888,8 +7889,6 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/16/bits/uniform_int_dist.h:
 
-/usr/include/c++/16/bits/ostream.tcc:
-
 /usr/include/qt6/QtCore/qdeadlinetimer.h:
 
 /usr/include/qt6/QtCore/qtresource.h:
@@ -7965,6 +7964,8 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o:
 /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/main.cpp:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginConfig.cmake:
+
+/usr/include/qt6/QtGui/QImage:
 
 /usr/include/qt6/QtCore/QVector:
 
@@ -8193,20 +8194,6 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o:
 /usr/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsTargets.cmake:
 
 /usr/include/bits/time64.h:
-
-/usr/include/qt6/QtGui/qtransform.h:
-
-/usr/include/qt6/QtWidgets/QTabWidget:
-
-/usr/include/qt6/QtCore/QJsonDocument:
-
-/usr/include/qt6/QtCore/qcborcommon.h:
-
-/usr/lib32/libgio-2.0.so.0:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Widgets/Qt6WidgetsTargetsPrecheck.cmake:
 
 /usr/lib/cmake/Qt6Core/Qt6CoreTargets.cmake:
 
@@ -8871,6 +8858,20 @@ CMakeFiles/4.4.5/CMakeCCompiler.cmake:
 /usr/include/c++/16/string:
 
 /usr/include/bits/uintn-identity.h:
+
+/usr/include/qt6/QtWidgets/QTabWidget:
+
+/usr/include/qt6/QtCore/QJsonDocument:
+
+/usr/include/qt6/QtCore/qcborcommon.h:
+
+/usr/include/qt6/QtGui/qtransform.h:
+
+/usr/lib32/libgio-2.0.so.0:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Widgets/Qt6WidgetsTargetsPrecheck.cmake:
 
 /usr/include/bits/waitflags.h:
 

@@ -49,6 +49,10 @@ struct Channels
     float noseSneer   = 0.0f; // 0..1
     float mouthDimple = 0.0f; // 0..1
     float mouthPress  = 0.0f; // 0..1
+    float mouthX      = 0.0f; // -1..1 (boca deslocada pro lado)
+    float mouthY      = 0.0f; // -1..1 (boca mais alta/baixa)
+    float browL       = 0.5f; // 0..1 (sobrancelha esquerda)
+    float browR       = 0.5f; // 0..1 (sobrancelha direita)
     float breath    = 0.0f;   // 0..1 (procedural)
 
     // Escala nominal de cada entrada (ex.: FaceAngleX vai de -30..30).
@@ -101,6 +105,7 @@ struct AppSettings
 
     // Rastreio
     bool    mouseEnabled  = true;
+    bool    debugCam      = false;   // mostra a janela de debug do rastreio (landmarks)
     QString mouseScreen;                  // nome da tela p/ tracking ("" = automático)
     bool    micEnabled    = true;
     bool    webcamEnabled = false;

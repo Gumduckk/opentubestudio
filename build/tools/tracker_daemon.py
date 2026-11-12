@@ -19,6 +19,7 @@ a webcam e emitir, uma linha JSON por frame, os dados usados pelo app:
 Comandos no stdin (JSON por linha):  {"cmd":"quit"}
 """
 import argparse
+import base64
 import json
 import math
 import os
@@ -217,7 +218,101 @@ class OneEuro:
         return self.x_prev
 
 
+# Índices dos pontos (mapeamento MediaPipe → px) para o debug visual.
+# Todos os landmarks são desenhados como pontinhos; as partes de interesse
+# ficam maiores: 468..477 = íris, 105/334 = sobrancelha.
+DEBUG_CAM = os.environ.get("GUMM_DEBUG_CAM") == "1"   # janela do OpenCV (opcional)
+DEBUG_CAM_ACTIVE = DEBUG_CAM
+DEBUG_FAILED = False       # a janela do OpenCV falhou; a UI continua funcionando
+LAST_UI_SENT = 0.0
+
+
+def overlay_debug(frame, lm):
+    """Desenha a malha e os valores em cima do frame (sempre funciona)."""
+    h, w = frame.shape[:2]
+
+    def px(i):
+        return int(lm[i].x * w), int(lm[i].y * h)
+
+    # malha facial como pontinhos
+    for i in range(0, 468):
+        x, y = px(i)
+        cv2.circle(frame, (x, y), 1, (160, 200, 255), -1, cv2.LINE_AA)
+    # sobrancelhas em amarelo
+    for i in (105, 334):
+        x, y = px(i)
+        cv2.circle(frame, (x, y), 4, (0, 220, 255), -1, cv2.LINE_AA)
+    # íris em verde (+468..477 quando refinado)
+    for i in range(468, min(len(lm), 478)):
+        x, y = px(i)
+        cv2.circle(frame, (x, y), 3, (80, 255, 80), -1, cv2.LINE_AA)
+
+
+def overlay_texts(frame, out):
+    h, w = frame.shape[:2]
+    lines = [
+        "yaw=%+.1f pitch=%+.1f roll=%+.1f" % (out.get("yaw", 0.0),
+                                              out.get("pitch", 0.0),
+                                              out.get("roll", 0.0)),
+        "blinkL=%.2f blinkR=%.2f jaw=%.2f smile=%.2f" % (
+            out.get("blinkL", 0.0), out.get("blinkR", 0.0),
+            out.get("jaw", 0.0), out.get("smile", 0.0)),
+        "brow=%.2f eyeX=%+.2f eyeY=%+.2f" % (
+            out.get("brow", 0.0), out.get("eyeX", 0.0), out.get("eyeY", 0.0)),
+        "earL=%.3f earR=%.3f mar=%.3f" % (
+            out.get("earL", 0.0), out.get("earR", 0.0), out.get("mar", 0.0)),
+        "mouthX=%+.3f mouthY=%+.3f browL=%.3f browR=%.3f" % (
+            out.get("mouthX", 0.0), out.get("mouthY", 0.0),
+            out.get("browL", 0.0), out.get("browR", 0.0)),
+        "faceX=%+.1f faceY=%+.1f faceZ=%+.1f scale=%.2f" % (
+            out.get("faceX", 0.0), out.get("faceY", 0.0),
+            out.get("faceZ", 0.0), out.get("faceScale", 0.0)),
+    ]
+    y = 22
+    for line in lines:
+        cv2.putText(frame, line, (10, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
+                    (80, 255, 80), 1, cv2.LINE_AA)
+        y += 20
+
+
+def emit_frame(frame):
+    """Manda o frame anotado (JPEG, ~3 fps) pro app, dentro do stdout JSON."""
+    global LAST_UI_SENT
+    now = time.time()
+    if now - LAST_UI_SENT < 0.3:   # ~3 fps
+        return
+    LAST_UI_SENT = now
+    try:
+        h, w = frame.shape[:2]
+        small = cv2.resize(frame, (320, max(1, int(h * 320.0 / w))),
+                           interpolation=cv2.INTER_AREA)
+        ok, buf = cv2.imencode(".jpg", small, [cv2.IMWRITE_JPEG_QUALITY, 40])
+        if not ok:
+            return
+        b64 = base64.b64encode(buf.tobytes()).decode("ascii")
+        print(json.dumps({"img": b64}), flush=True)
+    except Exception as e:
+        log("debug_frame falhou: %s" % e)
+
+
+def draw_debug(frame, lm, out):
+    """Desenha e manda pro app; também tenta a janela do OpenCV."""
+    global DEBUG_FAILED
+    overlay_debug(frame, lm)
+    overlay_texts(frame, out)
+    emit_frame(frame)
+    if DEBUG_CAM_ACTIVE and not DEBUG_FAILED:
+        try:
+            cv2.imshow("GummVTuber — debug de rastreio", frame)
+            cv2.waitKey(1)  # bombeia a janela; fecha com Ctrl+C do app
+        except Exception as e:
+            # Sem display / OpenCV sem GUI: avisa uma vez; a UI continua
+            log("janela do OpenCV desativada: %s" % e)
+            DEBUG_FAILED = True
+
+
 def main():
+    global DEBUG_FAILED, DEBUG_CAM_ACTIVE
     opts = parse_args()
 
     options = vision.FaceLandmarkerOptions(
@@ -242,6 +337,8 @@ def main():
     log("rastreador ativo (câmera %d). Ctrl+C ou comando quit para sair."
         % opts.camera)
     print(json.dumps({"ok": 1}), flush=True)  # handshake
+    if DEBUG_CAM_ACTIVE:
+        log("debug_cam ATIVADO (janela de rastreio)")
 
     last_ts = -1
     last_frame_t = time.time()
@@ -250,7 +347,8 @@ def main():
     f1 = {k: OneEuro(1.0, 0.2) for k in (
         "jaw", "smile", "pucker", "funnel", "cheek", "browDown", "frown",
         "stretch", "cheekSquint", "noseSneer", "mouthDimple", "mouthPress",
-        "tongueOut", "brow",
+        "tongueOut", "brow", "browL", "browR",
+        "earL", "earR", "mar", "mouthX", "mouthY",
     )}
     stdin_fd = sys.stdin.fileno()
     pending = first
@@ -269,6 +367,10 @@ def main():
                         continue
                     if cmd.get("cmd") == "quit":
                         break
+                    if cmd.get("cmd") == "debug_cam":
+                        DEBUG_CAM_ACTIVE = bool(cmd.get("on", 1))
+                        log("debug_cam %s" % ("LIGADO" if DEBUG_CAM_ACTIVE else "desligado"))
+                        continue
             except (ValueError, OSError):
                 pass
 
@@ -294,6 +396,18 @@ def main():
 
             if not result.face_landmarks:
                 print(json.dumps({"found": 0}), flush=True)
+                if DEBUG_CAM_ACTIVE:
+                    cv2.putText(frame, "Rosto NAO encontrado", (10, 30),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.8, (60, 60, 255),
+                                2, cv2.LINE_AA)
+                    emit_frame(frame)
+                    if not DEBUG_FAILED:
+                        try:
+                            cv2.imshow("GummVTuber — debug de rastreio", frame)
+                            cv2.waitKey(1)
+                        except Exception as e:
+                            log("janela do OpenCV desativada: %s" % e)
+                            DEBUG_FAILED = True
                 continue
 
             lm = result.face_landmarks[0]
@@ -348,22 +462,8 @@ def main():
             out["jaw"] = _f("jaw", min(1.0, bs.get("jawOpen", 0.0)))
             out["smile"] = _f("smile", min(1.0, (bs.get("mouthSmileLeft", 0.0)
                                      + bs.get("mouthSmileRight", 0.0)) / 2.0))
-            # Sobrancelhas: altura pela GEOMETRIA dos landmarks (razão
-            # distância sobrancelha-pálpebra / largura do olho). O blendshape
-            # browInnerUp quase nunca dispara; assim sobe de verdade.
-            try:
-                def _p3(i):
-                    return (lm[i].x, lm[i].y, lm[i].z)
-
-                def _d3(a, b):
-                    return math.dist(_p3(a), _p3(b))
-
-                brow_l = _d3(105, 159) / (_d3(33, 133) + 1e-6)
-                brow_r = _d3(334, 386) / (_d3(362, 263) + 1e-6)
-                out["brow"] = (brow_l + brow_r) / 2.0
-            except IndexError:
-                out["brow"] = min(1.0, bs.get("browInnerUp", 0.0)
-                                  + 0.5 * bs.get("browOuterUpLeft", 0.0))
+            # (sobrancelhas por geometria são calculadas no bloco de
+            # olhos/boca abaixo, com média de vários pontos do contorno)
             # --- expressões extras (biquinho, bochecha, sobrancelha baixa,
             # mandíbula lateral, careta, arqueamento lateral da boca) ---
             out["pucker"] = _f("pucker", min(1.0, bs.get("mouthPucker", 0.0)))
@@ -403,6 +503,48 @@ def main():
             except (IndexError, AttributeError):
                 out["eyeX"] = 0.0
                 out["eyeY"] = 0.0
+
+            # --- olhos (EAR = Eye Aspect Ratio) ---
+            # Mais preciso que blendshape para abrir/fechar: razão
+            # (altura da pálpebra superior + inferior) / largura dos olhos.
+            try:
+                def _p3(i):
+                    return (lm[i].x, lm[i].y, lm[i].z)
+
+                def _d3(a, b):
+                    return math.dist(_p3(a), _p3(b))
+
+                ear_l = (_d3(159, 145) + _d3(160, 153)) / (2.0 * _d3(33, 133) + 1e-6)
+                ear_r = (_d3(386, 374) + _d3(385, 380)) / (2.0 * _d3(362, 263) + 1e-6)
+                out["earL"] = _f("earL", ear_l)
+                out["earR"] = _f("earR", ear_r)
+
+                # --- boca (MAR + eixos X/Y) ---
+                mouth_w = _d3(61, 291)
+                mouth_h = _d3(13, 14)  # lábios externo superior/inferior
+                out["mar"] = _f("mar", mouth_h / (mouth_w + 1e-6))
+                face_cx = (lm[33].x + lm[263].x) / 2.0
+                face_cy = (lm[33].y + lm[263].y) / 2.0
+                face_w = _d3(33, 263) + 1e-6
+                mouth_cx = (lm[61].x + lm[291].x) / 2.0
+                mouth_cy = (lm[13].y + lm[14].y) / 2.0
+                out["mouthX"] = _f("mouthX", (mouth_cx - face_cx) / face_w)
+                out["mouthY"] = _f("mouthY", (mouth_cy - face_cy) / face_w)
+
+                # --- sobrancelhas (contorno completo, média de 4 pontos) ---
+                bl = (_d3(70, 159) + _d3(63, 159) + _d3(105, 159) + _d3(66, 159)) / (4.0 * _d3(33, 133) + 1e-6)
+                br = (_d3(300, 386) + _d3(293, 386) + _d3(334, 386) + _d3(296, 386)) / (4.0 * _d3(362, 263) + 1e-6)
+                out["browL"] = _f("browL", bl)
+                out["browR"] = _f("browR", br)
+                out["brow"] = _f("brow", (bl + br) / 2.0)
+            except (IndexError, AttributeError):
+                pass
+            except Exception as e:
+                log("geometria de olhos/boca/sobrancelha falhou: %s" % e)
+
+            # --- debug visual (GUMM_DEBUG_CAM=1 ou comando "debug_cam") ---
+            if DEBUG_CAM_ACTIVE:
+                draw_debug(frame, lm, out)
 
             print(json.dumps(out), flush=True)
     except KeyboardInterrupt:

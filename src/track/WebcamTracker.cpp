@@ -4,6 +4,7 @@
 #include <QJsonObject>
 #include <QFileInfo>
 #include <QVector>
+#include <QImage>
 #include <algorithm>
 #include <cmath>
 
@@ -80,6 +81,16 @@ void WebcamTracker::start(const QString& pythonExe, const QString& scriptPath,
          << QStringLiteral("--width") << QString::number(width)
          << QStringLiteral("--height") << QString::number(height);
     _proc->start(pythonExe, args);
+    if (_debugCam)
+        _proc->write(QByteArray("{\"cmd\":\"debug_cam\",\"on\":1}\n"));
+}
+
+void WebcamTracker::setDebugCam(bool on)
+{
+    _debugCam = on;
+    if (running())
+        _proc->write(QByteArray(on ? "{\"cmd\":\"debug_cam\",\"on\":1}\n"
+                                    : "{\"cmd\":\"debug_cam\",\"on\":0}\n"));
 }
 
 void WebcamTracker::stop()
@@ -121,8 +132,21 @@ void WebcamTracker::onReadyReadStdout()
     while ((idx = _buf.indexOf('\n')) >= 0) {
         const QByteArray line = _buf.left(idx);
         _buf.remove(0, idx + 1);
-        if (!line.trimmed().isEmpty())
-            parseLine(line);
+        if (line.trimmed().isEmpty())
+            continue;
+        // Frame do debug (JPEG base64): vai direto pro QLabel da UI
+        if (line.contains("\"img\"")) {
+            const QJsonObject o = QJsonDocument::fromJson(line).object();
+            if (o.contains(QStringLiteral("img"))) {
+                const QByteArray jpeg = QByteArray::fromBase64(
+                    o[QStringLiteral("img")].toString().toLatin1());
+                QImage img;
+                if (img.loadFromData(jpeg, "JPG"))
+                    emit debugFrame(img);
+                continue;
+            }
+        }
+        parseLine(line);
     }
 }
 
@@ -193,6 +217,15 @@ void WebcamTracker::parseLine(const QByteArray& line)
         f.noseSneer   = static_cast<float>(o[QStringLiteral("noseSneer")].toDouble());
         f.mouthDimple = static_cast<float>(o[QStringLiteral("mouthDimple")].toDouble());
         f.mouthPress  = static_cast<float>(o[QStringLiteral("mouthPress")].toDouble());
+        if (o.contains(QStringLiteral("earL"))) {
+            f.earL = static_cast<float>(o[QStringLiteral("earL")].toDouble());
+            f.earR = static_cast<float>(o[QStringLiteral("earR")].toDouble());
+            f.mar  = static_cast<float>(o[QStringLiteral("mar")].toDouble());
+            f.mouthX = static_cast<float>(o[QStringLiteral("mouthX")].toDouble());
+            f.mouthY = static_cast<float>(o[QStringLiteral("mouthY")].toDouble());
+            f.browL  = static_cast<float>(o[QStringLiteral("browL")].toDouble());
+            f.browR  = static_cast<float>(o[QStringLiteral("browR")].toDouble());
+        }
         f.pucker   = static_cast<float>(o[QStringLiteral("pucker")].toDouble());
         f.funnel   = static_cast<float>(o[QStringLiteral("funnel")].toDouble());
         f.cheek    = static_cast<float>(o[QStringLiteral("cheek")].toDouble());
@@ -214,6 +247,8 @@ void WebcamTracker::parseLine(const QByteArray& line)
         _calMouth << f.jaw; _calBrow << f.brow;
         _calFaceX << f.faceX; _calFaceY << f.faceY; _calFaceZ << f.faceZ;
         _calFaceScale << f.faceScale;
+        _calEarL << f.earL; _calEarR << f.earR; _calMar << f.mar;
+        _calMouthX << f.mouthX; _calMouthY << f.mouthY;
     }
 
     if (_calibrating && _calTimer.hasExpired(1500)) {
@@ -238,11 +273,18 @@ void WebcamTracker::parseLine(const QByteArray& line)
             n.faceY = median(std::move(_calFaceY));
             n.faceZ = median(std::move(_calFaceZ));
             n.faceScale = median(std::move(_calFaceScale));
+            n.earL  = median(std::move(_calEarL));
+            n.earR  = median(std::move(_calEarR));
+            n.mar   = median(std::move(_calMar));
+            n.mouthX = median(std::move(_calMouthX));
+            n.mouthY = median(std::move(_calMouthY));
             n.valid = true;
         } else {
             _calYaw.clear(); _calPitch.clear(); _calRoll.clear();
             _calEyeX.clear(); _calEyeY.clear(); _calMouth.clear(); _calBrow.clear();
             _calFaceX.clear(); _calFaceY.clear(); _calFaceZ.clear(); _calFaceScale.clear();
+            _calEarL.clear(); _calEarR.clear(); _calMar.clear();
+            _calMouthX.clear(); _calMouthY.clear();
         }
         _neutral = n;
         emit neutralCaptured(n);
@@ -258,5 +300,7 @@ void WebcamTracker::calibrate(int ms)
     _calYaw.clear(); _calPitch.clear(); _calRoll.clear();
     _calEyeX.clear(); _calEyeY.clear(); _calMouth.clear(); _calBrow.clear();
     _calFaceX.clear(); _calFaceY.clear(); _calFaceZ.clear(); _calFaceScale.clear();
+    _calEarL.clear(); _calEarR.clear(); _calMar.clear();
+    _calMouthX.clear(); _calMouthY.clear();
     Q_UNUSED(ms); // janela fixa de 1500 ms (constante interna)
 }

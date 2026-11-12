@@ -49,6 +49,9 @@ template <> constexpr inline auto WebcamTracker::qt_create_metaobjectdata<qt_met
         "n",
         "faceFoundChanged",
         "found",
+        "debugFrame",
+        "QImage",
+        "img",
         "onReadyReadStdout",
         "onReadyReadStderr",
         "onFinished",
@@ -74,13 +77,17 @@ template <> constexpr inline auto WebcamTracker::qt_create_metaobjectdata<qt_met
         QtMocHelpers::SignalData<void(bool)>(9, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::Bool, 10 },
         }}),
+        // Signal 'debugFrame'
+        QtMocHelpers::SignalData<void(const QImage &)>(11, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 12, 13 },
+        }}),
         // Slot 'onReadyReadStdout'
-        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onReadyReadStderr'
-        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onFinished'
-        QtMocHelpers::SlotData<void(int, QProcess::ExitStatus)>(13, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 14 }, { 0x80000000 | 15, 16 },
+        QtMocHelpers::SlotData<void(int, QProcess::ExitStatus)>(16, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 17 }, { 0x80000000 | 18, 19 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -109,9 +116,10 @@ void WebcamTracker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 1: _t->logLine((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         case 2: _t->neutralCaptured((*reinterpret_cast<std::add_pointer_t<FaceNeutral>>(_a[1]))); break;
         case 3: _t->faceFoundChanged((*reinterpret_cast<std::add_pointer_t<bool>>(_a[1]))); break;
-        case 4: _t->onReadyReadStdout(); break;
-        case 5: _t->onReadyReadStderr(); break;
-        case 6: _t->onFinished((*reinterpret_cast<std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QProcess::ExitStatus>>(_a[2]))); break;
+        case 4: _t->debugFrame((*reinterpret_cast<std::add_pointer_t<QImage>>(_a[1]))); break;
+        case 5: _t->onReadyReadStdout(); break;
+        case 6: _t->onReadyReadStderr(); break;
+        case 7: _t->onFinished((*reinterpret_cast<std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QProcess::ExitStatus>>(_a[2]))); break;
         default: ;
         }
     }
@@ -123,6 +131,8 @@ void WebcamTracker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         if (QtMocHelpers::indexOfMethod<void (WebcamTracker::*)(const FaceNeutral & )>(_a, &WebcamTracker::neutralCaptured, 2))
             return;
         if (QtMocHelpers::indexOfMethod<void (WebcamTracker::*)(bool )>(_a, &WebcamTracker::faceFoundChanged, 3))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (WebcamTracker::*)(const QImage & )>(_a, &WebcamTracker::debugFrame, 4))
             return;
     }
 }
@@ -146,14 +156,14 @@ int WebcamTracker::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 7;
+        _id -= 8;
     }
     return _id;
 }
@@ -180,5 +190,11 @@ void WebcamTracker::neutralCaptured(const FaceNeutral & _t1)
 void WebcamTracker::faceFoundChanged(bool _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1);
+}
+
+// SIGNAL 4
+void WebcamTracker::debugFrame(const QImage & _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 4, nullptr, _t1);
 }
 QT_WARNING_POP

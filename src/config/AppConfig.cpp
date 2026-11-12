@@ -35,8 +35,11 @@ float Channels::valueFor(const QString& input) const
     if (input == QLatin1String("EyeSmileL"))    return eyeSmileL;
     if (input == QLatin1String("EyeSmileR"))    return eyeSmileR;
     if (input == QLatin1String("TongueOut"))    return tongueOut;
-    // Alias histórico do .vtube.json da Akari: MouthX = mandíbula lateral
-    if (input == QLatin1String("MouthX"))       return jawSide;
+    // Alias histórico do .vtube.json da Akari: MouthX = deslocamento da boca
+    if (input == QLatin1String("MouthX"))       return mouthX;
+    if (input == QLatin1String("MouthY"))       return mouthY;
+    if (input == QLatin1String("BrowLeftY"))    return browL;
+    if (input == QLatin1String("BrowRightY"))   return browR;
     if (input == QLatin1String("FacePositionX")) return facePosX;
     if (input == QLatin1String("FacePositionY")) return facePosY;
     if (input == QLatin1String("FacePositionZ")) return facePosZ;
@@ -78,6 +81,8 @@ QStringList Channels::allInputs()
              QStringLiteral("FacePositionZ"),
              QStringLiteral("CheekSquint"), QStringLiteral("NoseSneer"),
              QStringLiteral("MouthDimple"), QStringLiteral("MouthPress"),
+             QStringLiteral("MouthY"),
+             QStringLiteral("BrowLeftY"), QStringLiteral("BrowRightY"),
              QStringLiteral("Breathing") };
 }
 
@@ -125,6 +130,7 @@ QJsonObject AppSettings::toJson() const
 
     QJsonObject tr;
     tr[QStringLiteral("mouse")] = mouseEnabled;
+    tr[QStringLiteral("debugCam")] = debugCam;
     tr[QStringLiteral("mouseScreen")] = mouseScreen;
     tr[QStringLiteral("mic")] = micEnabled;
     tr[QStringLiteral("webcam")] = webcamEnabled;
@@ -190,6 +196,7 @@ AppSettings AppSettings::fromJson(const QJsonObject& o)
 
     const QJsonObject tr = o[QStringLiteral("tracking")].toObject();
     s.mouseEnabled = tr[QStringLiteral("mouse")].toBool(true);
+    s.debugCam     = tr[QStringLiteral("debugCam")].toBool(false);
     s.mouseScreen  = tr[QStringLiteral("mouseScreen")].toString();
     s.micEnabled   = tr[QStringLiteral("mic")].toBool(true);
     s.webcamEnabled= tr[QStringLiteral("webcam")].toBool(false);

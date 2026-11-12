@@ -12,6 +12,7 @@
 #include <QProcess>
 #include <QElapsedTimer>
 #include <QVector>
+#include <QImage>
 
 struct FaceReading
 {
@@ -31,6 +32,11 @@ struct FaceReading
     float jawSide = 0, frown = 0, stretch = 0;
     // canais ARKit extras
     float cheekSquint = 0, noseSneer = 0, mouthDimple = 0, mouthPress = 0;
+    // geometria (olhos/boca/sobrancelha)
+    float earL = 0.25f, earR = 0.25f;      // EAR (aspect ratio de cada olho)
+    float mar = 0.15f;                     // MAR (altura/largura da boca)
+    float mouthX = 0, mouthY = 0;          // deslocamento da boca vs centro do rosto
+    float browL = 0, browR = 0;            // sobrancelhas separadas
 };
 
 struct FaceNeutral
@@ -38,6 +44,8 @@ struct FaceNeutral
     float yaw = 0, pitch = 0, roll = 0;
     float eyeX = 0, eyeY = 0, mouth = 0, brow = 0;
     float faceX = 0, faceY = 0, faceZ = 0, faceScale = 1.0f;
+    // geometria: neutros
+    float earL = 0.25f, earR = 0.25f, mar = 0.15f, mouthX = 0, mouthY = 0;
     bool  valid = false;
 };
 
@@ -63,6 +71,11 @@ public:
     const FaceReading& face() const { return _face; }
     FaceNeutral neutral() const { return _neutral; }
 
+    // Liga/desliga a janela de debug da câmera (landmarks desenhados) no
+    // daemon, em runtime, via comando stdin. O valor é lembrado para
+    // re-aplicar se a webcam for reiniciada.
+    void setDebugCam(bool on);
+
     // Calibração: média dos valores durante ~1.5s com a pessoa olhando
     // reto pra câmera. Emite neutralCaptured() ao terminar.
     void calibrate(int ms = 1500);
@@ -73,6 +86,8 @@ signals:
     void logLine(const QString& line);    // saída de stderr do daemon
     void neutralCaptured(const FaceNeutral& n);
     void faceFoundChanged(bool found);
+    // Frame anotado do debug de rastreio (JPEG já decodificado)
+    void debugFrame(const QImage& img);
 
 private slots:
     void onReadyReadStdout();
@@ -93,6 +108,7 @@ private:
     QString _pythonExe, _scriptPath, _modelPath;
     int _cameraIndex = -1;
     int _width = 0, _height = 0;
+    bool _debugCam = false;
 
     bool _calibrating = false;
     QElapsedTimer _calTimer;
@@ -101,5 +117,6 @@ private:
     QVector<float> _calYaw, _calPitch, _calRoll;
     QVector<float> _calEyeX, _calEyeY, _calMouth, _calBrow;
     QVector<float> _calFaceX, _calFaceY, _calFaceZ, _calFaceScale;
+    QVector<float> _calEarL, _calEarR, _calMar, _calMouthX, _calMouthY;
     FaceNeutral _neutral;
 };

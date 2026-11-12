@@ -425,6 +425,7 @@ CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o: \
  /usr/include/qt6/QtCore/qiodevice.h /usr/include/qt6/QtCore/QIODevice \
  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
  /usr/include/qt6/QtCore/QProcess /usr/include/qt6/QtCore/qprocess.h \
+ /usr/include/qt6/QtGui/QImage \
  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h \
  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/../track/OneEuroFilter.h \
  /usr/include/qt6/QtWidgets/QApplication \
@@ -454,7 +455,7 @@ CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o: \
  /usr/include/qt6/QtWidgets/QGridLayout /usr/include/qt6/QtWidgets/QLabel \
  /usr/include/qt6/QtWidgets/qlabel.h /usr/include/qt6/QtWidgets/qframe.h \
  /usr/include/qt6/QtGui/qpicture.h /usr/include/qt6/QtGui/qtextdocument.h \
- /usr/include/qt6/QtWidgets/QPushButton \
+ /usr/include/qt6/QtGui/QPixmap /usr/include/qt6/QtWidgets/QPushButton \
  /usr/include/qt6/QtWidgets/qpushbutton.h \
  /usr/include/qt6/QtWidgets/qabstractbutton.h \
  /usr/include/qt6/QtWidgets/QToolButton \
