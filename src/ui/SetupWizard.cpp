@@ -21,7 +21,7 @@ SetupWizard::SetupWizard(const QStringList& cameraNames,
                          const QStringList& micNames, QWidget* parent)
     : QWizard(parent)
 {
-    setWindowTitle(QStringLiteral("Configuração automática — GummVTuber"));
+    setWindowTitle(QStringLiteral("Configuração automática — OpentubeStudio"));
     setOption(QWizard::NoBackButtonOnLastPage, true);
     resize(560, 440);
 

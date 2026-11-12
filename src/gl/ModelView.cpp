@@ -152,7 +152,7 @@ bool ModelView::ensureModelGl()
     QString err;
     if (!_model->SetupGl(qMax(1, int(width() * devicePixelRatioF())),
                          qMax(1, int(height() * devicePixelRatioF())), &err)) {
-        qWarning("[GummVTuber] %s", qPrintable(err));
+        qWarning("[OpentubeStudio] %s", qPrintable(err));
         _lastError = err;
         _model.reset();
         return false;

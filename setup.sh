@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ---------------------------------------------------------------------------
-# GummVTuber — instalação em 1 clique
+# OpentubeStudio — instalação em 1 clique
 #   • baixa o Cubism SDK oficial da Live2D (grátis; ao baixar você aceita a
 #     licença gratuita da Live2D — https://www.live2d.com/eula/)
 #   • baixa o modelo de rastreio facial (MediaPipe, do Google, grátis)
@@ -17,7 +17,7 @@ OSF_DIR="tools/OpenSeeFace"
 OSF_URL="https://github.com/emilianavt/OpenSeeFace.git"
 
 # ---------------------------------------------------------------------------
-echo "=== GummVTuber :: instalação ==="
+echo "=== OpentubeStudio :: instalação ==="
 
 # 0) OpenSeeFace (mesmo rastreador que o VTube Studio usa) -------------------
 if [ ! -f "$OSF_DIR/tracker.py" ]; then
@@ -114,14 +114,14 @@ fi
 
 # 6) Atalho no menu do sistema ----------------------------------------------
 mkdir -p "$HOME/.local/share/applications"
-cp -f "Models/Gum/icon.png" build/gummvtuber-icon.png 2>/dev/null || true
-cat > "$HOME/.local/share/applications/gummvtuber.desktop" << EOF
+cp -f "icon.png" build/opentubestudio-icon.png 2>/dev/null || true
+cat > "$HOME/.local/share/applications/opentubestudio.desktop" << EOF
 [Desktop Entry]
 Type=Application
-Name=GummVTuber
+Name=OpentubeStudio
 Comment=Player Live2D para Linux (estilo VTube Studio)
-Exec=$(pwd)/build/GummVTuber
-Icon=$(pwd)/build/gummvtuber-icon.png
+Exec=$(pwd)/build/OpentubeStudio
+Icon=$(pwd)/build/opentubestudio-icon.png
 Terminal=false
 Categories=AudioVideo;Graphics;
 EOF
@@ -129,4 +129,4 @@ update-desktop-database "$HOME/.local/share/applications" 2>/dev/null || true
 
 echo ""
 echo "=== Tudo pronto! ==="
-echo "Abra com:  ./iniciar.sh     (ou 'GummVTuber' no menu do sistema)"
+echo "Abra com:  ./iniciar.sh     (ou 'OpentubeStudio' no menu do sistema)"

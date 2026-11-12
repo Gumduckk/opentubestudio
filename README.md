@@ -1,4 +1,4 @@
-# GummVTuber
+# OpentubeStudio
 
 Aplicação de Live2D para Linux que anima o seu avatar com movimentos reais —
 estilo VTube Studio, mas 100% offline e gratuito. Funciona com mouse,
@@ -7,8 +7,8 @@ microfone (lip sync) e **webcam com rastreio facial** (MediaPipe).
 ## Instalar (do zero ao app rodando em um comando)
 
 ```bash
-git clone <seu-repo> gummvtuber
-cd gummvtuber
+git clone <seu-repo> opentubestudio
+cd opentubestudio
 ./portable.sh      # instala Qt6 + compilador, baixa o SDK da Live2D,
                    # instala o mediapipe num venv, compila e cria o atalho
 ```
@@ -20,7 +20,7 @@ Ao final:
 ./iniciar.sh --x11  # forçando X11/XWayland (melhor para OBS capturar)
 ```
 
-Ou abra "GummVTuber" pelo menu de aplicativos.
+Ou abra "OpentubeStudio" pelo menu de aplicativos.
 
 ### O que o `./portable.sh` faz
 

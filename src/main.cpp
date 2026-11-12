@@ -1,5 +1,5 @@
 /*
- * GummVTuber — player Live2D nativo para Linux (estilo VTube Studio).
+ * OpentubeStudio — player Live2D nativo para Linux (estilo VTube Studio).
  *
  * Renderiza modelos Live2D (Cubism 3/4/5) com:
  *   - fundo de tela verde (cor configurável) ou transparente, para OBS;
@@ -10,6 +10,8 @@
 #include <QSurfaceFormat>
 #include <QDir>
 #include <QFile>
+#include <QFileInfo>
+#include <QIcon>
 #include <QTimer>
 
 #include <cstdlib>
@@ -80,8 +82,13 @@ int main(int argc, char** argv)
     QSurfaceFormat::setDefaultFormat(fmt);
 
     QApplication app(argc, argv);
-    QApplication::setApplicationName(QStringLiteral("GummVTuber"));
-    QApplication::setOrganizationName(QStringLiteral("GummVTuber"));
+    QApplication::setApplicationName(QStringLiteral("OpentubeStudio"));
+    QApplication::setOrganizationName(QStringLiteral("OpentubeStudio"));
+
+    // Ícone do aplicativo (placeholder; trocar icon.png pela arte final)
+    const QString iconPath = QCoreApplication::applicationDirPath() + QStringLiteral("/icon.png");
+    if (QFileInfo::exists(iconPath))
+        app.setWindowIcon(QIcon(iconPath));
 
     // Os shaders do Cubism Framework e o rastreador Python são resolvidos
     // relativamente ao diretório do executável.

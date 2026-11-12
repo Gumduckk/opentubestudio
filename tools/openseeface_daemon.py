@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-openseeface_daemon.py — rastreador facial do GummVTuber via OpenSeeFace.
+openseeface_daemon.py — rastreador facial do OpentubeStudio via OpenSeeFace.
 
 O OpenSeeFace (github.com/emilianavt/OpenSeeFace) é o mesmo rastreador que o
 VTube Studio usa por baixo: rede MobileNetV3 em ONNX, roda na CPU a 30-60 fps.
@@ -22,7 +22,7 @@ import sys
 import time
 
 def log(*a):
-    print("[GummVTuber:webcam]", *a, file=sys.stderr, flush=True)
+    print("[OpentubeStudio:webcam]", *a, file=sys.stderr, flush=True)
 
 def die(msg, code):
     log("ERRO:", msg)

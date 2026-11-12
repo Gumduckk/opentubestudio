@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# GummVTuber — setup completo para quem baixou o repositório.
+# OpentubeStudio — setup completo para quem baixou o repositório.
 # Instala as dependências do sistema (com sudo), baixa o SDK/modelos e
 # compila tudo sozinho. Um comando só:
 #
@@ -9,7 +9,7 @@
 set -e
 cd "$(dirname "$0")"
 
-echo "=== GummVTuber :: instalação 1-comando ==="
+echo "=== OpentubeStudio :: instalação 1-comando ==="
 
 # ---- 1) Dependências do sistema -------------------------------------------
 echo "-> Instalando dependências do sistema..."
@@ -38,5 +38,5 @@ fi
 
 echo ""
 echo "=== Tudo pronto! ==="
-echo "Abra com:  ./iniciar.sh       (ou 'GummVTuber' no menu do sistema)"
+echo "Abra com:  ./iniciar.sh       (ou 'OpentubeStudio' no menu do sistema)"
 echo "Para OBS:  ./iniciar.sh --x11"

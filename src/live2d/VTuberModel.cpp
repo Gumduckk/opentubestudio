@@ -285,7 +285,7 @@ void VTuberModel::setupTextures()
         const QString path = _dir + QLatin1Char('/') + rel;
         QImage img(path);
         if (img.isNull()) {
-            qWarning("[GummVTuber] textura não encontrada: %s", qPrintable(path));
+            qWarning("[OpentubeStudio] textura não encontrada: %s", qPrintable(path));
             continue;
         }
 

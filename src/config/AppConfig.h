@@ -1,8 +1,8 @@
 #pragma once
 /*
- * AppConfig — configurações do GummVTuber.
+ * AppConfig — configurações do OpentubeStudio.
  *
- * Guarda tudo em ~/.config/GummVTuber/GummVTuber.conf (via QSettings):
+ * Guarda tudo em ~/.config/OpentubeStudio/OpentubeStudio.conf (via QSettings):
  * modelo, fundo (verde/transparente/cor), opções de OBS, rastreio e o
  * mapeamento de parâmetros (no formato do VTube Studio: entrada -> parâmetro
  * Live2D com faixas de entrada/saída e suavização).

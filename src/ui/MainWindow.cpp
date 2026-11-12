@@ -48,7 +48,7 @@
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent)
 {
-    setWindowTitle(QStringLiteral("GummVTuber — Live2D no Linux"));
+    setWindowTitle(QStringLiteral("OpentubeStudio — Live2D no Linux"));
     _settings = AppConfig::load();
 
     _persistDebounce.setSingleShot(true);
@@ -643,9 +643,9 @@ void MainWindow::buildBackgroundTab()
     obsHelp->setTextFormat(Qt::RichText);
     obsHelp->setText(QStringLiteral(
         "<b>Como usar no OBS Studio</b><br>"
-        "1. Deixe o fundo <b>verde</b> aqui no GummVTuber.<br>"
+        "1. Deixe o fundo <b>verde</b> aqui no OpentubeStudio.<br>"
         "2. No OBS: <i>Fonte → + → Captura de Tela</i> (PipeWire) e escolha a "
-        "janela do GummVTuber — ou <i>Captura de Janela</i> se estiver no X11.<br>"
+        "janela do OpentubeStudio — ou <i>Captura de Janela</i> se estiver no X11.<br>"
         "3. No filtro da fonte: <i>+ → Chroma Key</i>, cor de corte "
         "<b>Verde</b> (Similaridade ~200, Suavidade ~80).<br><br>"
         "<b>Fundo transparente:</b> funciona melhor no X11 (ou rodando com "
@@ -840,7 +840,7 @@ void MainWindow::loadModel(const QString& path)
         const int added = AppConfig::ensureTrackingMappings(
             _settings, _view->model()->parameterIds());
         if (added > 0)
-            qInfo("[GummVTuber] %d vínculos de tracking novos adicionados ao modelo", added);
+            qInfo("[OpentubeStudio] %d vínculos de tracking novos adicionados ao modelo", added);
         rebuildMappingTable();
     }
     rebuildExpressionButtons();
@@ -1243,8 +1243,8 @@ QString MainWindow::faceModelPath() const
     const QString appDir = QCoreApplication::applicationDirPath();
     const QStringList candidates = {
         appDir + QStringLiteral("/tools/models/face_landmarker.task"),
-        QStringLiteral("~/.local/share/gummvtuber/face_landmarker.task"),
-        QDir::home().filePath(QStringLiteral(".local/share/gummvtuber/face_landmarker.task")),
+        QStringLiteral("~/.local/share/opentubestudio/face_landmarker.task"),
+        QDir::home().filePath(QStringLiteral(".local/share/opentubestudio/face_landmarker.task")),
     };
     for (const QString& c : candidates) {
         const QString expanded = c.startsWith(QLatin1Char('~'))

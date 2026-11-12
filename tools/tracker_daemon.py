@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-tracker_daemon.py — rastreador facial do GummVTuber.
+tracker_daemon.py — rastreador facial do OpentubeStudio.
 
 Usa o MediaPipe Face Landmarker (Google, grátis, roda 100% offline) para ler
 a webcam e emitir, uma linha JSON por frame, os dados usados pelo app:
@@ -29,7 +29,7 @@ import time
 
 
 def log(*a):
-    print("[GummVTuber:webcam]", *a, file=sys.stderr, flush=True)
+    print("[OpentubeStudio:webcam]", *a, file=sys.stderr, flush=True)
 
 
 def die(msg, code):
@@ -49,7 +49,7 @@ except Exception as e:  # noqa: BLE001
 
 
 def parse_args():
-    ap = argparse.ArgumentParser(description="Rastreador facial do GummVTuber")
+    ap = argparse.ArgumentParser(description="Rastreador facial do OpentubeStudio")
     ap.add_argument("--model", required=True, help="caminho do face_landmarker.task")
     ap.add_argument("--camera", type=int, default=0, help="índice da câmera (v4l2)")
     ap.add_argument("--width", type=int, default=1280, help="(ignorado; compat)")
@@ -333,7 +333,7 @@ def draw_debug(frame, lm, out):
     emit_frame(frame)
     if DEBUG_CAM_ACTIVE and not DEBUG_FAILED:
         try:
-            cv2.imshow("GummVTuber — debug de rastreio", frame)
+            cv2.imshow("OpentubeStudio — debug de rastreio", frame)
             cv2.waitKey(1)  # bombeia a janela; fecha com Ctrl+C do app
         except Exception as e:
             # Sem display / OpenCV sem GUI: avisa uma vez; a UI continua
@@ -433,7 +433,7 @@ def main():
                     emit_frame(frame)
                     if not DEBUG_FAILED:
                         try:
-                            cv2.imshow("GummVTuber — debug de rastreio", frame)
+                            cv2.imshow("OpentubeStudio — debug de rastreio", frame)
                             cv2.waitKey(1)
                         except Exception as e:
                             log("janela do OpenCV desativada: %s" % e)

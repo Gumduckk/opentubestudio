@@ -252,7 +252,7 @@ AppSettings AppSettings::fromJson(const QJsonObject& o)
 // ---------------------------------------------------------------------------
 static QSettings makeSettings()
 {
-    return QSettings(QStringLiteral("GummVTuber"), QStringLiteral("GummVTuber"));
+    return QSettings(QStringLiteral("OpentubeStudio"), QStringLiteral("OpentubeStudio"));
 }
 
 AppSettings AppConfig::load()

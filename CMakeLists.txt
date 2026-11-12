@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(GummVTuber LANGUAGES C CXX)
+project(OpentubeStudio LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -40,7 +40,7 @@ target_link_libraries(Framework Live2DCubismCore)
 # ---------------------------------------------------------------------------
 # Aplicativo
 # ---------------------------------------------------------------------------
-add_executable(GummVTuber
+add_executable(OpentubeStudio
   src/main.cpp
   src/config/AppConfig.h
   src/config/AppConfig.cpp
@@ -64,12 +64,12 @@ add_executable(GummVTuber
   src/ui/SetupWizard.cpp
 )
 
-target_include_directories(GummVTuber PRIVATE
+target_include_directories(OpentubeStudio PRIVATE
   src
   ${CMAKE_CURRENT_SOURCE_DIR}/third_party/glew_shim
 )
 
-target_link_libraries(GummVTuber PRIVATE
+target_link_libraries(OpentubeStudio PRIVATE
   Qt6::Widgets
   Qt6::OpenGL
   Qt6::OpenGLWidgets
@@ -79,12 +79,15 @@ target_link_libraries(GummVTuber PRIVATE
 )
 
 # Shaders desktop do framework (carregados do diretório do executável)
-add_custom_command(TARGET GummVTuber POST_BUILD
+add_custom_command(TARGET OpentubeStudio POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy_directory
           ${FRAMEWORK_PATH}/src/Rendering/OpenGL/Shaders/Standard
-          $<TARGET_FILE_DIR:GummVTuber>/FrameworkShaders
+          $<TARGET_FILE_DIR:OpentubeStudio>/FrameworkShaders
   COMMAND ${CMAKE_COMMAND} -E copy_directory
           ${CMAKE_CURRENT_SOURCE_DIR}/tools
-          $<TARGET_FILE_DIR:GummVTuber>/tools
-  COMMENT "Copiando shaders do Cubism Framework e ferramentas Python"
+          $<TARGET_FILE_DIR:OpentubeStudio>/tools
+  COMMAND ${CMAKE_COMMAND} -E copy
+          ${CMAKE_CURRENT_SOURCE_DIR}/icon.png
+          $<TARGET_FILE_DIR:OpentubeStudio>/icon.png
+  COMMENT "Copiando shaders do Cubism Framework, ferramentas Python e o ícone"
 )

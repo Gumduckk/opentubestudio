@@ -1,6 +1,6 @@
 #pragma once
 /*
- * MainWindow — janela principal do GummVTuber.
+ * MainWindow — janela principal do OpentubeStudio.
  * Visor do modelo + painel de configuração (rastreio, parâmetros,
  * fundo/OBS, modelo) + assistente de configuração automática.
  */
