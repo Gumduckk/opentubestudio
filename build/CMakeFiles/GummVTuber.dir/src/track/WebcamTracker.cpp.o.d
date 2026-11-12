@@ -1,7 +1,7 @@
 CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o: \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/track/WebcamTracker.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.cpp \
  /usr/include/stdc-predef.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/track/WebcamTracker.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
  /usr/include/qt6/QtCore/QObject /usr/include/qt6/QtCore/qobject.h \
  /usr/include/qt6/QtCore/qobjectdefs.h \
  /usr/include/qt6/QtCore/qnamespace.h /usr/include/qt6/QtCore/qglobal.h \

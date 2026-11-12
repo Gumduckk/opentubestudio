@@ -1,12 +1,12 @@
 Framework/CMakeFiles/Framework.dir/src/CubismModelSettingJson.cpp.o: \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismModelSettingJson.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismModelSettingJson.cpp \
  /usr/include/stdc-predef.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismModelSettingJson.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismModelSetting.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFramework.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Live2DCubismCore.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Core/include/Live2DCubismCore.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFrameworkConfig.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismModelSettingJson.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismModelSetting.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFramework.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Live2DCubismCore.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Core/include/Live2DCubismCore.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFrameworkConfig.hpp \
  /usr/include/c++/16/new \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -19,8 +19,8 @@ Framework/CMakeFiles/Framework.dir/src/CubismModelSettingJson.cpp.o: \
  /usr/include/c++/16/bits/exception.h /usr/include/c++/16/bits/version.h \
  /usr/include/c++/16/bits/new_except.h \
  /usr/include/c++/16/bits/exception_defines.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismAllocator.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/CubismBasicType.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismAllocator.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/CubismBasicType.hpp \
  /usr/include/c++/16/cstddef \
  /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stddef.h \
  /usr/include/c++/16/cstdlib /usr/include/stdlib.h \
@@ -109,12 +109,12 @@ Framework/CMakeFiles/Framework.dir/src/CubismModelSettingJson.cpp.o: \
  /usr/include/c++/16/bits/uses_allocator.h \
  /usr/include/c++/16/bits/uses_allocator_args.h /usr/include/c++/16/tuple \
  /usr/include/c++/16/bits/invoke.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmMap.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmString.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmMap.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmString.hpp \
  /usr/include/string.h /usr/include/strings.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismDebug.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Id/CubismId.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismJsonHolder.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismJson.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmVector.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Id/CubismIdManager.hpp
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismDebug.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Id/CubismId.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismJsonHolder.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismJson.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmVector.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Id/CubismIdManager.hpp

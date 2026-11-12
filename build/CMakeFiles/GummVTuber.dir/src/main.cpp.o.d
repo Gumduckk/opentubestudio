@@ -1,5 +1,5 @@
 CMakeFiles/GummVTuber.dir/src/main.cpp.o: \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/main.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/qt6/QtWidgets/QApplication \
  /usr/include/qt6/QtWidgets/qapplication.h \
  /usr/include/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -366,13 +366,13 @@ CMakeFiles/GummVTuber.dir/src/main.cpp.o: \
  /usr/include/qt6/QtCore/qfile.h /usr/include/qt6/QtCore/qfileinfo.h \
  /usr/include/qt6/QtCore/qtimezone.h /usr/include/qt6/QtCore/QFile \
  /usr/include/qt6/QtCore/QTimer /usr/include/qt6/QtCore/qtimer.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFramework.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Live2DCubismCore.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Core/include/Live2DCubismCore.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFrameworkConfig.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismAllocator.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/CubismBasicType.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/ui/MainWindow.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFramework.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Live2DCubismCore.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Core/include/Live2DCubismCore.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFrameworkConfig.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismAllocator.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/CubismBasicType.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/MainWindow.h \
  /usr/include/qt6/QtWidgets/QMainWindow \
  /usr/include/qt6/QtWidgets/qmainwindow.h \
  /usr/include/qt6/QtWidgets/qwidget.h /usr/include/qt6/QtGui/qaction.h \
@@ -383,7 +383,7 @@ CMakeFiles/GummVTuber.dir/src/main.cpp.o: \
  /usr/include/qt6/QtGui/qfontvariableaxis.h \
  /usr/include/qt6/QtWidgets/qsizepolicy.h \
  /usr/include/qt6/QtWidgets/qtabwidget.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/config/AppConfig.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.h \
  /usr/include/qt6/QtCore/QString /usr/include/qt6/QtCore/QStringList \
  /usr/include/qt6/QtCore/QVector /usr/include/qt6/QtCore/qvector.h \
  /usr/include/qt6/QtGui/QColor /usr/include/qt6/QtCore/QJsonObject \

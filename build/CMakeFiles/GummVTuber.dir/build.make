@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk"
+CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/build"
+CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/GummVTuber.dir/depend.make
@@ -71,9 +71,9 @@ include CMakeFiles/GummVTuber.dir/flags.make
 
 GummVTuber_autogen/timestamp: /usr/lib/qt6/moc
 GummVTuber_autogen/timestamp: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target GummVTuber"
-	/usr/bin/cmake -E cmake_autogen "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/GummVTuber_autogen.dir/AutogenInfo.json" Release
-	/usr/bin/cmake -E touch "/home/gumduck/Documentos/GitHub/seila kk/build/GummVTuber_autogen/timestamp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target GummVTuber"
+	/usr/bin/cmake -E cmake_autogen "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/GummVTuber_autogen.dir/AutogenInfo.json" Release
+	/usr/bin/cmake -E touch "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber_autogen/timestamp"
 
 CMakeFiles/GummVTuber.dir/codegen:
 .PHONY : CMakeFiles/GummVTuber.dir/codegen
@@ -81,156 +81,156 @@ CMakeFiles/GummVTuber.dir/codegen:
 CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o: CMakeFiles/GummVTuber.dir/flags.make
 CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o: GummVTuber_autogen/mocs_compilation.cpp
 CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o -MF CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/build/GummVTuber_autogen/mocs_compilation.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o -MF CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber_autogen/mocs_compilation.cpp"
 
 CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/build/GummVTuber_autogen/mocs_compilation.cpp" > CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber_autogen/mocs_compilation.cpp" > CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/build/GummVTuber_autogen/mocs_compilation.cpp" -o CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber_autogen/mocs_compilation.cpp" -o CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/GummVTuber.dir/src/main.cpp.o: CMakeFiles/GummVTuber.dir/flags.make
-CMakeFiles/GummVTuber.dir/src/main.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/src/main.cpp
+CMakeFiles/GummVTuber.dir/src/main.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/main.cpp
 CMakeFiles/GummVTuber.dir/src/main.cpp.o: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GummVTuber.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/main.cpp.o -MF CMakeFiles/GummVTuber.dir/src/main.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/main.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GummVTuber.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/main.cpp.o -MF CMakeFiles/GummVTuber.dir/src/main.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/main.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/main.cpp"
 
 CMakeFiles/GummVTuber.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GummVTuber.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/src/main.cpp" > CMakeFiles/GummVTuber.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/main.cpp" > CMakeFiles/GummVTuber.dir/src/main.cpp.i
 
 CMakeFiles/GummVTuber.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GummVTuber.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/src/main.cpp" -o CMakeFiles/GummVTuber.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/main.cpp" -o CMakeFiles/GummVTuber.dir/src/main.cpp.s
 
 CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o: CMakeFiles/GummVTuber.dir/flags.make
-CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/src/config/AppConfig.cpp
+CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.cpp
 CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o -MF CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/src/config/AppConfig.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o -MF CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/config/AppConfig.cpp"
 
 CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/src/config/AppConfig.cpp" > CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/config/AppConfig.cpp" > CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.i
 
 CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/src/config/AppConfig.cpp" -o CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/config/AppConfig.cpp" -o CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.s
 
 CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o: CMakeFiles/GummVTuber.dir/flags.make
-CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/src/live2d/VTuberModel.cpp
+CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/live2d/VTuberModel.cpp
 CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o -MF CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/src/live2d/VTuberModel.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o -MF CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/live2d/VTuberModel.cpp"
 
 CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/src/live2d/VTuberModel.cpp" > CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/live2d/VTuberModel.cpp" > CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.i
 
 CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/src/live2d/VTuberModel.cpp" -o CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/live2d/VTuberModel.cpp" -o CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.s
 
 CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o: CMakeFiles/GummVTuber.dir/flags.make
-CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/src/gl/ModelView.cpp
+CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/gl/ModelView.cpp
 CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o -MF CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/src/gl/ModelView.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o -MF CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/gl/ModelView.cpp"
 
 CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/src/gl/ModelView.cpp" > CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/gl/ModelView.cpp" > CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.i
 
 CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/src/gl/ModelView.cpp" -o CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/gl/ModelView.cpp" -o CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.s
 
 CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o: CMakeFiles/GummVTuber.dir/flags.make
-CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/src/track/MouseTracker.cpp
+CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.cpp
 CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o -MF CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/src/track/MouseTracker.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o -MF CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MouseTracker.cpp"
 
 CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/src/track/MouseTracker.cpp" > CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MouseTracker.cpp" > CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.i
 
 CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/src/track/MouseTracker.cpp" -o CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MouseTracker.cpp" -o CMakeFiles/GummVTuber.dir/src/track/MouseTracker.cpp.s
 
 CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o: CMakeFiles/GummVTuber.dir/flags.make
-CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/src/track/EvdevMouse.cpp
+CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.cpp
 CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o -MF CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/src/track/EvdevMouse.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o -MF CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/EvdevMouse.cpp"
 
 CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/src/track/EvdevMouse.cpp" > CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/EvdevMouse.cpp" > CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.i
 
 CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/src/track/EvdevMouse.cpp" -o CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/EvdevMouse.cpp" -o CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.s
 
 CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o: CMakeFiles/GummVTuber.dir/flags.make
-CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/src/track/MicTracker.cpp
+CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.cpp
 CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o -MF CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/src/track/MicTracker.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o -MF CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MicTracker.cpp"
 
 CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/src/track/MicTracker.cpp" > CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MicTracker.cpp" > CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.i
 
 CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/src/track/MicTracker.cpp" -o CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MicTracker.cpp" -o CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.s
 
 CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o: CMakeFiles/GummVTuber.dir/flags.make
-CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/src/track/WebcamTracker.cpp
+CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.cpp
 CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o -MF CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/src/track/WebcamTracker.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o -MF CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/WebcamTracker.cpp"
 
 CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/src/track/WebcamTracker.cpp" > CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/WebcamTracker.cpp" > CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.i
 
 CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/src/track/WebcamTracker.cpp" -o CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/WebcamTracker.cpp" -o CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.s
 
 CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o: CMakeFiles/GummVTuber.dir/flags.make
-CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/src/ui/MainWindow.cpp
+CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/MainWindow.cpp
 CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o -MF CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/src/ui/MainWindow.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o -MF CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/MainWindow.cpp"
 
 CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/src/ui/MainWindow.cpp" > CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/MainWindow.cpp" > CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.i
 
 CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/src/ui/MainWindow.cpp" -o CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/MainWindow.cpp" -o CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.s
 
 CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o: CMakeFiles/GummVTuber.dir/flags.make
-CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/src/ui/SetupWizard.cpp
+CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/SetupWizard.cpp
 CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o: CMakeFiles/GummVTuber.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o -MF CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/src/ui/SetupWizard.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o -MF CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o.d -o CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/SetupWizard.cpp"
 
 CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/src/ui/SetupWizard.cpp" > CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/SetupWizard.cpp" > CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.i
 
 CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/src/ui/SetupWizard.cpp" -o CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/SetupWizard.cpp" -o CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.s
 
 # Object files for target GummVTuber
 GummVTuber_OBJECTS = \
@@ -272,13 +272,13 @@ GummVTuber: /usr/lib/libGLX.so
 GummVTuber: /usr/lib/libOpenGL.so
 GummVTuber: /usr/lib/libQt6Network.so.6.12.0
 GummVTuber: /usr/lib/libQt6Core.so.6.12.0
-GummVTuber: /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Core/lib/linux/x86_64/libLive2DCubismCore.a
+GummVTuber: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Core/lib/linux/x86_64/libLive2DCubismCore.a
 GummVTuber: CMakeFiles/GummVTuber.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable GummVTuber"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable GummVTuber"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GummVTuber.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copiando shaders do Cubism Framework e ferramentas Python"
-	/usr/bin/cmake -E copy_directory /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/Shaders/Standard /home/gumduck/Documentos/GitHub/seila\ kk/build/FrameworkShaders
-	/usr/bin/cmake -E copy_directory /home/gumduck/Documentos/GitHub/seila\ kk/tools /home/gumduck/Documentos/GitHub/seila\ kk/build/tools
+	/usr/bin/cmake -E copy_directory /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/Shaders/Standard /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/FrameworkShaders
+	/usr/bin/cmake -E copy_directory /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/tools /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/tools
 
 # Rule to build all files generated by this target.
 CMakeFiles/GummVTuber.dir/build: GummVTuber
@@ -289,6 +289,6 @@ CMakeFiles/GummVTuber.dir/clean:
 .PHONY : CMakeFiles/GummVTuber.dir/clean
 
 CMakeFiles/GummVTuber.dir/depend: GummVTuber_autogen/timestamp
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gumduck/Documentos/GitHub/seila kk" "/home/gumduck/Documentos/GitHub/seila kk" "/home/gumduck/Documentos/GitHub/seila kk/build" "/home/gumduck/Documentos/GitHub/seila kk/build" "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/GummVTuber.dir/DependInfo.cmake" "--color=$(COLOR)" GummVTuber
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/GummVTuber.dir/DependInfo.cmake" "--color=$(COLOR)" GummVTuber
 .PHONY : CMakeFiles/GummVTuber.dir/depend
 

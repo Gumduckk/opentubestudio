@@ -1,8 +1,8 @@
 CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o: \
- /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/mocs_compilation.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/FONZTXGS3D/moc_ModelView.cpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/FONZTXGS3D/../../../src/gl/ModelView.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/FONZTXGS3D/moc_ModelView.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/FONZTXGS3D/../../../src/gl/ModelView.h \
  /usr/include/qt6/QtOpenGLWidgets/QOpenGLWidget \
  /usr/include/qt6/QtOpenGLWidgets/qopenglwidget.h \
  /usr/include/qt6/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
@@ -343,7 +343,7 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtCore/qabstracteventdispatcher.h \
  /usr/include/qt6/QtCore/qeventloop.h \
  /usr/include/qt6/QtCore/qdeadlinetimer.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/config/AppConfig.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.h \
  /usr/include/qt6/QtCore/QString /usr/include/qt6/QtCore/QStringList \
  /usr/include/qt6/QtCore/QVector /usr/include/qt6/QtCore/qvector.h \
  /usr/include/qt6/QtGui/QColor /usr/include/qt6/QtCore/QJsonObject \
@@ -357,54 +357,54 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtCore/qurl.h /usr/include/qt6/QtCore/quuid.h \
  /usr/include/qt6/QtCore/qjsondocument.h \
  /usr/include/qt6/QtCore/qjsonparseerror.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/live2d/VTuberModel.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/live2d/VTuberModel.h \
  /usr/include/qt6/QtCore/QHash \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismUserModel.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismPose.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModel.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFramework.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Live2DCubismCore.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Core/include/Live2DCubismCore.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFrameworkConfig.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismAllocator.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/CubismBasicType.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModelMultiplyAndScreenColor.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/CubismRenderer.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismMatrix44.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmVector.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmString.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismDebug.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmRectF.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/csmBlendMode.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmMap.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Id/CubismId.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismJson.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismEyeBlink.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismModelSetting.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismBreath.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismLook.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismModelMatrix.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismTargetPoint.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismMoc.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionManager.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/ACubismMotion.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionQueueManager.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismExpressionMotion.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismExpressionMotionManager.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Physics/CubismPhysics.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismVector2.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismUserModel.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismPose.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModel.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFramework.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Live2DCubismCore.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Core/include/Live2DCubismCore.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFrameworkConfig.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismAllocator.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/CubismBasicType.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModelMultiplyAndScreenColor.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/CubismRenderer.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismMatrix44.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmVector.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmString.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismDebug.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmRectF.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/csmBlendMode.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmMap.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Id/CubismId.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismJson.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismEyeBlink.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/ICubismModelSetting.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismBreath.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismLook.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismModelMatrix.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismTargetPoint.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismMoc.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionManager.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/ACubismMotion.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionQueueManager.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismExpressionMotion.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismExpressionMotionManager.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Physics/CubismPhysics.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Math/CubismVector2.hpp \
  /usr/include/c++/16/math.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Physics/CubismPhysicsInternal.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModelUserData.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismUpdateScheduler.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/ICubismUpdater.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismModelSettingJson.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismJsonHolder.hpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/track/MouseTracker.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Physics/CubismPhysicsInternal.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismModelUserData.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismUpdateScheduler.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/ICubismUpdater.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismModelSettingJson.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismJsonHolder.hpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.h \
  /usr/include/qt6/QtCore/QObject \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/track/EvdevMouse.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.h \
  /usr/include/qt6/QtCore/QPoint /usr/include/qt6/QtCore/QList \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/track/MicTracker.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.h \
  /usr/include/qt6/QtMultimedia/QMediaDevices \
  /usr/include/qt6/QtMultimedia/qmediadevices.h \
  /usr/include/qt6/QtMultimedia/qtmultimediaglobal.h \
@@ -417,19 +417,19 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtMultimedia/qtaudio.h \
  /usr/include/qt6/QtMultimedia/qaudio.h \
  /usr/include/qt6/QtCore/qiodevice.h /usr/include/qt6/QtCore/QIODevice \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/track/WebcamTracker.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
  /usr/include/qt6/QtCore/QProcess /usr/include/qt6/QtCore/qprocess.h \
  /usr/include/qt6/QtCore/qtmochelpers.h \
  /usr/include/qt6/QtCore/qtmocconstants.h \
  /usr/include/qt6/QtCore/q20algorithm.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/UCUPM3LNIJ/moc_MicTracker.cpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/UCUPM3LNIJ/moc_WebcamTracker.cpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/YPKJ5OE7LN/moc_MainWindow.cpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/YPKJ5OE7LN/../../../src/ui/MainWindow.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/UCUPM3LNIJ/moc_MicTracker.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/UCUPM3LNIJ/moc_WebcamTracker.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/YPKJ5OE7LN/moc_MainWindow.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/YPKJ5OE7LN/../../../src/ui/MainWindow.h \
  /usr/include/qt6/QtWidgets/QMainWindow \
  /usr/include/qt6/QtWidgets/qmainwindow.h \
  /usr/include/qt6/QtWidgets/qtabwidget.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/YPKJ5OE7LN/moc_SetupWizard.cpp \
- /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/YPKJ5OE7LN/../../../src/ui/SetupWizard.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/YPKJ5OE7LN/moc_SetupWizard.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/YPKJ5OE7LN/../../../src/ui/SetupWizard.h \
  /usr/include/qt6/QtWidgets/QWizard /usr/include/qt6/QtWidgets/qwizard.h \
  /usr/include/qt6/QtWidgets/qdialog.h

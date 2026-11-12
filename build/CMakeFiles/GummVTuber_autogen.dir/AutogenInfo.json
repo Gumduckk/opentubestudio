@@ -1,17 +1,17 @@
 {
-	"BUILD_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/build/GummVTuber_autogen",
-	"CMAKE_BINARY_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/gumduck/Documentos/GitHub/seila kk",
+	"BUILD_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber_autogen",
+	"CMAKE_BINARY_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/gumduck/Documentos/GitHub/seila kk/CMakeLists.txt",
-		"/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/4.4.4/CMakeSystem.cmake",
+		"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/CMakeLists.txt",
+		"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/4.4.5/CMakeSystem.cmake",
 		"/usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake",
-		"/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/4.4.4/CMakeCCompiler.cmake",
-		"/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/4.4.4/CMakeCXXCompiler.cmake",
+		"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/4.4.5/CMakeCCompiler.cmake",
+		"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/4.4.5/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/share/cmake/Modules/CMakeGenericSystem.cmake",
 		"/usr/share/cmake/Modules/CMakeInitializeConfigs.cmake",
@@ -629,70 +629,70 @@
 		"/usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake",
 		"/usr/share/cmake/Modules/FindPackageMessage.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/gumduck/Documentos/GitHub/seila kk",
+	"CMAKE_SOURCE_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/build/GummVTuber_autogen/deps",
+	"DEP_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "GummVTuber_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/config/AppConfig.h",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/config/AppConfig.h",
 			"Mu",
 			"6DQYUKT47J/moc_AppConfig.cpp",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/gl/ModelView.h",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/gl/ModelView.h",
 			"Mu",
 			"FONZTXGS3D/moc_ModelView.cpp",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/live2d/VTuberModel.h",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/live2d/VTuberModel.h",
 			"Mu",
 			"MKYQQBTVVO/moc_VTuberModel.cpp",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/track/EvdevMouse.h",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/EvdevMouse.h",
 			"Mu",
 			"UCUPM3LNIJ/moc_EvdevMouse.cpp",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/track/MicTracker.h",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MicTracker.h",
 			"Mu",
 			"UCUPM3LNIJ/moc_MicTracker.cpp",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/track/MouseTracker.h",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MouseTracker.h",
 			"Mu",
 			"UCUPM3LNIJ/moc_MouseTracker.cpp",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/track/WebcamTracker.h",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/WebcamTracker.h",
 			"Mu",
 			"UCUPM3LNIJ/moc_WebcamTracker.cpp",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/ui/MainWindow.h",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/MainWindow.h",
 			"Mu",
 			"YPKJ5OE7LN/moc_MainWindow.cpp",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/ui/SetupWizard.h",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/SetupWizard.h",
 			"Mu",
 			"YPKJ5OE7LN/moc_SetupWizard.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/build/GummVTuber_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/build/GummVTuber_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"CSM_TARGET_LINUX_GL",
@@ -714,9 +714,9 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/gumduck/Documentos/GitHub/seila kk/src",
-		"/home/gumduck/Documentos/GitHub/seila kk/third_party/glew_shim",
-		"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src",
+		"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src",
+		"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/third_party/glew_shim",
+		"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src",
 		"/usr/include/qt6/QtWidgets",
 		"/usr/include/qt6",
 		"/usr/include/qt6/QtCore",
@@ -726,7 +726,7 @@
 		"/usr/include/qt6/QtOpenGLWidgets",
 		"/usr/include/qt6/QtMultimedia",
 		"/usr/include/qt6/QtNetwork",
-		"/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Core/include",
+		"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Core/include",
 		"/usr/include",
 		"/usr/include/c++/16",
 		"/usr/include/c++/16/x86_64-pc-linux-gnu",
@@ -754,62 +754,66 @@
 		"-E",
 		"/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/build/GummVTuber_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 4,
-	"PARSE_CACHE_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/GummVTuber_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/GummVTuber_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 12,
-	"SETTINGS_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/GummVTuber_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/GummVTuber_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/config/AppConfig.cpp",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/config/AppConfig.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/gl/ModelView.cpp",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/gl/ModelView.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/live2d/VTuberModel.cpp",
-			"Mu",
-			null
-		],
-		[ "/home/gumduck/Documentos/GitHub/seila kk/src/main.cpp", "Mu", null ],
-		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/track/EvdevMouse.cpp",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/live2d/VTuberModel.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/track/MicTracker.cpp",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/main.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/track/MouseTracker.cpp",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/EvdevMouse.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/track/WebcamTracker.cpp",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MicTracker.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/ui/MainWindow.cpp",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MouseTracker.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/gumduck/Documentos/GitHub/seila kk/src/ui/SetupWizard.cpp",
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/WebcamTracker.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/MainWindow.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/SetupWizard.cpp",
 			"Mu",
 			null
 		]

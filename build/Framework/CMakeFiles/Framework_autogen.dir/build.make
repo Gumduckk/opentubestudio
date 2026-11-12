@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk"
+CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/build"
+CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build"
 
 # Utility rule file for Framework_autogen.
 
@@ -70,9 +70,9 @@ Framework/CMakeFiles/Framework_autogen: Framework/Framework_autogen/timestamp
 
 Framework/Framework_autogen/timestamp: /usr/lib/qt6/moc
 Framework/Framework_autogen/timestamp: Framework/CMakeFiles/Framework_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target Framework"
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build/Framework" && /usr/bin/cmake -E cmake_autogen "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/CMakeFiles/Framework_autogen.dir/AutogenInfo.json" Release
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build/Framework" && /usr/bin/cmake -E touch "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/Framework_autogen/timestamp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target Framework"
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework" && /usr/bin/cmake -E cmake_autogen "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework/CMakeFiles/Framework_autogen.dir/AutogenInfo.json" Release
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework" && /usr/bin/cmake -E touch "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework/Framework_autogen/timestamp"
 
 Framework/CMakeFiles/Framework_autogen.dir/codegen:
 .PHONY : Framework/CMakeFiles/Framework_autogen.dir/codegen
@@ -87,10 +87,10 @@ Framework/CMakeFiles/Framework_autogen.dir/build: Framework_autogen
 .PHONY : Framework/CMakeFiles/Framework_autogen.dir/build
 
 Framework/CMakeFiles/Framework_autogen.dir/clean:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build/Framework" && $(CMAKE_COMMAND) -P CMakeFiles/Framework_autogen.dir/cmake_clean.cmake
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework" && $(CMAKE_COMMAND) -P CMakeFiles/Framework_autogen.dir/cmake_clean.cmake
 .PHONY : Framework/CMakeFiles/Framework_autogen.dir/clean
 
 Framework/CMakeFiles/Framework_autogen.dir/depend:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gumduck/Documentos/GitHub/seila kk" "/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework" "/home/gumduck/Documentos/GitHub/seila kk/build" "/home/gumduck/Documentos/GitHub/seila kk/build/Framework" "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/CMakeFiles/Framework_autogen.dir/DependInfo.cmake" "--color=$(COLOR)" Framework_autogen
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework/CMakeFiles/Framework_autogen.dir/DependInfo.cmake" "--color=$(COLOR)" Framework_autogen
 .PHONY : Framework/CMakeFiles/Framework_autogen.dir/depend
 

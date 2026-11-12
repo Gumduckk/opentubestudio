@@ -1,7 +1,7 @@
 CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o: \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/track/MicTracker.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.cpp \
  /usr/include/stdc-predef.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/track/MicTracker.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.h \
  /usr/include/qt6/QtCore/QObject /usr/include/qt6/QtCore/qobject.h \
  /usr/include/qt6/QtCore/qobjectdefs.h \
  /usr/include/qt6/QtCore/qnamespace.h /usr/include/qt6/QtCore/qglobal.h \

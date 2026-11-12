@@ -31,6 +31,7 @@
 #include <QAction>
 #include <QMenu>
 #include <QDir>
+#include <QFile>
 #include <QFileInfo>
 #include <QCoreApplication>
 #include <QMediaDevices>
@@ -78,11 +79,15 @@ MainWindow::MainWindow(QWidget* parent)
         _lblCalibStatus->setText(r);
         QMessageBox::warning(this, QStringLiteral("Webcam"),
                              r + QStringLiteral("\n\nDica: rode ./setup.sh para instalar o "
-                               "OpenSeeFace (onnxruntime + opencv) em tools/venv."));
+                               "MediaPipe (mediapipe + opencv) em tools/venv."));
     });
 
     // Carrega modelo salvo, ou inicia o assistente na primeira vez
     applySettings();
+    // Se a webcam foi deixada ligada na sessão anterior, já começa o rastreio
+    // ao abrir o app (sem precisar marcar a caixa novamente).
+    if (_settings.webcamEnabled)
+        startWebcamIfEnabled();
     if (!_settings.modelPath.isEmpty() && QFileInfo::exists(_settings.modelPath)) {
         loadModel(_settings.modelPath);
         if (_settings.mappings.isEmpty())
@@ -99,9 +104,15 @@ MainWindow::MainWindow(QWidget* parent)
     connect(statusTimer, &QTimer::timeout, this, [this]() {
         QString t;
         if (_view->webcam()->running()) {
-            t = _view->webcam()->face().found
-                    ? QStringLiteral("Webcam: rosto detectado ✓")
-                    : QStringLiteral("Webcam: procurando rosto...");
+            const auto& f = _view->webcam()->face();
+t = f.found
+    ? QStringLiteral("Webcam ✓  yaw=%1 pitch=%2 roll=%3  jaw=%4 smile=%5  eyeX=%6 eyeY=%7")
+          .arg(f.yaw,0,'f',1).arg(f.pitch,0,'f',1).arg(f.roll,0,'f',1)
+          .arg(f.jaw,0,'f',2).arg(f.smile,0,'f',2)
+          .arg(f.eyeX,0,'f',2).arg(f.eyeY,0,'f',2)
+    : QStringLiteral("Webcam: procurando rosto...");
+        } else if (_view->webcam()->starting()) {
+            t = QStringLiteral("Webcam: iniciando...");
         } else {
             t = (_settings.mouseEnabled ? QStringLiteral("Mouse ") : QString())
                 + (_settings.micEnabled ? QStringLiteral("+ Microfone") : QString());
@@ -319,8 +330,15 @@ void MainWindow::buildTrackingTab()
         _settings.micEnabled = on; applySettings();
     });
     connect(_chkWebcam, &QCheckBox::toggled, this, [this](bool on) {
-        _settings.webcamEnabled = on; applySettings();
-        if (on) startWebcamIfEnabled(); else _view->webcam()->stop();
+        _settings.webcamEnabled = on;
+        applySettings();
+        if (on) {
+            startWebcamIfEnabled();
+        } else {
+            // Libera a câmera imediatamente (o LED apaga e o daemon encerra).
+            _view->webcam()->stop();
+            _lblCalibStatus->setText(QStringLiteral("Rastreio facial desligado."));
+        }
     });
     connect(_comboCam, &QComboBox::currentIndexChanged, this, [this](int i) {
         if (_rebuildingUi || i < 0)
@@ -334,16 +352,6 @@ void MainWindow::buildTrackingTab()
         const int i = _comboMic->currentIndex();
         if (i >= 0 && i < mics.size())
             _settings.micDevice = QString::fromUtf8(mics[i].id());
-        _persistDebounce.start();
-    });
-    connect(_comboScreen, &QComboBox::currentIndexChanged, this, [this](int i) {
-        if (i <= 0) {
-            _settings.mouseScreen.clear();
-        } else {
-            const auto screens = QGuiApplication::screens();
-            if (i - 1 < screens.size())
-                _settings.mouseScreen = screens[i - 1]->name();
-        }
         _persistDebounce.start();
     });
     connect(_sldSensHead, &QSlider::valueChanged, this, [this](int v2) {
@@ -421,6 +429,7 @@ void MainWindow::buildMappingTab()
         if (r >= 0 && r < _settings.mappings.size()) {
             _settings.mappings.removeAt(r);
             rebuildMappingTable();
+            _view->updateSettings(_settings);
             _persistDebounce.start();
         }
     });
@@ -454,6 +463,28 @@ void MainWindow::buildMappingTab()
     });
 
     _tabs->addTab(page, QStringLiteral("Parâmetros"));
+
+    // Aba de debug
+    auto* dbgPage = new QWidget(_tabs);
+    auto* dbgV = new QVBoxLayout(dbgPage);
+    auto* dbgLabel = new QLabel(QStringLiteral("Debug..."), dbgPage);
+    dbgLabel->setFont(QFont(QStringLiteral("Monospace"), 10));
+    dbgV->addWidget(dbgLabel);
+    dbgV->addStretch();
+    _tabs->addTab(dbgPage, QStringLiteral("Debug"));
+
+    auto* dbgTimer = new QTimer(this);
+    connect(dbgTimer, &QTimer::timeout, this, [this, dbgLabel]() {
+        if (_view->webcam()->running()) {
+            const auto& f = _view->webcam()->face();
+            dbgLabel->setText(QStringLiteral("esq/dir (yaw)=%1\ncima/baixo (pitch)=%2\ninclinação (roll)=%3\nrosto=%4")
+                                 .arg(f.yaw,0,'f',2).arg(f.pitch,0,'f',2).arg(f.roll,0,'f',2)
+                                 .arg(f.found ? QStringLiteral("sim") : QStringLiteral("não")));
+        } else {
+            dbgLabel->setText(QStringLiteral("Webcam inativa"));
+        }
+    });
+    dbgTimer->start(200);
 }
 
 void MainWindow::buildBackgroundTab()
@@ -525,12 +556,31 @@ void MainWindow::buildBackgroundTab()
     v->addWidget(_chkFrameless);
     v->addWidget(_chkAlwaysOnTop);
 
+    // Seletor de monitor usado pelo rastreio de mouse (multi-monitor).
+    v->addWidget(new QLabel(QStringLiteral("Monitor usado pelo rastreio (mouse):"), page));
+    _comboScreen = new QComboBox(page);
+    v->addWidget(_comboScreen);
+
     auto* h2 = new QHBoxLayout;
     _comboResolution = new QComboBox(page);
     _comboResolution->addItems({ QStringLiteral("Tamanho atual"),
                                  QStringLiteral("1920×1080"),
                                  QStringLiteral("1280×720"),
                                  QStringLiteral("1080×1920 (vertical)") });
+    // A conexão é feita aqui, depois que _comboScreen foi criado (antes ele
+    // ainda era nullptr e o Qt avisava "invalid nullptr parameter").
+    connect(_comboScreen, &QComboBox::currentIndexChanged, this, [this](int i) {
+        if (_rebuildingUi || i < 0)
+            return;
+        if (i <= 0) {
+            _settings.mouseScreen.clear();
+        } else {
+            const auto screens = QGuiApplication::screens();
+            if (i - 1 < screens.size())
+                _settings.mouseScreen = screens[i - 1]->name();
+        }
+        _persistDebounce.start();
+    });
     auto* btnResize = new QPushButton(QStringLiteral("Redimensionar"), page);
     connect(btnResize, &QPushButton::clicked, this, [this]() {
         switch (_comboResolution->currentIndex()) {
@@ -914,6 +964,11 @@ void MainWindow::applySettings()
     _chkAlwaysOnTop->setChecked(_settings.alwaysOnTop);
     _rebuildingUi = false;
 
+    // Desligar a webcam em qualquer caminho (inclusive pelo assistente)
+    // encerra o daemon e libera o dispositivo na hora.
+    if (!_settings.webcamEnabled && _view->webcam()->active())
+        _view->webcam()->stop();
+
     _persistDebounce.start();
 }
 
@@ -940,6 +995,17 @@ void MainWindow::updateWindowFlags()
 
 void MainWindow::startWebcamIfEnabled()
 {
+    if (!_settings.webcamEnabled) {
+        _view->webcam()->stop();
+        return;
+    }
+
+    // Já está ativo nesta mesma câmera: não reinicia (evita piscar o LED e
+    // perder a calibração a cada mudança de outro ajuste).
+    if (_view->webcam()->active()
+        && _view->webcam()->cameraIndex() == _settings.webcamIndex)
+        return;
+
     // O OpenSeeFace lê a câmera direto pelo v4l2 (/dev/videoN), então usamos
     // o índice escolhido na UI em vez do índice do Qt (que no Wayland/PipeWire
     // pode não bater com o dispositivo real).
@@ -952,12 +1018,12 @@ void MainWindow::startWebcamIfEnabled()
     const QString model = faceModelPath();
     // O MediaPipe precisa do modelo; o OpenSeeFace não. Se o script for o do
     // OpenSeeFace, o modelo ausente não impede.
-    const bool osf = trackerScriptPath().contains(QStringLiteral("openseeface"));
-    if (!osf && model.isEmpty()) {
+    if (model.isEmpty()) {
         _lblCalibStatus->setText(QStringLiteral(
             "Modelo de rastreio facial não encontrado.\nRode ./setup.sh para baixá-lo."));
         return;
     }
+    _lblCalibStatus->setText(QStringLiteral("Iniciando rastreio facial..."));
     _view->webcam()->start(pythonExecutable(), trackerScriptPath(), model,
                            _settings.webcamIndex,
                            _settings.webcamWidth.toInt(),
@@ -966,6 +1032,7 @@ void MainWindow::startWebcamIfEnabled()
 
 void MainWindow::persist()
 {
+    _view->updateSettings(_settings);
     AppConfig::save(_settings);
 }
 
@@ -993,18 +1060,34 @@ void MainWindow::refreshWebcamDevices()
     _rebuildingUi = true;
     _comboCam->clear();
     // Lista dispositivos v4l2 (/dev/video0, video1, ...) — é o que o
-    // OpenSeeFace usa diretamente.
+    // rastreador usa diretamente. Mostra também o nome (sysfs) para o usuário
+    // distinguir webcam real de câmera virtual (OBS/Iriun).
     int selected = -1;
     for (int i = 0; i < 16; ++i) {
         const QString dev = QStringLiteral("/dev/video%1").arg(i);
         if (!QFileInfo::exists(dev))
             continue;
-        _comboCam->addItem(dev, i);
+
+        QString label = dev;
+        QFile nameFile(QStringLiteral("/sys/class/video4linux/video%1/name").arg(i));
+        if (nameFile.open(QIODevice::ReadOnly)) {
+            const QString name = QString::fromUtf8(nameFile.readAll()).trimmed();
+            if (!name.isEmpty())
+                label = QStringLiteral("%1 — %2").arg(dev, name);
+        }
+
+        _comboCam->addItem(label, i);
         if (i == _settings.webcamIndex)
             selected = _comboCam->count() - 1;
     }
-    if (_comboCam->count() == 0)
+    if (_comboCam->count() == 0) {
         _comboCam->addItem(QStringLiteral("(nenhuma /dev/video*)"), 0);
+    } else if (selected < 0) {
+        // O índice salvo não existe mais (ex.: câmera virtual removida):
+        // seleciona o primeiro dispositivo disponível.
+        selected = 0;
+        _settings.webcamIndex = _comboCam->itemData(0).toInt();
+    }
     if (selected >= 0)
         _comboCam->setCurrentIndex(selected);
     _rebuildingUi = false;
@@ -1078,18 +1161,22 @@ QString MainWindow::trackerScriptPath() const
 {
     const QString appDir = QCoreApplication::applicationDirPath();
 
-    // Prefere o OpenSeeFace (mesmo rastreador do VTube Studio) quando presente.
-    const QStringList candidates = {
-        appDir + QStringLiteral("/tools/openseeface_daemon.py"),
-        QDir::current().filePath(QStringLiteral("tools/openseeface_daemon.py")),
-        appDir + QStringLiteral("/tools/tracker_daemon.py"),
-        QDir::current().filePath(QStringLiteral("tools/tracker_daemon.py")),
-    };
+    // O MediaPipe é o padrão: entrega yaw/pitch/roll corretos e blendshapes
+    // (piscada, boca, sobrancelha) de forma estável mesmo com OpenCV novo.
+    // Quem preferir o OpenSeeFace (mesmo rastreador do VTube Studio) pode
+    // rodar com GUMM_TRACKER=openseeface.
+    QStringList names = { QStringLiteral("tracker_daemon.py") };
+
+    QStringList candidates;
+    for (const QString& name : names) {
+        candidates << appDir + QStringLiteral("/tools/") + name
+                   << QDir::current().filePath(QStringLiteral("tools/") + name);
+    }
     for (const QString& c : candidates) {
         if (QFileInfo::exists(c))
             return QFileInfo(c).absoluteFilePath();
     }
-    return QDir::current().filePath(QStringLiteral("tools/openseeface_daemon.py"));
+    return QDir::current().filePath(QStringLiteral("tools/tracker_daemon.py"));
 }
 
 QString MainWindow::faceModelPath() const

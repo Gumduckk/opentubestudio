@@ -467,14 +467,29 @@ void VTuberModel::Draw(float viewW, float viewH, float zoom, float panX, float p
     Csm::CubismMatrix44 mvp;
     mvp.LoadIdentity();
 
-    // Escala UNIFORME: o modelo tem 2 unidades de largura (ver SetWidth em
-    // Load). Escalamos igual nos dois eixos para preservar a proporção do
-    // personagem — escalas diferentes por eixo "engordavam" o modelo ao
-    // redimensionar a janela.
-    const float minSide = (viewW < viewH) ? viewW : viewH;
-    const float s = minSide / 2.0f;
-    mvp.Scale(s, s);
-    mvp.Scale(zoom, zoom);
+    // Escala UNIFORME em PIXELS. Importante: em espaço de clip o eixo X e o Y
+    // têm escalas diferentes quando a viewport não é quadrada. Por isso não
+    // basta usar o mesmo valor nos dois eixos (era isso que esticava o modelo
+    // ao redimensionar a janela).
+    //
+    // O model matrix deixa o modelo com 2 unidades de largura (SetWidth em
+    // Load); a altura correspondente depende do canvas do modelo.
+    const float canvasW = qMax(1.0f, static_cast<float>(_model->GetCanvasWidth()));
+    const float canvasH = qMax(1.0f, static_cast<float>(_model->GetCanvasHeight()));
+    const float modelW = 2.0f;
+    const float modelH = modelW * (canvasH / canvasW);
+
+    // "contain": cabe inteiro na viewport, preservando a proporção.
+    const float fit = qMin(viewW / modelW, viewH / modelH);
+    const float pxPerUnit = fit * zoom;
+
+    // Converte pixels -> clip (largura/altura de clip = 2).
+    const float sx = 2.0f * pxPerUnit / qMax(1.0f, viewW);
+    const float sy = 2.0f * pxPerUnit / qMax(1.0f, viewH);
+
+    // Scale/Translate aqui são setters absolutos (CubismMatrix44), então
+    // aplicamos a escala final de uma vez e só depois a translação em clip.
+    mvp.Scale(sx, sy);
     mvp.Translate(panX, panY);
     mvp.MultiplyByMatrix(GetModelMatrix());
 

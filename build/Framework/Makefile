@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk"
+CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/build"
+CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" "/home/gumduck/Documentos/GitHub/seila kk/build/Framework//CMakeFiles/progress.marks"
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" 0
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework//CMakeFiles/progress.marks"
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/clean
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/preinstall
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/preinstall
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Framework/CMakeFiles/Framework.dir/rule:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/CMakeFiles/Framework.dir/rule
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/CMakeFiles/Framework.dir/rule
 .PHONY : Framework/CMakeFiles/Framework.dir/rule
 
 # Convenience name for target.
@@ -127,12 +127,12 @@ Framework: Framework/CMakeFiles/Framework.dir/rule
 
 # fast build rule for target.
 Framework/fast:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/build
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/build
 .PHONY : Framework/fast
 
 # Convenience name for target.
 Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/rule:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/rule
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/rule
 .PHONY : Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/rule
 
 # Convenience name for target.
@@ -141,12 +141,12 @@ Framework_autogen_timestamp_deps: Framework/CMakeFiles/Framework_autogen_timesta
 
 # fast build rule for target.
 Framework_autogen_timestamp_deps/fast:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/build.make Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/build
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/build.make Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/build
 .PHONY : Framework_autogen_timestamp_deps/fast
 
 # Convenience name for target.
 Framework/CMakeFiles/Framework_autogen.dir/rule:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/CMakeFiles/Framework_autogen.dir/rule
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Framework/CMakeFiles/Framework_autogen.dir/rule
 .PHONY : Framework/CMakeFiles/Framework_autogen.dir/rule
 
 # Convenience name for target.
@@ -155,7 +155,7 @@ Framework_autogen: Framework/CMakeFiles/Framework_autogen.dir/rule
 
 # fast build rule for target.
 Framework_autogen/fast:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework_autogen.dir/build.make Framework/CMakeFiles/Framework_autogen.dir/build
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework_autogen.dir/build.make Framework/CMakeFiles/Framework_autogen.dir/build
 .PHONY : Framework_autogen/fast
 
 Framework_autogen/mocs_compilation.o: Framework_autogen/mocs_compilation.cpp.o
@@ -163,7 +163,7 @@ Framework_autogen/mocs_compilation.o: Framework_autogen/mocs_compilation.cpp.o
 
 # target to build an object file
 Framework_autogen/mocs_compilation.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/Framework_autogen/mocs_compilation.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/Framework_autogen/mocs_compilation.cpp.o
 .PHONY : Framework_autogen/mocs_compilation.cpp.o
 
 Framework_autogen/mocs_compilation.i: Framework_autogen/mocs_compilation.cpp.i
@@ -171,7 +171,7 @@ Framework_autogen/mocs_compilation.i: Framework_autogen/mocs_compilation.cpp.i
 
 # target to preprocess a source file
 Framework_autogen/mocs_compilation.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/Framework_autogen/mocs_compilation.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/Framework_autogen/mocs_compilation.cpp.i
 .PHONY : Framework_autogen/mocs_compilation.cpp.i
 
 Framework_autogen/mocs_compilation.s: Framework_autogen/mocs_compilation.cpp.s
@@ -179,7 +179,7 @@ Framework_autogen/mocs_compilation.s: Framework_autogen/mocs_compilation.cpp.s
 
 # target to generate assembly for a file
 Framework_autogen/mocs_compilation.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/Framework_autogen/mocs_compilation.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/Framework_autogen/mocs_compilation.cpp.s
 .PHONY : Framework_autogen/mocs_compilation.cpp.s
 
 src/CubismCdiJson.o: src/CubismCdiJson.cpp.o
@@ -187,7 +187,7 @@ src/CubismCdiJson.o: src/CubismCdiJson.cpp.o
 
 # target to build an object file
 src/CubismCdiJson.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismCdiJson.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismCdiJson.cpp.o
 .PHONY : src/CubismCdiJson.cpp.o
 
 src/CubismCdiJson.i: src/CubismCdiJson.cpp.i
@@ -195,7 +195,7 @@ src/CubismCdiJson.i: src/CubismCdiJson.cpp.i
 
 # target to preprocess a source file
 src/CubismCdiJson.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismCdiJson.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismCdiJson.cpp.i
 .PHONY : src/CubismCdiJson.cpp.i
 
 src/CubismCdiJson.s: src/CubismCdiJson.cpp.s
@@ -203,7 +203,7 @@ src/CubismCdiJson.s: src/CubismCdiJson.cpp.s
 
 # target to generate assembly for a file
 src/CubismCdiJson.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismCdiJson.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismCdiJson.cpp.s
 .PHONY : src/CubismCdiJson.cpp.s
 
 src/CubismDefaultParameterId.o: src/CubismDefaultParameterId.cpp.o
@@ -211,7 +211,7 @@ src/CubismDefaultParameterId.o: src/CubismDefaultParameterId.cpp.o
 
 # target to build an object file
 src/CubismDefaultParameterId.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismDefaultParameterId.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismDefaultParameterId.cpp.o
 .PHONY : src/CubismDefaultParameterId.cpp.o
 
 src/CubismDefaultParameterId.i: src/CubismDefaultParameterId.cpp.i
@@ -219,7 +219,7 @@ src/CubismDefaultParameterId.i: src/CubismDefaultParameterId.cpp.i
 
 # target to preprocess a source file
 src/CubismDefaultParameterId.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismDefaultParameterId.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismDefaultParameterId.cpp.i
 .PHONY : src/CubismDefaultParameterId.cpp.i
 
 src/CubismDefaultParameterId.s: src/CubismDefaultParameterId.cpp.s
@@ -227,7 +227,7 @@ src/CubismDefaultParameterId.s: src/CubismDefaultParameterId.cpp.s
 
 # target to generate assembly for a file
 src/CubismDefaultParameterId.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismDefaultParameterId.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismDefaultParameterId.cpp.s
 .PHONY : src/CubismDefaultParameterId.cpp.s
 
 src/CubismFramework.o: src/CubismFramework.cpp.o
@@ -235,7 +235,7 @@ src/CubismFramework.o: src/CubismFramework.cpp.o
 
 # target to build an object file
 src/CubismFramework.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismFramework.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismFramework.cpp.o
 .PHONY : src/CubismFramework.cpp.o
 
 src/CubismFramework.i: src/CubismFramework.cpp.i
@@ -243,7 +243,7 @@ src/CubismFramework.i: src/CubismFramework.cpp.i
 
 # target to preprocess a source file
 src/CubismFramework.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismFramework.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismFramework.cpp.i
 .PHONY : src/CubismFramework.cpp.i
 
 src/CubismFramework.s: src/CubismFramework.cpp.s
@@ -251,7 +251,7 @@ src/CubismFramework.s: src/CubismFramework.cpp.s
 
 # target to generate assembly for a file
 src/CubismFramework.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismFramework.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismFramework.cpp.s
 .PHONY : src/CubismFramework.cpp.s
 
 src/CubismModelSettingJson.o: src/CubismModelSettingJson.cpp.o
@@ -259,7 +259,7 @@ src/CubismModelSettingJson.o: src/CubismModelSettingJson.cpp.o
 
 # target to build an object file
 src/CubismModelSettingJson.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismModelSettingJson.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismModelSettingJson.cpp.o
 .PHONY : src/CubismModelSettingJson.cpp.o
 
 src/CubismModelSettingJson.i: src/CubismModelSettingJson.cpp.i
@@ -267,7 +267,7 @@ src/CubismModelSettingJson.i: src/CubismModelSettingJson.cpp.i
 
 # target to preprocess a source file
 src/CubismModelSettingJson.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismModelSettingJson.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismModelSettingJson.cpp.i
 .PHONY : src/CubismModelSettingJson.cpp.i
 
 src/CubismModelSettingJson.s: src/CubismModelSettingJson.cpp.s
@@ -275,7 +275,7 @@ src/CubismModelSettingJson.s: src/CubismModelSettingJson.cpp.s
 
 # target to generate assembly for a file
 src/CubismModelSettingJson.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismModelSettingJson.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/CubismModelSettingJson.cpp.s
 .PHONY : src/CubismModelSettingJson.cpp.s
 
 src/Effect/CubismBreath.o: src/Effect/CubismBreath.cpp.o
@@ -283,7 +283,7 @@ src/Effect/CubismBreath.o: src/Effect/CubismBreath.cpp.o
 
 # target to build an object file
 src/Effect/CubismBreath.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismBreath.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismBreath.cpp.o
 .PHONY : src/Effect/CubismBreath.cpp.o
 
 src/Effect/CubismBreath.i: src/Effect/CubismBreath.cpp.i
@@ -291,7 +291,7 @@ src/Effect/CubismBreath.i: src/Effect/CubismBreath.cpp.i
 
 # target to preprocess a source file
 src/Effect/CubismBreath.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismBreath.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismBreath.cpp.i
 .PHONY : src/Effect/CubismBreath.cpp.i
 
 src/Effect/CubismBreath.s: src/Effect/CubismBreath.cpp.s
@@ -299,7 +299,7 @@ src/Effect/CubismBreath.s: src/Effect/CubismBreath.cpp.s
 
 # target to generate assembly for a file
 src/Effect/CubismBreath.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismBreath.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismBreath.cpp.s
 .PHONY : src/Effect/CubismBreath.cpp.s
 
 src/Effect/CubismEyeBlink.o: src/Effect/CubismEyeBlink.cpp.o
@@ -307,7 +307,7 @@ src/Effect/CubismEyeBlink.o: src/Effect/CubismEyeBlink.cpp.o
 
 # target to build an object file
 src/Effect/CubismEyeBlink.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismEyeBlink.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismEyeBlink.cpp.o
 .PHONY : src/Effect/CubismEyeBlink.cpp.o
 
 src/Effect/CubismEyeBlink.i: src/Effect/CubismEyeBlink.cpp.i
@@ -315,7 +315,7 @@ src/Effect/CubismEyeBlink.i: src/Effect/CubismEyeBlink.cpp.i
 
 # target to preprocess a source file
 src/Effect/CubismEyeBlink.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismEyeBlink.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismEyeBlink.cpp.i
 .PHONY : src/Effect/CubismEyeBlink.cpp.i
 
 src/Effect/CubismEyeBlink.s: src/Effect/CubismEyeBlink.cpp.s
@@ -323,7 +323,7 @@ src/Effect/CubismEyeBlink.s: src/Effect/CubismEyeBlink.cpp.s
 
 # target to generate assembly for a file
 src/Effect/CubismEyeBlink.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismEyeBlink.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismEyeBlink.cpp.s
 .PHONY : src/Effect/CubismEyeBlink.cpp.s
 
 src/Effect/CubismLook.o: src/Effect/CubismLook.cpp.o
@@ -331,7 +331,7 @@ src/Effect/CubismLook.o: src/Effect/CubismLook.cpp.o
 
 # target to build an object file
 src/Effect/CubismLook.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismLook.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismLook.cpp.o
 .PHONY : src/Effect/CubismLook.cpp.o
 
 src/Effect/CubismLook.i: src/Effect/CubismLook.cpp.i
@@ -339,7 +339,7 @@ src/Effect/CubismLook.i: src/Effect/CubismLook.cpp.i
 
 # target to preprocess a source file
 src/Effect/CubismLook.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismLook.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismLook.cpp.i
 .PHONY : src/Effect/CubismLook.cpp.i
 
 src/Effect/CubismLook.s: src/Effect/CubismLook.cpp.s
@@ -347,7 +347,7 @@ src/Effect/CubismLook.s: src/Effect/CubismLook.cpp.s
 
 # target to generate assembly for a file
 src/Effect/CubismLook.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismLook.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismLook.cpp.s
 .PHONY : src/Effect/CubismLook.cpp.s
 
 src/Effect/CubismPose.o: src/Effect/CubismPose.cpp.o
@@ -355,7 +355,7 @@ src/Effect/CubismPose.o: src/Effect/CubismPose.cpp.o
 
 # target to build an object file
 src/Effect/CubismPose.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismPose.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismPose.cpp.o
 .PHONY : src/Effect/CubismPose.cpp.o
 
 src/Effect/CubismPose.i: src/Effect/CubismPose.cpp.i
@@ -363,7 +363,7 @@ src/Effect/CubismPose.i: src/Effect/CubismPose.cpp.i
 
 # target to preprocess a source file
 src/Effect/CubismPose.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismPose.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismPose.cpp.i
 .PHONY : src/Effect/CubismPose.cpp.i
 
 src/Effect/CubismPose.s: src/Effect/CubismPose.cpp.s
@@ -371,7 +371,7 @@ src/Effect/CubismPose.s: src/Effect/CubismPose.cpp.s
 
 # target to generate assembly for a file
 src/Effect/CubismPose.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismPose.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Effect/CubismPose.cpp.s
 .PHONY : src/Effect/CubismPose.cpp.s
 
 src/Id/CubismId.o: src/Id/CubismId.cpp.o
@@ -379,7 +379,7 @@ src/Id/CubismId.o: src/Id/CubismId.cpp.o
 
 # target to build an object file
 src/Id/CubismId.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismId.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismId.cpp.o
 .PHONY : src/Id/CubismId.cpp.o
 
 src/Id/CubismId.i: src/Id/CubismId.cpp.i
@@ -387,7 +387,7 @@ src/Id/CubismId.i: src/Id/CubismId.cpp.i
 
 # target to preprocess a source file
 src/Id/CubismId.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismId.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismId.cpp.i
 .PHONY : src/Id/CubismId.cpp.i
 
 src/Id/CubismId.s: src/Id/CubismId.cpp.s
@@ -395,7 +395,7 @@ src/Id/CubismId.s: src/Id/CubismId.cpp.s
 
 # target to generate assembly for a file
 src/Id/CubismId.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismId.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismId.cpp.s
 .PHONY : src/Id/CubismId.cpp.s
 
 src/Id/CubismIdManager.o: src/Id/CubismIdManager.cpp.o
@@ -403,7 +403,7 @@ src/Id/CubismIdManager.o: src/Id/CubismIdManager.cpp.o
 
 # target to build an object file
 src/Id/CubismIdManager.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismIdManager.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismIdManager.cpp.o
 .PHONY : src/Id/CubismIdManager.cpp.o
 
 src/Id/CubismIdManager.i: src/Id/CubismIdManager.cpp.i
@@ -411,7 +411,7 @@ src/Id/CubismIdManager.i: src/Id/CubismIdManager.cpp.i
 
 # target to preprocess a source file
 src/Id/CubismIdManager.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismIdManager.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismIdManager.cpp.i
 .PHONY : src/Id/CubismIdManager.cpp.i
 
 src/Id/CubismIdManager.s: src/Id/CubismIdManager.cpp.s
@@ -419,7 +419,7 @@ src/Id/CubismIdManager.s: src/Id/CubismIdManager.cpp.s
 
 # target to generate assembly for a file
 src/Id/CubismIdManager.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismIdManager.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Id/CubismIdManager.cpp.s
 .PHONY : src/Id/CubismIdManager.cpp.s
 
 src/Math/CubismMath.o: src/Math/CubismMath.cpp.o
@@ -427,7 +427,7 @@ src/Math/CubismMath.o: src/Math/CubismMath.cpp.o
 
 # target to build an object file
 src/Math/CubismMath.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMath.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMath.cpp.o
 .PHONY : src/Math/CubismMath.cpp.o
 
 src/Math/CubismMath.i: src/Math/CubismMath.cpp.i
@@ -435,7 +435,7 @@ src/Math/CubismMath.i: src/Math/CubismMath.cpp.i
 
 # target to preprocess a source file
 src/Math/CubismMath.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMath.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMath.cpp.i
 .PHONY : src/Math/CubismMath.cpp.i
 
 src/Math/CubismMath.s: src/Math/CubismMath.cpp.s
@@ -443,7 +443,7 @@ src/Math/CubismMath.s: src/Math/CubismMath.cpp.s
 
 # target to generate assembly for a file
 src/Math/CubismMath.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMath.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMath.cpp.s
 .PHONY : src/Math/CubismMath.cpp.s
 
 src/Math/CubismMatrix44.o: src/Math/CubismMatrix44.cpp.o
@@ -451,7 +451,7 @@ src/Math/CubismMatrix44.o: src/Math/CubismMatrix44.cpp.o
 
 # target to build an object file
 src/Math/CubismMatrix44.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMatrix44.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMatrix44.cpp.o
 .PHONY : src/Math/CubismMatrix44.cpp.o
 
 src/Math/CubismMatrix44.i: src/Math/CubismMatrix44.cpp.i
@@ -459,7 +459,7 @@ src/Math/CubismMatrix44.i: src/Math/CubismMatrix44.cpp.i
 
 # target to preprocess a source file
 src/Math/CubismMatrix44.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMatrix44.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMatrix44.cpp.i
 .PHONY : src/Math/CubismMatrix44.cpp.i
 
 src/Math/CubismMatrix44.s: src/Math/CubismMatrix44.cpp.s
@@ -467,7 +467,7 @@ src/Math/CubismMatrix44.s: src/Math/CubismMatrix44.cpp.s
 
 # target to generate assembly for a file
 src/Math/CubismMatrix44.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMatrix44.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismMatrix44.cpp.s
 .PHONY : src/Math/CubismMatrix44.cpp.s
 
 src/Math/CubismModelMatrix.o: src/Math/CubismModelMatrix.cpp.o
@@ -475,7 +475,7 @@ src/Math/CubismModelMatrix.o: src/Math/CubismModelMatrix.cpp.o
 
 # target to build an object file
 src/Math/CubismModelMatrix.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismModelMatrix.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismModelMatrix.cpp.o
 .PHONY : src/Math/CubismModelMatrix.cpp.o
 
 src/Math/CubismModelMatrix.i: src/Math/CubismModelMatrix.cpp.i
@@ -483,7 +483,7 @@ src/Math/CubismModelMatrix.i: src/Math/CubismModelMatrix.cpp.i
 
 # target to preprocess a source file
 src/Math/CubismModelMatrix.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismModelMatrix.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismModelMatrix.cpp.i
 .PHONY : src/Math/CubismModelMatrix.cpp.i
 
 src/Math/CubismModelMatrix.s: src/Math/CubismModelMatrix.cpp.s
@@ -491,7 +491,7 @@ src/Math/CubismModelMatrix.s: src/Math/CubismModelMatrix.cpp.s
 
 # target to generate assembly for a file
 src/Math/CubismModelMatrix.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismModelMatrix.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismModelMatrix.cpp.s
 .PHONY : src/Math/CubismModelMatrix.cpp.s
 
 src/Math/CubismTargetPoint.o: src/Math/CubismTargetPoint.cpp.o
@@ -499,7 +499,7 @@ src/Math/CubismTargetPoint.o: src/Math/CubismTargetPoint.cpp.o
 
 # target to build an object file
 src/Math/CubismTargetPoint.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismTargetPoint.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismTargetPoint.cpp.o
 .PHONY : src/Math/CubismTargetPoint.cpp.o
 
 src/Math/CubismTargetPoint.i: src/Math/CubismTargetPoint.cpp.i
@@ -507,7 +507,7 @@ src/Math/CubismTargetPoint.i: src/Math/CubismTargetPoint.cpp.i
 
 # target to preprocess a source file
 src/Math/CubismTargetPoint.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismTargetPoint.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismTargetPoint.cpp.i
 .PHONY : src/Math/CubismTargetPoint.cpp.i
 
 src/Math/CubismTargetPoint.s: src/Math/CubismTargetPoint.cpp.s
@@ -515,7 +515,7 @@ src/Math/CubismTargetPoint.s: src/Math/CubismTargetPoint.cpp.s
 
 # target to generate assembly for a file
 src/Math/CubismTargetPoint.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismTargetPoint.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismTargetPoint.cpp.s
 .PHONY : src/Math/CubismTargetPoint.cpp.s
 
 src/Math/CubismVector2.o: src/Math/CubismVector2.cpp.o
@@ -523,7 +523,7 @@ src/Math/CubismVector2.o: src/Math/CubismVector2.cpp.o
 
 # target to build an object file
 src/Math/CubismVector2.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismVector2.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismVector2.cpp.o
 .PHONY : src/Math/CubismVector2.cpp.o
 
 src/Math/CubismVector2.i: src/Math/CubismVector2.cpp.i
@@ -531,7 +531,7 @@ src/Math/CubismVector2.i: src/Math/CubismVector2.cpp.i
 
 # target to preprocess a source file
 src/Math/CubismVector2.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismVector2.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismVector2.cpp.i
 .PHONY : src/Math/CubismVector2.cpp.i
 
 src/Math/CubismVector2.s: src/Math/CubismVector2.cpp.s
@@ -539,7 +539,7 @@ src/Math/CubismVector2.s: src/Math/CubismVector2.cpp.s
 
 # target to generate assembly for a file
 src/Math/CubismVector2.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismVector2.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismVector2.cpp.s
 .PHONY : src/Math/CubismVector2.cpp.s
 
 src/Math/CubismViewMatrix.o: src/Math/CubismViewMatrix.cpp.o
@@ -547,7 +547,7 @@ src/Math/CubismViewMatrix.o: src/Math/CubismViewMatrix.cpp.o
 
 # target to build an object file
 src/Math/CubismViewMatrix.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismViewMatrix.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismViewMatrix.cpp.o
 .PHONY : src/Math/CubismViewMatrix.cpp.o
 
 src/Math/CubismViewMatrix.i: src/Math/CubismViewMatrix.cpp.i
@@ -555,7 +555,7 @@ src/Math/CubismViewMatrix.i: src/Math/CubismViewMatrix.cpp.i
 
 # target to preprocess a source file
 src/Math/CubismViewMatrix.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismViewMatrix.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismViewMatrix.cpp.i
 .PHONY : src/Math/CubismViewMatrix.cpp.i
 
 src/Math/CubismViewMatrix.s: src/Math/CubismViewMatrix.cpp.s
@@ -563,7 +563,7 @@ src/Math/CubismViewMatrix.s: src/Math/CubismViewMatrix.cpp.s
 
 # target to generate assembly for a file
 src/Math/CubismViewMatrix.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismViewMatrix.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Math/CubismViewMatrix.cpp.s
 .PHONY : src/Math/CubismViewMatrix.cpp.s
 
 src/Model/CubismMoc.o: src/Model/CubismMoc.cpp.o
@@ -571,7 +571,7 @@ src/Model/CubismMoc.o: src/Model/CubismMoc.cpp.o
 
 # target to build an object file
 src/Model/CubismMoc.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismMoc.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismMoc.cpp.o
 .PHONY : src/Model/CubismMoc.cpp.o
 
 src/Model/CubismMoc.i: src/Model/CubismMoc.cpp.i
@@ -579,7 +579,7 @@ src/Model/CubismMoc.i: src/Model/CubismMoc.cpp.i
 
 # target to preprocess a source file
 src/Model/CubismMoc.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismMoc.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismMoc.cpp.i
 .PHONY : src/Model/CubismMoc.cpp.i
 
 src/Model/CubismMoc.s: src/Model/CubismMoc.cpp.s
@@ -587,7 +587,7 @@ src/Model/CubismMoc.s: src/Model/CubismMoc.cpp.s
 
 # target to generate assembly for a file
 src/Model/CubismMoc.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismMoc.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismMoc.cpp.s
 .PHONY : src/Model/CubismMoc.cpp.s
 
 src/Model/CubismModel.o: src/Model/CubismModel.cpp.o
@@ -595,7 +595,7 @@ src/Model/CubismModel.o: src/Model/CubismModel.cpp.o
 
 # target to build an object file
 src/Model/CubismModel.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModel.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModel.cpp.o
 .PHONY : src/Model/CubismModel.cpp.o
 
 src/Model/CubismModel.i: src/Model/CubismModel.cpp.i
@@ -603,7 +603,7 @@ src/Model/CubismModel.i: src/Model/CubismModel.cpp.i
 
 # target to preprocess a source file
 src/Model/CubismModel.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModel.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModel.cpp.i
 .PHONY : src/Model/CubismModel.cpp.i
 
 src/Model/CubismModel.s: src/Model/CubismModel.cpp.s
@@ -611,7 +611,7 @@ src/Model/CubismModel.s: src/Model/CubismModel.cpp.s
 
 # target to generate assembly for a file
 src/Model/CubismModel.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModel.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModel.cpp.s
 .PHONY : src/Model/CubismModel.cpp.s
 
 src/Model/CubismModelMultiplyAndScreenColor.o: src/Model/CubismModelMultiplyAndScreenColor.cpp.o
@@ -619,7 +619,7 @@ src/Model/CubismModelMultiplyAndScreenColor.o: src/Model/CubismModelMultiplyAndS
 
 # target to build an object file
 src/Model/CubismModelMultiplyAndScreenColor.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelMultiplyAndScreenColor.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelMultiplyAndScreenColor.cpp.o
 .PHONY : src/Model/CubismModelMultiplyAndScreenColor.cpp.o
 
 src/Model/CubismModelMultiplyAndScreenColor.i: src/Model/CubismModelMultiplyAndScreenColor.cpp.i
@@ -627,7 +627,7 @@ src/Model/CubismModelMultiplyAndScreenColor.i: src/Model/CubismModelMultiplyAndS
 
 # target to preprocess a source file
 src/Model/CubismModelMultiplyAndScreenColor.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelMultiplyAndScreenColor.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelMultiplyAndScreenColor.cpp.i
 .PHONY : src/Model/CubismModelMultiplyAndScreenColor.cpp.i
 
 src/Model/CubismModelMultiplyAndScreenColor.s: src/Model/CubismModelMultiplyAndScreenColor.cpp.s
@@ -635,7 +635,7 @@ src/Model/CubismModelMultiplyAndScreenColor.s: src/Model/CubismModelMultiplyAndS
 
 # target to generate assembly for a file
 src/Model/CubismModelMultiplyAndScreenColor.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelMultiplyAndScreenColor.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelMultiplyAndScreenColor.cpp.s
 .PHONY : src/Model/CubismModelMultiplyAndScreenColor.cpp.s
 
 src/Model/CubismModelUserData.o: src/Model/CubismModelUserData.cpp.o
@@ -643,7 +643,7 @@ src/Model/CubismModelUserData.o: src/Model/CubismModelUserData.cpp.o
 
 # target to build an object file
 src/Model/CubismModelUserData.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserData.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserData.cpp.o
 .PHONY : src/Model/CubismModelUserData.cpp.o
 
 src/Model/CubismModelUserData.i: src/Model/CubismModelUserData.cpp.i
@@ -651,7 +651,7 @@ src/Model/CubismModelUserData.i: src/Model/CubismModelUserData.cpp.i
 
 # target to preprocess a source file
 src/Model/CubismModelUserData.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserData.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserData.cpp.i
 .PHONY : src/Model/CubismModelUserData.cpp.i
 
 src/Model/CubismModelUserData.s: src/Model/CubismModelUserData.cpp.s
@@ -659,7 +659,7 @@ src/Model/CubismModelUserData.s: src/Model/CubismModelUserData.cpp.s
 
 # target to generate assembly for a file
 src/Model/CubismModelUserData.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserData.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserData.cpp.s
 .PHONY : src/Model/CubismModelUserData.cpp.s
 
 src/Model/CubismModelUserDataJson.o: src/Model/CubismModelUserDataJson.cpp.o
@@ -667,7 +667,7 @@ src/Model/CubismModelUserDataJson.o: src/Model/CubismModelUserDataJson.cpp.o
 
 # target to build an object file
 src/Model/CubismModelUserDataJson.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserDataJson.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserDataJson.cpp.o
 .PHONY : src/Model/CubismModelUserDataJson.cpp.o
 
 src/Model/CubismModelUserDataJson.i: src/Model/CubismModelUserDataJson.cpp.i
@@ -675,7 +675,7 @@ src/Model/CubismModelUserDataJson.i: src/Model/CubismModelUserDataJson.cpp.i
 
 # target to preprocess a source file
 src/Model/CubismModelUserDataJson.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserDataJson.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserDataJson.cpp.i
 .PHONY : src/Model/CubismModelUserDataJson.cpp.i
 
 src/Model/CubismModelUserDataJson.s: src/Model/CubismModelUserDataJson.cpp.s
@@ -683,7 +683,7 @@ src/Model/CubismModelUserDataJson.s: src/Model/CubismModelUserDataJson.cpp.s
 
 # target to generate assembly for a file
 src/Model/CubismModelUserDataJson.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserDataJson.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismModelUserDataJson.cpp.s
 .PHONY : src/Model/CubismModelUserDataJson.cpp.s
 
 src/Model/CubismUserModel.o: src/Model/CubismUserModel.cpp.o
@@ -691,7 +691,7 @@ src/Model/CubismUserModel.o: src/Model/CubismUserModel.cpp.o
 
 # target to build an object file
 src/Model/CubismUserModel.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismUserModel.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismUserModel.cpp.o
 .PHONY : src/Model/CubismUserModel.cpp.o
 
 src/Model/CubismUserModel.i: src/Model/CubismUserModel.cpp.i
@@ -699,7 +699,7 @@ src/Model/CubismUserModel.i: src/Model/CubismUserModel.cpp.i
 
 # target to preprocess a source file
 src/Model/CubismUserModel.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismUserModel.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismUserModel.cpp.i
 .PHONY : src/Model/CubismUserModel.cpp.i
 
 src/Model/CubismUserModel.s: src/Model/CubismUserModel.cpp.s
@@ -707,7 +707,7 @@ src/Model/CubismUserModel.s: src/Model/CubismUserModel.cpp.s
 
 # target to generate assembly for a file
 src/Model/CubismUserModel.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismUserModel.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Model/CubismUserModel.cpp.s
 .PHONY : src/Model/CubismUserModel.cpp.s
 
 src/Motion/ACubismMotion.o: src/Motion/ACubismMotion.cpp.o
@@ -715,7 +715,7 @@ src/Motion/ACubismMotion.o: src/Motion/ACubismMotion.cpp.o
 
 # target to build an object file
 src/Motion/ACubismMotion.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ACubismMotion.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ACubismMotion.cpp.o
 .PHONY : src/Motion/ACubismMotion.cpp.o
 
 src/Motion/ACubismMotion.i: src/Motion/ACubismMotion.cpp.i
@@ -723,7 +723,7 @@ src/Motion/ACubismMotion.i: src/Motion/ACubismMotion.cpp.i
 
 # target to preprocess a source file
 src/Motion/ACubismMotion.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ACubismMotion.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ACubismMotion.cpp.i
 .PHONY : src/Motion/ACubismMotion.cpp.i
 
 src/Motion/ACubismMotion.s: src/Motion/ACubismMotion.cpp.s
@@ -731,7 +731,7 @@ src/Motion/ACubismMotion.s: src/Motion/ACubismMotion.cpp.s
 
 # target to generate assembly for a file
 src/Motion/ACubismMotion.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ACubismMotion.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ACubismMotion.cpp.s
 .PHONY : src/Motion/ACubismMotion.cpp.s
 
 src/Motion/CubismBreathUpdater.o: src/Motion/CubismBreathUpdater.cpp.o
@@ -739,7 +739,7 @@ src/Motion/CubismBreathUpdater.o: src/Motion/CubismBreathUpdater.cpp.o
 
 # target to build an object file
 src/Motion/CubismBreathUpdater.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismBreathUpdater.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismBreathUpdater.cpp.o
 .PHONY : src/Motion/CubismBreathUpdater.cpp.o
 
 src/Motion/CubismBreathUpdater.i: src/Motion/CubismBreathUpdater.cpp.i
@@ -747,7 +747,7 @@ src/Motion/CubismBreathUpdater.i: src/Motion/CubismBreathUpdater.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismBreathUpdater.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismBreathUpdater.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismBreathUpdater.cpp.i
 .PHONY : src/Motion/CubismBreathUpdater.cpp.i
 
 src/Motion/CubismBreathUpdater.s: src/Motion/CubismBreathUpdater.cpp.s
@@ -755,7 +755,7 @@ src/Motion/CubismBreathUpdater.s: src/Motion/CubismBreathUpdater.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismBreathUpdater.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismBreathUpdater.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismBreathUpdater.cpp.s
 .PHONY : src/Motion/CubismBreathUpdater.cpp.s
 
 src/Motion/CubismExpressionMotion.o: src/Motion/CubismExpressionMotion.cpp.o
@@ -763,7 +763,7 @@ src/Motion/CubismExpressionMotion.o: src/Motion/CubismExpressionMotion.cpp.o
 
 # target to build an object file
 src/Motion/CubismExpressionMotion.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotion.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotion.cpp.o
 .PHONY : src/Motion/CubismExpressionMotion.cpp.o
 
 src/Motion/CubismExpressionMotion.i: src/Motion/CubismExpressionMotion.cpp.i
@@ -771,7 +771,7 @@ src/Motion/CubismExpressionMotion.i: src/Motion/CubismExpressionMotion.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismExpressionMotion.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotion.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotion.cpp.i
 .PHONY : src/Motion/CubismExpressionMotion.cpp.i
 
 src/Motion/CubismExpressionMotion.s: src/Motion/CubismExpressionMotion.cpp.s
@@ -779,7 +779,7 @@ src/Motion/CubismExpressionMotion.s: src/Motion/CubismExpressionMotion.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismExpressionMotion.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotion.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotion.cpp.s
 .PHONY : src/Motion/CubismExpressionMotion.cpp.s
 
 src/Motion/CubismExpressionMotionManager.o: src/Motion/CubismExpressionMotionManager.cpp.o
@@ -787,7 +787,7 @@ src/Motion/CubismExpressionMotionManager.o: src/Motion/CubismExpressionMotionMan
 
 # target to build an object file
 src/Motion/CubismExpressionMotionManager.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotionManager.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotionManager.cpp.o
 .PHONY : src/Motion/CubismExpressionMotionManager.cpp.o
 
 src/Motion/CubismExpressionMotionManager.i: src/Motion/CubismExpressionMotionManager.cpp.i
@@ -795,7 +795,7 @@ src/Motion/CubismExpressionMotionManager.i: src/Motion/CubismExpressionMotionMan
 
 # target to preprocess a source file
 src/Motion/CubismExpressionMotionManager.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotionManager.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotionManager.cpp.i
 .PHONY : src/Motion/CubismExpressionMotionManager.cpp.i
 
 src/Motion/CubismExpressionMotionManager.s: src/Motion/CubismExpressionMotionManager.cpp.s
@@ -803,7 +803,7 @@ src/Motion/CubismExpressionMotionManager.s: src/Motion/CubismExpressionMotionMan
 
 # target to generate assembly for a file
 src/Motion/CubismExpressionMotionManager.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotionManager.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionMotionManager.cpp.s
 .PHONY : src/Motion/CubismExpressionMotionManager.cpp.s
 
 src/Motion/CubismExpressionUpdater.o: src/Motion/CubismExpressionUpdater.cpp.o
@@ -811,7 +811,7 @@ src/Motion/CubismExpressionUpdater.o: src/Motion/CubismExpressionUpdater.cpp.o
 
 # target to build an object file
 src/Motion/CubismExpressionUpdater.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionUpdater.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionUpdater.cpp.o
 .PHONY : src/Motion/CubismExpressionUpdater.cpp.o
 
 src/Motion/CubismExpressionUpdater.i: src/Motion/CubismExpressionUpdater.cpp.i
@@ -819,7 +819,7 @@ src/Motion/CubismExpressionUpdater.i: src/Motion/CubismExpressionUpdater.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismExpressionUpdater.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionUpdater.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionUpdater.cpp.i
 .PHONY : src/Motion/CubismExpressionUpdater.cpp.i
 
 src/Motion/CubismExpressionUpdater.s: src/Motion/CubismExpressionUpdater.cpp.s
@@ -827,7 +827,7 @@ src/Motion/CubismExpressionUpdater.s: src/Motion/CubismExpressionUpdater.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismExpressionUpdater.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionUpdater.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismExpressionUpdater.cpp.s
 .PHONY : src/Motion/CubismExpressionUpdater.cpp.s
 
 src/Motion/CubismEyeBlinkUpdater.o: src/Motion/CubismEyeBlinkUpdater.cpp.o
@@ -835,7 +835,7 @@ src/Motion/CubismEyeBlinkUpdater.o: src/Motion/CubismEyeBlinkUpdater.cpp.o
 
 # target to build an object file
 src/Motion/CubismEyeBlinkUpdater.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismEyeBlinkUpdater.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismEyeBlinkUpdater.cpp.o
 .PHONY : src/Motion/CubismEyeBlinkUpdater.cpp.o
 
 src/Motion/CubismEyeBlinkUpdater.i: src/Motion/CubismEyeBlinkUpdater.cpp.i
@@ -843,7 +843,7 @@ src/Motion/CubismEyeBlinkUpdater.i: src/Motion/CubismEyeBlinkUpdater.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismEyeBlinkUpdater.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismEyeBlinkUpdater.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismEyeBlinkUpdater.cpp.i
 .PHONY : src/Motion/CubismEyeBlinkUpdater.cpp.i
 
 src/Motion/CubismEyeBlinkUpdater.s: src/Motion/CubismEyeBlinkUpdater.cpp.s
@@ -851,7 +851,7 @@ src/Motion/CubismEyeBlinkUpdater.s: src/Motion/CubismEyeBlinkUpdater.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismEyeBlinkUpdater.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismEyeBlinkUpdater.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismEyeBlinkUpdater.cpp.s
 .PHONY : src/Motion/CubismEyeBlinkUpdater.cpp.s
 
 src/Motion/CubismLipSyncUpdater.o: src/Motion/CubismLipSyncUpdater.cpp.o
@@ -859,7 +859,7 @@ src/Motion/CubismLipSyncUpdater.o: src/Motion/CubismLipSyncUpdater.cpp.o
 
 # target to build an object file
 src/Motion/CubismLipSyncUpdater.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLipSyncUpdater.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLipSyncUpdater.cpp.o
 .PHONY : src/Motion/CubismLipSyncUpdater.cpp.o
 
 src/Motion/CubismLipSyncUpdater.i: src/Motion/CubismLipSyncUpdater.cpp.i
@@ -867,7 +867,7 @@ src/Motion/CubismLipSyncUpdater.i: src/Motion/CubismLipSyncUpdater.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismLipSyncUpdater.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLipSyncUpdater.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLipSyncUpdater.cpp.i
 .PHONY : src/Motion/CubismLipSyncUpdater.cpp.i
 
 src/Motion/CubismLipSyncUpdater.s: src/Motion/CubismLipSyncUpdater.cpp.s
@@ -875,7 +875,7 @@ src/Motion/CubismLipSyncUpdater.s: src/Motion/CubismLipSyncUpdater.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismLipSyncUpdater.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLipSyncUpdater.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLipSyncUpdater.cpp.s
 .PHONY : src/Motion/CubismLipSyncUpdater.cpp.s
 
 src/Motion/CubismLookUpdater.o: src/Motion/CubismLookUpdater.cpp.o
@@ -883,7 +883,7 @@ src/Motion/CubismLookUpdater.o: src/Motion/CubismLookUpdater.cpp.o
 
 # target to build an object file
 src/Motion/CubismLookUpdater.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLookUpdater.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLookUpdater.cpp.o
 .PHONY : src/Motion/CubismLookUpdater.cpp.o
 
 src/Motion/CubismLookUpdater.i: src/Motion/CubismLookUpdater.cpp.i
@@ -891,7 +891,7 @@ src/Motion/CubismLookUpdater.i: src/Motion/CubismLookUpdater.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismLookUpdater.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLookUpdater.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLookUpdater.cpp.i
 .PHONY : src/Motion/CubismLookUpdater.cpp.i
 
 src/Motion/CubismLookUpdater.s: src/Motion/CubismLookUpdater.cpp.s
@@ -899,7 +899,7 @@ src/Motion/CubismLookUpdater.s: src/Motion/CubismLookUpdater.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismLookUpdater.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLookUpdater.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismLookUpdater.cpp.s
 .PHONY : src/Motion/CubismLookUpdater.cpp.s
 
 src/Motion/CubismMotion.o: src/Motion/CubismMotion.cpp.o
@@ -907,7 +907,7 @@ src/Motion/CubismMotion.o: src/Motion/CubismMotion.cpp.o
 
 # target to build an object file
 src/Motion/CubismMotion.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotion.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotion.cpp.o
 .PHONY : src/Motion/CubismMotion.cpp.o
 
 src/Motion/CubismMotion.i: src/Motion/CubismMotion.cpp.i
@@ -915,7 +915,7 @@ src/Motion/CubismMotion.i: src/Motion/CubismMotion.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismMotion.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotion.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotion.cpp.i
 .PHONY : src/Motion/CubismMotion.cpp.i
 
 src/Motion/CubismMotion.s: src/Motion/CubismMotion.cpp.s
@@ -923,7 +923,7 @@ src/Motion/CubismMotion.s: src/Motion/CubismMotion.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismMotion.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotion.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotion.cpp.s
 .PHONY : src/Motion/CubismMotion.cpp.s
 
 src/Motion/CubismMotionJson.o: src/Motion/CubismMotionJson.cpp.o
@@ -931,7 +931,7 @@ src/Motion/CubismMotionJson.o: src/Motion/CubismMotionJson.cpp.o
 
 # target to build an object file
 src/Motion/CubismMotionJson.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionJson.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionJson.cpp.o
 .PHONY : src/Motion/CubismMotionJson.cpp.o
 
 src/Motion/CubismMotionJson.i: src/Motion/CubismMotionJson.cpp.i
@@ -939,7 +939,7 @@ src/Motion/CubismMotionJson.i: src/Motion/CubismMotionJson.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismMotionJson.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionJson.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionJson.cpp.i
 .PHONY : src/Motion/CubismMotionJson.cpp.i
 
 src/Motion/CubismMotionJson.s: src/Motion/CubismMotionJson.cpp.s
@@ -947,7 +947,7 @@ src/Motion/CubismMotionJson.s: src/Motion/CubismMotionJson.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismMotionJson.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionJson.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionJson.cpp.s
 .PHONY : src/Motion/CubismMotionJson.cpp.s
 
 src/Motion/CubismMotionManager.o: src/Motion/CubismMotionManager.cpp.o
@@ -955,7 +955,7 @@ src/Motion/CubismMotionManager.o: src/Motion/CubismMotionManager.cpp.o
 
 # target to build an object file
 src/Motion/CubismMotionManager.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionManager.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionManager.cpp.o
 .PHONY : src/Motion/CubismMotionManager.cpp.o
 
 src/Motion/CubismMotionManager.i: src/Motion/CubismMotionManager.cpp.i
@@ -963,7 +963,7 @@ src/Motion/CubismMotionManager.i: src/Motion/CubismMotionManager.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismMotionManager.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionManager.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionManager.cpp.i
 .PHONY : src/Motion/CubismMotionManager.cpp.i
 
 src/Motion/CubismMotionManager.s: src/Motion/CubismMotionManager.cpp.s
@@ -971,7 +971,7 @@ src/Motion/CubismMotionManager.s: src/Motion/CubismMotionManager.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismMotionManager.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionManager.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionManager.cpp.s
 .PHONY : src/Motion/CubismMotionManager.cpp.s
 
 src/Motion/CubismMotionQueueEntry.o: src/Motion/CubismMotionQueueEntry.cpp.o
@@ -979,7 +979,7 @@ src/Motion/CubismMotionQueueEntry.o: src/Motion/CubismMotionQueueEntry.cpp.o
 
 # target to build an object file
 src/Motion/CubismMotionQueueEntry.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueEntry.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueEntry.cpp.o
 .PHONY : src/Motion/CubismMotionQueueEntry.cpp.o
 
 src/Motion/CubismMotionQueueEntry.i: src/Motion/CubismMotionQueueEntry.cpp.i
@@ -987,7 +987,7 @@ src/Motion/CubismMotionQueueEntry.i: src/Motion/CubismMotionQueueEntry.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismMotionQueueEntry.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueEntry.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueEntry.cpp.i
 .PHONY : src/Motion/CubismMotionQueueEntry.cpp.i
 
 src/Motion/CubismMotionQueueEntry.s: src/Motion/CubismMotionQueueEntry.cpp.s
@@ -995,7 +995,7 @@ src/Motion/CubismMotionQueueEntry.s: src/Motion/CubismMotionQueueEntry.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismMotionQueueEntry.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueEntry.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueEntry.cpp.s
 .PHONY : src/Motion/CubismMotionQueueEntry.cpp.s
 
 src/Motion/CubismMotionQueueManager.o: src/Motion/CubismMotionQueueManager.cpp.o
@@ -1003,7 +1003,7 @@ src/Motion/CubismMotionQueueManager.o: src/Motion/CubismMotionQueueManager.cpp.o
 
 # target to build an object file
 src/Motion/CubismMotionQueueManager.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueManager.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueManager.cpp.o
 .PHONY : src/Motion/CubismMotionQueueManager.cpp.o
 
 src/Motion/CubismMotionQueueManager.i: src/Motion/CubismMotionQueueManager.cpp.i
@@ -1011,7 +1011,7 @@ src/Motion/CubismMotionQueueManager.i: src/Motion/CubismMotionQueueManager.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismMotionQueueManager.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueManager.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueManager.cpp.i
 .PHONY : src/Motion/CubismMotionQueueManager.cpp.i
 
 src/Motion/CubismMotionQueueManager.s: src/Motion/CubismMotionQueueManager.cpp.s
@@ -1019,7 +1019,7 @@ src/Motion/CubismMotionQueueManager.s: src/Motion/CubismMotionQueueManager.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismMotionQueueManager.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueManager.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismMotionQueueManager.cpp.s
 .PHONY : src/Motion/CubismMotionQueueManager.cpp.s
 
 src/Motion/CubismPhysicsUpdater.o: src/Motion/CubismPhysicsUpdater.cpp.o
@@ -1027,7 +1027,7 @@ src/Motion/CubismPhysicsUpdater.o: src/Motion/CubismPhysicsUpdater.cpp.o
 
 # target to build an object file
 src/Motion/CubismPhysicsUpdater.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPhysicsUpdater.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPhysicsUpdater.cpp.o
 .PHONY : src/Motion/CubismPhysicsUpdater.cpp.o
 
 src/Motion/CubismPhysicsUpdater.i: src/Motion/CubismPhysicsUpdater.cpp.i
@@ -1035,7 +1035,7 @@ src/Motion/CubismPhysicsUpdater.i: src/Motion/CubismPhysicsUpdater.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismPhysicsUpdater.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPhysicsUpdater.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPhysicsUpdater.cpp.i
 .PHONY : src/Motion/CubismPhysicsUpdater.cpp.i
 
 src/Motion/CubismPhysicsUpdater.s: src/Motion/CubismPhysicsUpdater.cpp.s
@@ -1043,7 +1043,7 @@ src/Motion/CubismPhysicsUpdater.s: src/Motion/CubismPhysicsUpdater.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismPhysicsUpdater.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPhysicsUpdater.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPhysicsUpdater.cpp.s
 .PHONY : src/Motion/CubismPhysicsUpdater.cpp.s
 
 src/Motion/CubismPoseUpdater.o: src/Motion/CubismPoseUpdater.cpp.o
@@ -1051,7 +1051,7 @@ src/Motion/CubismPoseUpdater.o: src/Motion/CubismPoseUpdater.cpp.o
 
 # target to build an object file
 src/Motion/CubismPoseUpdater.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPoseUpdater.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPoseUpdater.cpp.o
 .PHONY : src/Motion/CubismPoseUpdater.cpp.o
 
 src/Motion/CubismPoseUpdater.i: src/Motion/CubismPoseUpdater.cpp.i
@@ -1059,7 +1059,7 @@ src/Motion/CubismPoseUpdater.i: src/Motion/CubismPoseUpdater.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismPoseUpdater.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPoseUpdater.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPoseUpdater.cpp.i
 .PHONY : src/Motion/CubismPoseUpdater.cpp.i
 
 src/Motion/CubismPoseUpdater.s: src/Motion/CubismPoseUpdater.cpp.s
@@ -1067,7 +1067,7 @@ src/Motion/CubismPoseUpdater.s: src/Motion/CubismPoseUpdater.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismPoseUpdater.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPoseUpdater.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismPoseUpdater.cpp.s
 .PHONY : src/Motion/CubismPoseUpdater.cpp.s
 
 src/Motion/CubismUpdateScheduler.o: src/Motion/CubismUpdateScheduler.cpp.o
@@ -1075,7 +1075,7 @@ src/Motion/CubismUpdateScheduler.o: src/Motion/CubismUpdateScheduler.cpp.o
 
 # target to build an object file
 src/Motion/CubismUpdateScheduler.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismUpdateScheduler.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismUpdateScheduler.cpp.o
 .PHONY : src/Motion/CubismUpdateScheduler.cpp.o
 
 src/Motion/CubismUpdateScheduler.i: src/Motion/CubismUpdateScheduler.cpp.i
@@ -1083,7 +1083,7 @@ src/Motion/CubismUpdateScheduler.i: src/Motion/CubismUpdateScheduler.cpp.i
 
 # target to preprocess a source file
 src/Motion/CubismUpdateScheduler.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismUpdateScheduler.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismUpdateScheduler.cpp.i
 .PHONY : src/Motion/CubismUpdateScheduler.cpp.i
 
 src/Motion/CubismUpdateScheduler.s: src/Motion/CubismUpdateScheduler.cpp.s
@@ -1091,7 +1091,7 @@ src/Motion/CubismUpdateScheduler.s: src/Motion/CubismUpdateScheduler.cpp.s
 
 # target to generate assembly for a file
 src/Motion/CubismUpdateScheduler.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismUpdateScheduler.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/CubismUpdateScheduler.cpp.s
 .PHONY : src/Motion/CubismUpdateScheduler.cpp.s
 
 src/Motion/ICubismUpdater.o: src/Motion/ICubismUpdater.cpp.o
@@ -1099,7 +1099,7 @@ src/Motion/ICubismUpdater.o: src/Motion/ICubismUpdater.cpp.o
 
 # target to build an object file
 src/Motion/ICubismUpdater.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ICubismUpdater.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ICubismUpdater.cpp.o
 .PHONY : src/Motion/ICubismUpdater.cpp.o
 
 src/Motion/ICubismUpdater.i: src/Motion/ICubismUpdater.cpp.i
@@ -1107,7 +1107,7 @@ src/Motion/ICubismUpdater.i: src/Motion/ICubismUpdater.cpp.i
 
 # target to preprocess a source file
 src/Motion/ICubismUpdater.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ICubismUpdater.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ICubismUpdater.cpp.i
 .PHONY : src/Motion/ICubismUpdater.cpp.i
 
 src/Motion/ICubismUpdater.s: src/Motion/ICubismUpdater.cpp.s
@@ -1115,7 +1115,7 @@ src/Motion/ICubismUpdater.s: src/Motion/ICubismUpdater.cpp.s
 
 # target to generate assembly for a file
 src/Motion/ICubismUpdater.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ICubismUpdater.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/ICubismUpdater.cpp.s
 .PHONY : src/Motion/ICubismUpdater.cpp.s
 
 src/Motion/IParameterProvider.o: src/Motion/IParameterProvider.cpp.o
@@ -1123,7 +1123,7 @@ src/Motion/IParameterProvider.o: src/Motion/IParameterProvider.cpp.o
 
 # target to build an object file
 src/Motion/IParameterProvider.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/IParameterProvider.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/IParameterProvider.cpp.o
 .PHONY : src/Motion/IParameterProvider.cpp.o
 
 src/Motion/IParameterProvider.i: src/Motion/IParameterProvider.cpp.i
@@ -1131,7 +1131,7 @@ src/Motion/IParameterProvider.i: src/Motion/IParameterProvider.cpp.i
 
 # target to preprocess a source file
 src/Motion/IParameterProvider.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/IParameterProvider.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/IParameterProvider.cpp.i
 .PHONY : src/Motion/IParameterProvider.cpp.i
 
 src/Motion/IParameterProvider.s: src/Motion/IParameterProvider.cpp.s
@@ -1139,7 +1139,7 @@ src/Motion/IParameterProvider.s: src/Motion/IParameterProvider.cpp.s
 
 # target to generate assembly for a file
 src/Motion/IParameterProvider.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/IParameterProvider.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Motion/IParameterProvider.cpp.s
 .PHONY : src/Motion/IParameterProvider.cpp.s
 
 src/Physics/CubismPhysics.o: src/Physics/CubismPhysics.cpp.o
@@ -1147,7 +1147,7 @@ src/Physics/CubismPhysics.o: src/Physics/CubismPhysics.cpp.o
 
 # target to build an object file
 src/Physics/CubismPhysics.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysics.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysics.cpp.o
 .PHONY : src/Physics/CubismPhysics.cpp.o
 
 src/Physics/CubismPhysics.i: src/Physics/CubismPhysics.cpp.i
@@ -1155,7 +1155,7 @@ src/Physics/CubismPhysics.i: src/Physics/CubismPhysics.cpp.i
 
 # target to preprocess a source file
 src/Physics/CubismPhysics.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysics.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysics.cpp.i
 .PHONY : src/Physics/CubismPhysics.cpp.i
 
 src/Physics/CubismPhysics.s: src/Physics/CubismPhysics.cpp.s
@@ -1163,7 +1163,7 @@ src/Physics/CubismPhysics.s: src/Physics/CubismPhysics.cpp.s
 
 # target to generate assembly for a file
 src/Physics/CubismPhysics.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysics.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysics.cpp.s
 .PHONY : src/Physics/CubismPhysics.cpp.s
 
 src/Physics/CubismPhysicsJson.o: src/Physics/CubismPhysicsJson.cpp.o
@@ -1171,7 +1171,7 @@ src/Physics/CubismPhysicsJson.o: src/Physics/CubismPhysicsJson.cpp.o
 
 # target to build an object file
 src/Physics/CubismPhysicsJson.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysicsJson.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysicsJson.cpp.o
 .PHONY : src/Physics/CubismPhysicsJson.cpp.o
 
 src/Physics/CubismPhysicsJson.i: src/Physics/CubismPhysicsJson.cpp.i
@@ -1179,7 +1179,7 @@ src/Physics/CubismPhysicsJson.i: src/Physics/CubismPhysicsJson.cpp.i
 
 # target to preprocess a source file
 src/Physics/CubismPhysicsJson.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysicsJson.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysicsJson.cpp.i
 .PHONY : src/Physics/CubismPhysicsJson.cpp.i
 
 src/Physics/CubismPhysicsJson.s: src/Physics/CubismPhysicsJson.cpp.s
@@ -1187,7 +1187,7 @@ src/Physics/CubismPhysicsJson.s: src/Physics/CubismPhysicsJson.cpp.s
 
 # target to generate assembly for a file
 src/Physics/CubismPhysicsJson.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysicsJson.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Physics/CubismPhysicsJson.cpp.s
 .PHONY : src/Physics/CubismPhysicsJson.cpp.s
 
 src/Rendering/CubismRenderer.o: src/Rendering/CubismRenderer.cpp.o
@@ -1195,7 +1195,7 @@ src/Rendering/CubismRenderer.o: src/Rendering/CubismRenderer.cpp.o
 
 # target to build an object file
 src/Rendering/CubismRenderer.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/CubismRenderer.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/CubismRenderer.cpp.o
 .PHONY : src/Rendering/CubismRenderer.cpp.o
 
 src/Rendering/CubismRenderer.i: src/Rendering/CubismRenderer.cpp.i
@@ -1203,7 +1203,7 @@ src/Rendering/CubismRenderer.i: src/Rendering/CubismRenderer.cpp.i
 
 # target to preprocess a source file
 src/Rendering/CubismRenderer.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/CubismRenderer.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/CubismRenderer.cpp.i
 .PHONY : src/Rendering/CubismRenderer.cpp.i
 
 src/Rendering/CubismRenderer.s: src/Rendering/CubismRenderer.cpp.s
@@ -1211,7 +1211,7 @@ src/Rendering/CubismRenderer.s: src/Rendering/CubismRenderer.cpp.s
 
 # target to generate assembly for a file
 src/Rendering/CubismRenderer.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/CubismRenderer.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/CubismRenderer.cpp.s
 .PHONY : src/Rendering/CubismRenderer.cpp.s
 
 src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.o: src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.o
@@ -1219,7 +1219,7 @@ src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.o: src/Rendering/OpenGL/Cu
 
 # target to build an object file
 src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.o
 .PHONY : src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.o
 
 src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.i: src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.i
@@ -1227,7 +1227,7 @@ src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.i: src/Rendering/OpenGL/Cu
 
 # target to preprocess a source file
 src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.i
 .PHONY : src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.i
 
 src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.s: src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.s
@@ -1235,7 +1235,7 @@ src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.s: src/Rendering/OpenGL/Cu
 
 # target to generate assembly for a file
 src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.s
 .PHONY : src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.cpp.s
 
 src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.o: src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.o
@@ -1243,7 +1243,7 @@ src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.o: src/Rendering/Open
 
 # target to build an object file
 src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.o
 .PHONY : src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.o
 
 src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.i: src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.i
@@ -1251,7 +1251,7 @@ src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.i: src/Rendering/Open
 
 # target to preprocess a source file
 src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.i
 .PHONY : src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.i
 
 src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.s: src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.s
@@ -1259,7 +1259,7 @@ src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.s: src/Rendering/Open
 
 # target to generate assembly for a file
 src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.s
 .PHONY : src/Rendering/OpenGL/CubismOffscreenRenderTarget_OpenGLES2.cpp.s
 
 src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.o: src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.o
@@ -1267,7 +1267,7 @@ src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.o: src/Rendering/OpenGL/Cubism
 
 # target to build an object file
 src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.o
 .PHONY : src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.o
 
 src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.i: src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.i
@@ -1275,7 +1275,7 @@ src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.i: src/Rendering/OpenGL/Cubism
 
 # target to preprocess a source file
 src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.i
 .PHONY : src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.i
 
 src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.s: src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.s
@@ -1283,7 +1283,7 @@ src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.s: src/Rendering/OpenGL/Cubism
 
 # target to generate assembly for a file
 src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.s
 .PHONY : src/Rendering/OpenGL/CubismRenderTarget_OpenGLES2.cpp.s
 
 src/Rendering/OpenGL/CubismRenderer_OpenGLES2.o: src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.o
@@ -1291,7 +1291,7 @@ src/Rendering/OpenGL/CubismRenderer_OpenGLES2.o: src/Rendering/OpenGL/CubismRend
 
 # target to build an object file
 src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.o
 .PHONY : src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.o
 
 src/Rendering/OpenGL/CubismRenderer_OpenGLES2.i: src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.i
@@ -1299,7 +1299,7 @@ src/Rendering/OpenGL/CubismRenderer_OpenGLES2.i: src/Rendering/OpenGL/CubismRend
 
 # target to preprocess a source file
 src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.i
 .PHONY : src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.i
 
 src/Rendering/OpenGL/CubismRenderer_OpenGLES2.s: src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.s
@@ -1307,7 +1307,7 @@ src/Rendering/OpenGL/CubismRenderer_OpenGLES2.s: src/Rendering/OpenGL/CubismRend
 
 # target to generate assembly for a file
 src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.s
 .PHONY : src/Rendering/OpenGL/CubismRenderer_OpenGLES2.cpp.s
 
 src/Rendering/OpenGL/CubismShader_OpenGLES2.o: src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.o
@@ -1315,7 +1315,7 @@ src/Rendering/OpenGL/CubismShader_OpenGLES2.o: src/Rendering/OpenGL/CubismShader
 
 # target to build an object file
 src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.o
 .PHONY : src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.o
 
 src/Rendering/OpenGL/CubismShader_OpenGLES2.i: src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.i
@@ -1323,7 +1323,7 @@ src/Rendering/OpenGL/CubismShader_OpenGLES2.i: src/Rendering/OpenGL/CubismShader
 
 # target to preprocess a source file
 src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.i
 .PHONY : src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.i
 
 src/Rendering/OpenGL/CubismShader_OpenGLES2.s: src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.s
@@ -1331,7 +1331,7 @@ src/Rendering/OpenGL/CubismShader_OpenGLES2.s: src/Rendering/OpenGL/CubismShader
 
 # target to generate assembly for a file
 src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.s
 .PHONY : src/Rendering/OpenGL/CubismShader_OpenGLES2.cpp.s
 
 src/Rendering/csmBlendMode.o: src/Rendering/csmBlendMode.cpp.o
@@ -1339,7 +1339,7 @@ src/Rendering/csmBlendMode.o: src/Rendering/csmBlendMode.cpp.o
 
 # target to build an object file
 src/Rendering/csmBlendMode.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/csmBlendMode.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/csmBlendMode.cpp.o
 .PHONY : src/Rendering/csmBlendMode.cpp.o
 
 src/Rendering/csmBlendMode.i: src/Rendering/csmBlendMode.cpp.i
@@ -1347,7 +1347,7 @@ src/Rendering/csmBlendMode.i: src/Rendering/csmBlendMode.cpp.i
 
 # target to preprocess a source file
 src/Rendering/csmBlendMode.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/csmBlendMode.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/csmBlendMode.cpp.i
 .PHONY : src/Rendering/csmBlendMode.cpp.i
 
 src/Rendering/csmBlendMode.s: src/Rendering/csmBlendMode.cpp.s
@@ -1355,7 +1355,7 @@ src/Rendering/csmBlendMode.s: src/Rendering/csmBlendMode.cpp.s
 
 # target to generate assembly for a file
 src/Rendering/csmBlendMode.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/csmBlendMode.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Rendering/csmBlendMode.cpp.s
 .PHONY : src/Rendering/csmBlendMode.cpp.s
 
 src/Type/csmRectF.o: src/Type/csmRectF.cpp.o
@@ -1363,7 +1363,7 @@ src/Type/csmRectF.o: src/Type/csmRectF.cpp.o
 
 # target to build an object file
 src/Type/csmRectF.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmRectF.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmRectF.cpp.o
 .PHONY : src/Type/csmRectF.cpp.o
 
 src/Type/csmRectF.i: src/Type/csmRectF.cpp.i
@@ -1371,7 +1371,7 @@ src/Type/csmRectF.i: src/Type/csmRectF.cpp.i
 
 # target to preprocess a source file
 src/Type/csmRectF.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmRectF.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmRectF.cpp.i
 .PHONY : src/Type/csmRectF.cpp.i
 
 src/Type/csmRectF.s: src/Type/csmRectF.cpp.s
@@ -1379,7 +1379,7 @@ src/Type/csmRectF.s: src/Type/csmRectF.cpp.s
 
 # target to generate assembly for a file
 src/Type/csmRectF.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmRectF.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmRectF.cpp.s
 .PHONY : src/Type/csmRectF.cpp.s
 
 src/Type/csmString.o: src/Type/csmString.cpp.o
@@ -1387,7 +1387,7 @@ src/Type/csmString.o: src/Type/csmString.cpp.o
 
 # target to build an object file
 src/Type/csmString.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmString.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmString.cpp.o
 .PHONY : src/Type/csmString.cpp.o
 
 src/Type/csmString.i: src/Type/csmString.cpp.i
@@ -1395,7 +1395,7 @@ src/Type/csmString.i: src/Type/csmString.cpp.i
 
 # target to preprocess a source file
 src/Type/csmString.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmString.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmString.cpp.i
 .PHONY : src/Type/csmString.cpp.i
 
 src/Type/csmString.s: src/Type/csmString.cpp.s
@@ -1403,7 +1403,7 @@ src/Type/csmString.s: src/Type/csmString.cpp.s
 
 # target to generate assembly for a file
 src/Type/csmString.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmString.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Type/csmString.cpp.s
 .PHONY : src/Type/csmString.cpp.s
 
 src/Utils/CubismDebug.o: src/Utils/CubismDebug.cpp.o
@@ -1411,7 +1411,7 @@ src/Utils/CubismDebug.o: src/Utils/CubismDebug.cpp.o
 
 # target to build an object file
 src/Utils/CubismDebug.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismDebug.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismDebug.cpp.o
 .PHONY : src/Utils/CubismDebug.cpp.o
 
 src/Utils/CubismDebug.i: src/Utils/CubismDebug.cpp.i
@@ -1419,7 +1419,7 @@ src/Utils/CubismDebug.i: src/Utils/CubismDebug.cpp.i
 
 # target to preprocess a source file
 src/Utils/CubismDebug.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismDebug.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismDebug.cpp.i
 .PHONY : src/Utils/CubismDebug.cpp.i
 
 src/Utils/CubismDebug.s: src/Utils/CubismDebug.cpp.s
@@ -1427,7 +1427,7 @@ src/Utils/CubismDebug.s: src/Utils/CubismDebug.cpp.s
 
 # target to generate assembly for a file
 src/Utils/CubismDebug.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismDebug.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismDebug.cpp.s
 .PHONY : src/Utils/CubismDebug.cpp.s
 
 src/Utils/CubismJson.o: src/Utils/CubismJson.cpp.o
@@ -1435,7 +1435,7 @@ src/Utils/CubismJson.o: src/Utils/CubismJson.cpp.o
 
 # target to build an object file
 src/Utils/CubismJson.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismJson.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismJson.cpp.o
 .PHONY : src/Utils/CubismJson.cpp.o
 
 src/Utils/CubismJson.i: src/Utils/CubismJson.cpp.i
@@ -1443,7 +1443,7 @@ src/Utils/CubismJson.i: src/Utils/CubismJson.cpp.i
 
 # target to preprocess a source file
 src/Utils/CubismJson.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismJson.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismJson.cpp.i
 .PHONY : src/Utils/CubismJson.cpp.i
 
 src/Utils/CubismJson.s: src/Utils/CubismJson.cpp.s
@@ -1451,7 +1451,7 @@ src/Utils/CubismJson.s: src/Utils/CubismJson.cpp.s
 
 # target to generate assembly for a file
 src/Utils/CubismJson.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismJson.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismJson.cpp.s
 .PHONY : src/Utils/CubismJson.cpp.s
 
 src/Utils/CubismString.o: src/Utils/CubismString.cpp.o
@@ -1459,7 +1459,7 @@ src/Utils/CubismString.o: src/Utils/CubismString.cpp.o
 
 # target to build an object file
 src/Utils/CubismString.cpp.o:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismString.cpp.o
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismString.cpp.o
 .PHONY : src/Utils/CubismString.cpp.o
 
 src/Utils/CubismString.i: src/Utils/CubismString.cpp.i
@@ -1467,7 +1467,7 @@ src/Utils/CubismString.i: src/Utils/CubismString.cpp.i
 
 # target to preprocess a source file
 src/Utils/CubismString.cpp.i:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismString.cpp.i
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismString.cpp.i
 .PHONY : src/Utils/CubismString.cpp.i
 
 src/Utils/CubismString.s: src/Utils/CubismString.cpp.s
@@ -1475,7 +1475,7 @@ src/Utils/CubismString.s: src/Utils/CubismString.cpp.s
 
 # target to generate assembly for a file
 src/Utils/CubismString.cpp.s:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismString.cpp.s
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(MAKE) $(MAKESILENT) -f Framework/CMakeFiles/Framework.dir/build.make Framework/CMakeFiles/Framework.dir/src/Utils/CubismString.cpp.s
 .PHONY : src/Utils/CubismString.cpp.s
 
 # Help Target
@@ -1665,6 +1665,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

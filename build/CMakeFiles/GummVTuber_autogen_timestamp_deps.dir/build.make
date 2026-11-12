@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk"
+CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/build"
+CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build"
 
 # Utility rule file for GummVTuber_autogen_timestamp_deps.
 
@@ -81,6 +81,6 @@ CMakeFiles/GummVTuber_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/GummVTuber_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/GummVTuber_autogen_timestamp_deps.dir/depend:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gumduck/Documentos/GitHub/seila kk" "/home/gumduck/Documentos/GitHub/seila kk" "/home/gumduck/Documentos/GitHub/seila kk/build" "/home/gumduck/Documentos/GitHub/seila kk/build" "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/GummVTuber_autogen_timestamp_deps.dir/DependInfo.cmake" "--color=$(COLOR)" GummVTuber_autogen_timestamp_deps
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/GummVTuber_autogen_timestamp_deps.dir/DependInfo.cmake" "--color=$(COLOR)" GummVTuber_autogen_timestamp_deps
 .PHONY : CMakeFiles/GummVTuber_autogen_timestamp_deps.dir/depend
 

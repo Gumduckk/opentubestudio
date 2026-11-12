@@ -19,6 +19,7 @@ Comandos no stdin (JSON por linha):  {"cmd":"quit"}
 import argparse
 import json
 import math
+import os
 import select
 import sys
 import time
@@ -35,6 +36,7 @@ def die(msg, code):
 
 try:
     import cv2
+    import numpy as np
     import mediapipe as mp
     from mediapipe.tasks.python import vision
     from mediapipe.tasks.python.core.base_options import BaseOptions
@@ -50,6 +52,103 @@ def parse_args():
     ap.add_argument("--width", type=int, default=1280, help="(ignorado; compat)")
     ap.add_argument("--height", type=int, default=720, help="(ignorado; compat)")
     return ap.parse_args()
+
+
+def limit_frame(frame, max_w=1280, max_h=720):
+    """Reduz frames gigantes (ex.: webcam virtual 4K) para acelerar o rastreio."""
+    h, w = frame.shape[:2]
+    if w <= max_w and h <= max_h:
+        return frame
+    scale = min(max_w / float(w), max_h / float(h))
+    return cv2.resize(frame, (int(w * scale), int(h * scale)),
+                      interpolation=cv2.INTER_AREA)
+
+
+def list_video_devices():
+    """Lista os índices de /dev/video* presentes no sistema."""
+    return [i for i in range(16) if os.path.exists("/dev/video%d" % i)]
+
+
+def open_video(index, width, height, fourcc=None, tries=20):
+    """Abre um dispositivo e devolve (cap, frame) só se ele entregar imagem."""
+    # OpenCV 5 pode falhar ao abrir por índice numérico ("can't open camera
+    # by index"), mas abre normalmente pelo caminho /dev/videoN.
+    path = "/dev/video%d" % index
+    cap = cv2.VideoCapture(path, cv2.CAP_V4L2)
+    if not cap.isOpened():
+        cap.release()
+        cap = cv2.VideoCapture(path)
+    if not cap.isOpened():
+        cap.release()
+        return None, None
+
+    # Mantém só o frame mais recente: evita atraso quando a detecção demora.
+    cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+    if fourcc:
+        # Webcams USB em 720p+ costumam precisar de MJPG; em YUYV o
+        # dispositivo abre mas não consegue entregar frames.
+        cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*fourcc))
+    if width > 0:
+        cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
+    if height > 0:
+        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
+
+    for _ in range(tries):
+        ok, frame = cap.read()
+        if ok and frame is not None:
+            return cap, frame
+        time.sleep(0.05)
+    cap.release()
+    return None, None
+
+
+def is_virtual_camera(index):
+    """True para câmeras virtuais (v4l2loopback: OBS/Iriun), que não têm
+    o symlink 'device' no sysfs como as webcams USB reais."""
+    return not os.path.exists("/sys/class/video4linux/video%d/device" % index)
+
+
+def open_camera(index, width, height):
+    """Abre a câmera escolhida e garante que ela realmente entrega frames.
+
+    Se o dispositivo abrir mas não entregar imagem (nó de metadados, câmera
+    virtual sem produtor como OBS Virtual Cam / v4l2loopback parado etc.),
+    tenta os outros /dev/video* automaticamente. Assim o rastreio funciona
+    mesmo quando o índice salvo aponta para uma câmera vazia.
+    """
+    candidates = [index] + [i for i in list_video_devices() if i != index]
+    tested = []
+    for cam in candidates:
+        if cam not in tested:
+            tested.append(cam)
+        if is_virtual_camera(cam):
+            # Câmera virtual já tem formato/resolução definidos pelo produtor
+            # (OBS/Iriun). Não forçar MJPG/tamanho: use o formato atual e só
+            # depois tente a resolução pedida.
+            attempts = ((0, 0, None), (width, height, None))
+        else:
+            # Webcam USB: em 720p+ normalmente precisa de MJPG; se falhar,
+            # tenta o formato padrão em 640x480.
+            attempts = ((width, height, "MJPG"), (640, 480, None))
+
+        for w, h, fourcc in attempts:
+            cap, frame = open_video(cam, w, h, fourcc)
+            if frame is not None:
+                if cam != index:
+                    log("câmera %d não entregou imagem; usando /dev/video%d"
+                        % (index, cam))
+                frame = limit_frame(frame)
+                log("câmera %d: %dx%d"
+                    % (cam, frame.shape[1], frame.shape[0]))
+                return cap, frame
+        log("câmera %d abriu, mas não entregou imagem; tentando outra..." % cam)
+
+    die("nenhuma câmera entregou imagem (testadas: %s).\n"
+        "        Se usa OBS Virtual Cam, inicie a câmera virtual no OBS.\n"
+        "        Se usa Iriun/telefone, conecte o celular.\n"
+        "        Feche VTube Studio/OpenSeeFace/OBS que estejam usando a\n"
+        "        mesma câmera e escolha a câmera correta na aba Rastreio."
+        % ", ".join("/dev/video%d" % i for i in tested), 3)
 
 
 def euler_deg(R):
@@ -73,6 +172,11 @@ def main():
         base_options=BaseOptions(model_asset_path=opts.model),
         running_mode=vision.RunningMode.VIDEO,
         num_faces=1,
+        # Limiares mais tolerantes: ajuda com rosto pequeno, de lado ou com
+        # pouca luz. O mapeamento de parâmetros já suaviza falsos positivos.
+        min_face_detection_confidence=0.3,
+        min_face_presence_confidence=0.3,
+        min_tracking_confidence=0.3,
         output_face_blendshapes=True,
         output_facial_transformation_matrixes=True,
     )
@@ -81,9 +185,7 @@ def main():
     except Exception as e:  # noqa: BLE001
         die("não carregou o modelo de rastreio: %s" % e, 2)
 
-    cap = cv2.VideoCapture(opts.camera)
-    if not cap.isOpened():
-        die("não abriu a câmera %d (/dev/video%d)" % (opts.camera, opts.camera), 3)
+    cap, first = open_camera(opts.camera, opts.width, opts.height)
 
     log("rastreador ativo (câmera %d). Ctrl+C ou comando quit para sair."
         % opts.camera)
@@ -91,6 +193,7 @@ def main():
 
     last_ts = -1
     stdin_fd = sys.stdin.fileno()
+    pending = first
     try:
         while True:
             # comandos do app (não bloqueia)
@@ -109,10 +212,15 @@ def main():
             except (ValueError, OSError):
                 pass
 
-            ok, frame = cap.read()
-            if not ok:
-                time.sleep(0.01)
-                continue
+            if pending is not None:
+                frame = pending
+                pending = None
+            else:
+                ok, frame = cap.read()
+                if not ok:
+                    time.sleep(0.01)
+                    continue
+                frame = limit_frame(frame)
 
             rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb)
@@ -132,7 +240,10 @@ def main():
             out = {"found": 1}
 
             # --- cabeça ---
-            M = result.facial_transformation_matrixes[0].data.reshape(4, 4)
+            # MediaPipe novo entrega .data como memoryview; np.asarray
+            # garante o reshape independente da versão do pacote.
+            M = np.asarray(result.facial_transformation_matrixes[0].data,
+                           dtype=np.float32).reshape(4, 4)
             R = [[float(M[0][0]), float(M[0][1]), float(M[0][2])],
                  [float(M[1][0]), float(M[1][1]), float(M[1][2])],
                  [float(M[2][0]), float(M[2][1]), float(M[2][2])]]

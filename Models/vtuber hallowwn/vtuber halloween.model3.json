@@ -1,0 +1,32 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "vtuber halloween.moc3",
+		"Textures": [
+			"vtuber halloween.2048/texture_00.png",
+			"vtuber halloween.2048/texture_01.png",
+			"vtuber halloween.2048/texture_02.png",
+			"vtuber halloween.2048/texture_03.png",
+			"vtuber halloween.2048/texture_04.png",
+			"vtuber halloween.2048/texture_05.png",
+			"vtuber halloween.2048/texture_06.png",
+			"vtuber halloween.2048/texture_07.png",
+			"vtuber halloween.2048/texture_08.png",
+			"vtuber halloween.2048/texture_09.png"
+		],
+		"Physics": "vtuber halloween.physics3.json",
+		"DisplayInfo": "vtuber halloween.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		}
+	]
+}

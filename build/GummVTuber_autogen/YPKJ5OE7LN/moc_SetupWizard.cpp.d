@@ -1,5 +1,5 @@
-/home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/YPKJ5OE7LN/moc_SetupWizard.cpp: /home/gumduck/Documentos/GitHub/seila\ kk/src/ui/SetupWizard.h \
-  /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/moc_predefs.h \
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/YPKJ5OE7LN/moc_SetupWizard.cpp: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/SetupWizard.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \

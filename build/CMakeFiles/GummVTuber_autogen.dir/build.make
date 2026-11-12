@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk"
+CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/build"
+CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build"
 
 # Utility rule file for GummVTuber_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/GummVTuber_autogen: GummVTuber_autogen/timestamp
 
 GummVTuber_autogen/timestamp: /usr/lib/qt6/moc
 GummVTuber_autogen/timestamp: CMakeFiles/GummVTuber_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target GummVTuber"
-	/usr/bin/cmake -E cmake_autogen "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/GummVTuber_autogen.dir/AutogenInfo.json" Release
-	/usr/bin/cmake -E touch "/home/gumduck/Documentos/GitHub/seila kk/build/GummVTuber_autogen/timestamp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target GummVTuber"
+	/usr/bin/cmake -E cmake_autogen "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/GummVTuber_autogen.dir/AutogenInfo.json" Release
+	/usr/bin/cmake -E touch "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber_autogen/timestamp"
 
 CMakeFiles/GummVTuber_autogen.dir/codegen:
 .PHONY : CMakeFiles/GummVTuber_autogen.dir/codegen
@@ -91,6 +91,6 @@ CMakeFiles/GummVTuber_autogen.dir/clean:
 .PHONY : CMakeFiles/GummVTuber_autogen.dir/clean
 
 CMakeFiles/GummVTuber_autogen.dir/depend:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gumduck/Documentos/GitHub/seila kk" "/home/gumduck/Documentos/GitHub/seila kk" "/home/gumduck/Documentos/GitHub/seila kk/build" "/home/gumduck/Documentos/GitHub/seila kk/build" "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/GummVTuber_autogen.dir/DependInfo.cmake" "--color=$(COLOR)" GummVTuber_autogen
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/GummVTuber_autogen.dir/DependInfo.cmake" "--color=$(COLOR)" GummVTuber_autogen
 .PHONY : CMakeFiles/GummVTuber_autogen.dir/depend
 

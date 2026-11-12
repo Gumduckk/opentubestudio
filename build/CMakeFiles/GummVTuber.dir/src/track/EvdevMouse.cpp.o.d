@@ -1,7 +1,7 @@
 CMakeFiles/GummVTuber.dir/src/track/EvdevMouse.cpp.o: \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/track/EvdevMouse.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.cpp \
  /usr/include/stdc-predef.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/track/EvdevMouse.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.h \
  /usr/include/qt6/QtCore/QPoint /usr/include/qt6/QtCore/qpoint.h \
  /usr/include/qt6/QtCore/qcheckedint_impl.h \
  /usr/include/qt6/QtCore/qassert.h \

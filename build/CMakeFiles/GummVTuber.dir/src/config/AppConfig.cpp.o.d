@@ -1,7 +1,7 @@
 CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o: \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/config/AppConfig.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.cpp \
  /usr/include/stdc-predef.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/config/AppConfig.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.h \
  /usr/include/qt6/QtCore/QString /usr/include/qt6/QtCore/qstring.h \
  /usr/include/qt6/QtCore/qchar.h /usr/include/qt6/QtCore/qglobal.h \
  /usr/include/c++/16/type_traits \

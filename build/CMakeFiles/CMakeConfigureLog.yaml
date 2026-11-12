@@ -61,7 +61,7 @@ events:
       - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:218 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      The system is: Linux - 7.2.11-1-cachyos - x86_64
+      The system is: Linux - 7.3.1-1-cachyos - x86_64
   -
     kind: "find-v1"
     backtrace:
@@ -256,7 +256,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/4.4.4/CompilerIdC/a.out
+        /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/4.4.5/CompilerIdC/a.out
       
   -
     kind: "find-v1"
@@ -1187,7 +1187,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/4.4.4/CompilerIdCXX/a.out
+        /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/4.4.5/CompilerIdCXX/a.out
       
   -
     kind: "find-v1"
@@ -1402,8 +1402,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-7vcolW"
-      binary: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-7vcolW"
+      source: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5Ww9dT"
+      binary: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5Ww9dT"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -1413,13 +1413,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: false
       stdout: |
-        Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-7vcolW'
+        Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5Ww9dT'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_91b91/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_91b91.dir/build.make CMakeFiles/cmTC_91b91.dir/build
-        make[1]: Entering directory '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-7vcolW'
-        Building C object CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_910fd/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_910fd.dir/build.make CMakeFiles/cmTC_910fd.dir/build
+        make[1]: Entering directory '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5Ww9dT'
+        Building C object CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         Target: x86_64-pc-linux-gnu
@@ -1427,8 +1427,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.2.1 20260810 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91b91.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_91b91.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccNkjcQ0.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_910fd.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_910fd.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cc0g805D.s
         GNU C23 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 16.2.1 20260810, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.28-GMP
         
@@ -1441,15 +1441,15 @@ events:
          /usr/local/include
          /usr/include
         End of search list.
-        Compiler executable checksum: a48c0af3a2776f11d2f29c8a4f4a097f
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91b91.dir/'
-         as -v --64 -o CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o /tmp/ccNkjcQ0.s
+        Compiler executable checksum: 21fae48896f9c4a226da158148b4a12e
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_910fd.dir/'
+         as -v --64 -o CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o /tmp/cc0g805D.s
         GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_91b91
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91b91.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_910fd
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_910fd.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper
@@ -1460,14 +1460,14 @@ events:
         gcc version 16.2.1 20260810 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_91b91' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_91b91.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSB8gNd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91b91 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_910fd' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_910fd.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cczkPguK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_910fd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         collect2 version 16.2.1 20260810
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSB8gNd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91b91 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cczkPguK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_910fd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.47
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_91b91' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_91b91.'
-        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o -o cmTC_91b91
-        make[1]: Leaving directory '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-7vcolW'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_910fd' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_910fd.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o -o cmTC_910fd
+        make[1]: Leaving directory '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5Ww9dT'
         
       exitCode: 0
   -
@@ -1500,13 +1500,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
-        ignore line: [Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-7vcolW']
+        ignore line: [Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5Ww9dT']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_91b91/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_91b91.dir/build.make CMakeFiles/cmTC_91b91.dir/build]
-        ignore line: [make[1]: Entering directory '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-7vcolW']
-        ignore line: [Building C object CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_910fd/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_910fd.dir/build.make CMakeFiles/cmTC_910fd.dir/build]
+        ignore line: [make[1]: Entering directory '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5Ww9dT']
+        ignore line: [Building C object CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -1514,8 +1514,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91b91.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_91b91.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccNkjcQ0.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_910fd.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_910fd.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/cc0g805D.s]
         ignore line: [GNU C23 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 16.2.1 20260810  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.28-GMP]
         ignore line: []
@@ -1528,15 +1528,15 @@ events:
         ignore line: [ /usr/local/include]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [Compiler executable checksum: a48c0af3a2776f11d2f29c8a4f4a097f]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91b91.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o /tmp/ccNkjcQ0.s]
+        ignore line: [Compiler executable checksum: 21fae48896f9c4a226da158148b4a12e]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_910fd.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o /tmp/cc0g805D.s]
         ignore line: [GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_91b91]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91b91.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_910fd]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_910fd.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper]
@@ -1547,13 +1547,13 @@ events:
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_91b91' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_91b91.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSB8gNd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91b91 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_910fd' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_910fd.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cczkPguK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_910fd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccSB8gNd.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cczkPguK.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
           arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
@@ -1569,7 +1569,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_91b91] ==> ignore
+          arg [cmTC_910fd] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o]
@@ -1581,7 +1581,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
           arg [-latomic_asneeded] ==> lib [atomic_asneeded]
@@ -1591,9 +1591,9 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
         ignore line: [collect2 version 16.2.1 20260810]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSB8gNd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91b91 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSB8gNd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91b91 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSB8gNd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91b91 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_91b91.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cczkPguK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_910fd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cczkPguK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_910fd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cczkPguK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_910fd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_910fd.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
         linker tool for 'C': /usr/bin/ld -m;elf
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -1630,8 +1630,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-aPFaGc"
-      binary: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-aPFaGc"
+      source: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-P5PocR"
+      binary: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-P5PocR"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1642,13 +1642,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: false
       stdout: |
-        Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-aPFaGc'
+        Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-P5PocR'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7defd/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_7defd.dir/build.make CMakeFiles/cmTC_7defd.dir/build
-        make[1]: Entering directory '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-aPFaGc'
-        Building CXX object CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7db31/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_7db31.dir/build.make CMakeFiles/cmTC_7db31.dir/build
+        make[1]: Entering directory '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-P5PocR'
+        Building CXX object CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         Target: x86_64-pc-linux-gnu
@@ -1656,8 +1656,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.2.1 20260810 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7defd.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7defd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccILmkFn.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7db31.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7db31.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccvxXHTp.s
         GNU C++20 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 16.2.1 20260810, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.28-GMP
         
@@ -1673,15 +1673,15 @@ events:
          /usr/local/include
          /usr/include
         End of search list.
-        Compiler executable checksum: 28a31ad65a3474623aa15fc494746870
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7defd.dir/'
-         as -v --64 -o CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccILmkFn.s
+        Compiler executable checksum: 48ed26afbfd8a1151cb01c1770d6f643
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7db31.dir/'
+         as -v --64 -o CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccvxXHTp.s
         GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_7defd
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7defd.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_7db31
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7db31.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper
@@ -1692,14 +1692,14 @@ events:
         gcc version 16.2.1 20260810 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7defd' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7defd.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOyol4l.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7defd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7db31' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7db31.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn9X7ry.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7db31 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         collect2 version 16.2.1 20260810
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOyol4l.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7defd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn9X7ry.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7db31 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.47
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7defd' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7defd.'
-        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_7defd
-        make[1]: Leaving directory '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-aPFaGc'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7db31' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7db31.'
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_7db31
+        make[1]: Leaving directory '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-P5PocR'
         
       exitCode: 0
   -
@@ -1738,13 +1738,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
-        ignore line: [Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-aPFaGc']
+        ignore line: [Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-P5PocR']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7defd/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_7defd.dir/build.make CMakeFiles/cmTC_7defd.dir/build]
-        ignore line: [make[1]: Entering directory '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-aPFaGc']
-        ignore line: [Building CXX object CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7db31/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_7db31.dir/build.make CMakeFiles/cmTC_7db31.dir/build]
+        ignore line: [make[1]: Entering directory '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-P5PocR']
+        ignore line: [Building CXX object CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -1752,8 +1752,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7defd.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7defd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccILmkFn.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7db31.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_7db31.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccvxXHTp.s]
         ignore line: [GNU C++20 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 16.2.1 20260810  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.28-GMP]
         ignore line: []
@@ -1769,15 +1769,15 @@ events:
         ignore line: [ /usr/local/include]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [Compiler executable checksum: 28a31ad65a3474623aa15fc494746870]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7defd.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccILmkFn.s]
+        ignore line: [Compiler executable checksum: 48ed26afbfd8a1151cb01c1770d6f643]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7db31.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccvxXHTp.s]
         ignore line: [GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_7defd]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7defd.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_7db31]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7db31.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper]
@@ -1788,13 +1788,13 @@ events:
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7defd' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7defd.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOyol4l.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7defd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7db31' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7db31.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn9X7ry.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7db31 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccOyol4l.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccn9X7ry.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
@@ -1810,7 +1810,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_7defd] ==> ignore
+          arg [cmTC_7db31] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o]
@@ -1822,7 +1822,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1834,9 +1834,9 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
         ignore line: [collect2 version 16.2.1 20260810]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOyol4l.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7defd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOyol4l.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7defd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOyol4l.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7defd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7defd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn9X7ry.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7db31 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn9X7ry.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7db31 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn9X7ry.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7db31 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7db31.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
         linker tool for 'CXX': /usr/bin/ld -m;elf
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -1880,8 +1880,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-FvbD1p"
-      binary: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-FvbD1p"
+      source: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-sV8UrW"
+      binary: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-sV8UrW"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -1892,18 +1892,18 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-FvbD1p'
+        Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-sV8UrW'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3c419/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_3c419.dir/build.make CMakeFiles/cmTC_3c419.dir/build
-        make[1]: Entrando no diretório '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-FvbD1p'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_740bf/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_740bf.dir/build.make CMakeFiles/cmTC_740bf.dir/build
+        make[1]: Entrando no diretório '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-sV8UrW'
         
-        Building C object CMakeFiles/cmTC_3c419.dir/src.c.o
-        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_3c419.dir/src.c.o -c "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-FvbD1p/src.c"
-        Linking C executable cmTC_3c419
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c419.dir/link.txt --verbose=1
-        /usr/bin/cc CMakeFiles/cmTC_3c419.dir/src.c.o -o cmTC_3c419
-        make[1]: Saindo do diretório '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-FvbD1p'
+        Building C object CMakeFiles/cmTC_740bf.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_740bf.dir/src.c.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-sV8UrW/src.c"
+        Linking C executable cmTC_740bf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_740bf.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_740bf.dir/src.c.o -o cmTC_740bf
+        make[1]: Saindo do diretório '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-sV8UrW'
         
         
       exitCode: 0
@@ -1961,27 +1961,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6CoreToolsConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6CoreToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6coretools-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6coretools-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6CoreTools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6CoreTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6coretools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6coretools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6CoreTools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6CoreTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6coretools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6coretools.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -2117,27 +2117,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6GuiToolsConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6GuiToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6guitools-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6guitools-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6GuiTools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6GuiTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6guitools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6guitools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6GuiTools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6GuiTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6guitools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6guitools.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -2270,27 +2270,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6WidgetsToolsConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6WidgetsToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6widgetstools-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6widgetstools-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6WidgetsTools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6WidgetsTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6widgetstools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6widgetstools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6WidgetsTools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6WidgetsTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6widgetstools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6widgetstools.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -2393,8 +2393,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-klRdw5"
-      binary: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-klRdw5"
+      source: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5POTBY"
+      binary: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5POTBY"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2405,18 +2405,18 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-klRdw5'
+        Change Dir: '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5POTBY'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ef995/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_ef995.dir/build.make CMakeFiles/cmTC_ef995.dir/build
-        make[1]: Entrando no diretório '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-klRdw5'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b2164/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_b2164.dir/build.make CMakeFiles/cmTC_b2164.dir/build
+        make[1]: Entrando no diretório '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5POTBY'
         
-        Building CXX object CMakeFiles/cmTC_ef995.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_STDATOMIC  -std=gnu++17 -o CMakeFiles/cmTC_ef995.dir/src.cxx.o -c "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-klRdw5/src.cxx"
-        Linking CXX executable cmTC_ef995
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef995.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_ef995.dir/src.cxx.o -o cmTC_ef995
-        make[1]: Saindo do diretório '/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/CMakeScratch/TryCompile-klRdw5'
+        Building CXX object CMakeFiles/cmTC_b2164.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_STDATOMIC  -std=gnu++17 -o CMakeFiles/cmTC_b2164.dir/src.cxx.o -c "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5POTBY/src.cxx"
+        Linking CXX executable cmTC_b2164
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2164.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_b2164.dir/src.cxx.o -o cmTC_b2164
+        make[1]: Saindo do diretório '/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/CMakeScratch/TryCompile-5POTBY'
         
         
       exitCode: 0
@@ -2473,27 +2473,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6CoreConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6CoreConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6core-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6core-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Core.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Core.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6core.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6core.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6Core.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6Core.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6core.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6core.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -4547,27 +4547,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6DBusToolsConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6DBusToolsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6dbustools-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6dbustools-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6DBusTools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6DBusTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6dbustools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6dbustools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6DBusTools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6DBusTools.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6dbustools.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6dbustools.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -4707,27 +4707,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6DBusConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6DBusConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6dbus-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6dbus-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6DBus.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6DBus.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6dbus.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6dbus.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6DBus.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6DBus.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6dbus.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6dbus.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -4838,27 +4838,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6GuiConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6GuiConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6gui-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6gui-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Gui.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Gui.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6gui.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6gui.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6Gui.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6Gui.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6gui.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6gui.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -4961,27 +4961,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6WidgetsConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6WidgetsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6widgets-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6widgets-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Widgets.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Widgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6widgets.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6widgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6Widgets.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6Widgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6widgets.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6widgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -5084,27 +5084,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6OpenGLConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6OpenGLConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6opengl-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6opengl-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6OpenGL.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6OpenGL.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6opengl.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6opengl.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6OpenGL.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6OpenGL.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6opengl.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6opengl.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -5207,27 +5207,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6OpenGLWidgetsConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6OpenGLWidgetsConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6openglwidgets-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6openglwidgets-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6OpenGLWidgets.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6OpenGLWidgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6openglwidgets.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6openglwidgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6OpenGLWidgets.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6OpenGLWidgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6openglwidgets.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6openglwidgets.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -5322,27 +5322,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6ConcurrentConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6ConcurrentConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6concurrent-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6concurrent-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Concurrent.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Concurrent.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6concurrent.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6concurrent.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6Concurrent.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6Concurrent.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6concurrent.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6concurrent.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -5437,27 +5437,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6NetworkConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6NetworkConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6network-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6network-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Network.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Network.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6network.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6network.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6Network.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6Network.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6network.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6network.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -5552,27 +5552,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6MultimediaConfig.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6MultimediaConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6multimedia-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6multimedia-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Multimedia.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6Multimedia.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6multimedia.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6multimedia.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6Multimedia.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6Multimedia.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6multimedia.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6multimedia.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -5721,27 +5721,27 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/Qt6Config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/Qt6Config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/qt6-config.cmake"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/qt6-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/Qt6.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/Qt6.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/lib/cps/qt6.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/lib/cps/qt6.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/Qt6.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/Qt6.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/gumduck/Documentos/GitHub/seila kk/build/CMakeFiles/pkgRedirects/share/cps/qt6.cps"
+        path: "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/CMakeFiles/pkgRedirects/share/cps/qt6.cps"
         mode: "cps"
         reason: "no_exist"
       -

@@ -1,7 +1,7 @@
 CMakeFiles/GummVTuber.dir/src/ui/SetupWizard.cpp.o: \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/ui/SetupWizard.cpp \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/SetupWizard.cpp \
  /usr/include/stdc-predef.h \
- /home/gumduck/Documentos/GitHub/seila\ kk/src/ui/SetupWizard.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/SetupWizard.h \
  /usr/include/qt6/QtWidgets/QWizard /usr/include/qt6/QtWidgets/qwizard.h \
  /usr/include/qt6/QtWidgets/qtwidgetsglobal.h \
  /usr/include/qt6/QtGui/qtguiglobal.h /usr/include/qt6/QtCore/qglobal.h \

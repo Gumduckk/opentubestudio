@@ -44,7 +44,10 @@ public:
                const QString& modelPath, int cameraIndex,
                int width = 1280, int height = 720);
     void stop();
-    bool running() const;
+    bool running() const;                 // daemon já está rodando
+    bool starting() const;                // processo abrindo a câmera
+    bool active() const;                  // running() || starting()
+    int cameraIndex() const { return _cameraIndex; }
 
     const FaceReading& face() const { return _face; }
     FaceNeutral neutral() const { return _neutral; }
@@ -72,6 +75,13 @@ private:
     QByteArray _buf;
     FaceReading _face;
     bool _lastFound = false;
+    bool _stopping = false;
+
+    // Configuração do processo atual. Serve para não reiniciar a câmera
+    // quando start() é chamado de novo com os mesmos parâmetros.
+    QString _pythonExe, _scriptPath, _modelPath;
+    int _cameraIndex = -1;
+    int _width = 0, _height = 0;
 
     bool _calibrating = false;
     QElapsedTimer _calTimer;

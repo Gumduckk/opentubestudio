@@ -1,5 +1,5 @@
 set(__QT_DEPLOY_TARGETS "Framework;GummVTuber")
-set(__QT_DEPLOY_TARGET_Framework_FILE /home/gumduck/Documentos/GitHub/seila kk/build/Framework/libFramework.a)
+set(__QT_DEPLOY_TARGET_Framework_FILE /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework/libFramework.a)
 set(__QT_DEPLOY_TARGET_Framework_TYPE STATIC_LIBRARY)
-set(__QT_DEPLOY_TARGET_GummVTuber_FILE /home/gumduck/Documentos/GitHub/seila kk/build/GummVTuber)
+set(__QT_DEPLOY_TARGET_GummVTuber_FILE /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber)
 set(__QT_DEPLOY_TARGET_GummVTuber_TYPE EXECUTABLE)

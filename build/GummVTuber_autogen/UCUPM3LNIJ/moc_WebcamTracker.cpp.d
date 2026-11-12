@@ -1,5 +1,5 @@
-/home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/UCUPM3LNIJ/moc_WebcamTracker.cpp: /home/gumduck/Documentos/GitHub/seila\ kk/src/track/WebcamTracker.h \
-  /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/moc_predefs.h \
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/UCUPM3LNIJ/moc_WebcamTracker.cpp: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \

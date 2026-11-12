@@ -1,5 +1,5 @@
-/home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/UCUPM3LNIJ/moc_MicTracker.cpp: /home/gumduck/Documentos/GitHub/seila\ kk/src/track/MicTracker.h \
-  /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/moc_predefs.h \
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/UCUPM3LNIJ/moc_MicTracker.cpp: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/moc_predefs.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \

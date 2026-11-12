@@ -23,7 +23,7 @@ GummVTuber: \
   /usr/lib/libOpenGL.so \
   /usr/lib/libQt6Network.so.6.12.0 \
   /usr/lib/libQt6Core.so.6.12.0 \
-  /home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Core/lib/linux/x86_64/libLive2DCubismCore.a \
+  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Core/lib/linux/x86_64/libLive2DCubismCore.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libm.so \
@@ -212,7 +212,7 @@ Framework/libFramework.a:
 
 /usr/lib/libQt6Core.so.6.12.0:
 
-/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Core/lib/linux/x86_64/libLive2DCubismCore.a:
+/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Core/lib/linux/x86_64/libLive2DCubismCore.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/libstdc++.so:
 

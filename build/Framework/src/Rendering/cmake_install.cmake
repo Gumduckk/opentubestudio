@@ -1,4 +1,4 @@
-# Install script for directory: /home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering
+# Install script for directory: /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,13 +44,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gumduck/Documentos/GitHub/seila kk/build/Framework/src/Rendering/OpenGL/cmake_install.cmake")
+  include("/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework/src/Rendering/OpenGL/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/src/Rendering/install_local_manifest.txt"
+  file(WRITE "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework/src/Rendering/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

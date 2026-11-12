@@ -39,6 +39,78 @@ def parse_args():
     ap.add_argument("--fps", type=int, default=30)
     return ap.parse_args()
 
+
+def patch_opencv_compat():
+    """Compatibilidade com OpenCV novo.
+
+    O OpenSeeFace foi escrito esperando rvec/tvec em 1D. OpenCV 5 devolve
+    (3,1), e o np.transpose do tracker vira (1,3), quebrando o solvePnP
+    seguinte (ValueError: shapes (3,3) and (1,3) not aligned).
+    """
+    import cv2
+    import numpy as np
+
+    if getattr(cv2, "_gumm_solvepnp_1d", False):
+        return
+    original = cv2.solvePnP
+
+    def solve_pnp_1d(*args, **kwargs):
+        ok, rvec, tvec = original(*args, **kwargs)
+        return (ok,
+                np.asarray(rvec, dtype=np.float32).reshape(3),
+                np.asarray(tvec, dtype=np.float32).reshape(3))
+
+    cv2.solvePnP = solve_pnp_1d
+    cv2._gumm_solvepnp_1d = True
+
+
+def limit_frame(frame, max_w=1280, max_h=720):
+    """Reduz frames gigantes (ex.: webcam virtual 4K) para acelerar o rastreio."""
+    import cv2
+
+    h, w = frame.shape[:2]
+    if w <= max_w and h <= max_h:
+        return frame
+    scale = min(max_w / float(w), max_h / float(h))
+    return cv2.resize(frame, (int(w * scale), int(h * scale)),
+                      interpolation=cv2.INTER_AREA)
+
+
+def open_camera(index, width, height, fps):
+    """Abre a câmera pelo backend V4L2 e tenta aplicar resolução/FPS."""
+    import cv2
+
+    # OpenCV 5 pode falhar ao abrir por índice numérico; o caminho funciona.
+    path = "/dev/video%d" % index
+    cap = cv2.VideoCapture(path, cv2.CAP_V4L2)
+    if not cap.isOpened():
+        cap.release()
+        cap = cv2.VideoCapture(path)
+    if not cap.isOpened():
+        die("não abriu a câmera %d (/dev/video%d)" % (index, index), 3)
+
+    # Mantém só o frame mais recente: evita atraso quando a detecção demora.
+    cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
+    cap.set(cv2.CAP_PROP_FPS, fps)
+
+    # A primeira leitura pode falhar enquanto a câmera ajusta exposição.
+    for _ in range(20):
+        ok, frame = cap.read()
+        if ok and frame is not None:
+            break
+        time.sleep(0.05)
+    else:
+        cap.release()
+        die("a câmera %d abriu, mas não entregou imagem" % index, 3)
+
+    frame = limit_frame(frame)
+    h, w = frame.shape[:2]
+    real_fps = cap.get(cv2.CAP_PROP_FPS)
+    log("câmera %d: %dx%d @ %.0f fps" % (index, w, h, real_fps))
+    return cap, frame
+
 def main():
     opts = parse_args()
 
@@ -70,16 +142,16 @@ def main():
         die("dependências faltando (%s). Rode ./setup.sh para instalar "
             "onnxruntime, opencv-python, pillow e numpy." % e, 2)
 
+    patch_opencv_compat()
+
     model_dir = get_model_base_path(None)
 
-    cap = cv2.VideoCapture(opts.camera)
-    if not cap.isOpened():
-        die("não abriu a câmera %d (/dev/video%d)" % (opts.camera, opts.camera), 3)
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, opts.width)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, opts.height)
-    cap.set(cv2.CAP_PROP_FPS, opts.fps)
+    cap, first_frame = open_camera(opts.camera, opts.width, opts.height, opts.fps)
+    pending_frame = first_frame
 
     tracker = None
+    last_seen = time.monotonic()
+    was_found = False
     log("OpenSeeFace ativo (câmera %d, modelo %d). Ctrl+C ou quit para sair."
         % (opts.camera, opts.model_type))
     print(json.dumps({"ok": 1}), flush=True)  # handshake
@@ -103,25 +175,49 @@ def main():
             except (ValueError, OSError):
                 pass
 
-            ok, frame = cap.read()
-            if not ok:
-                time.sleep(0.01)
-                continue
+            if pending_frame is not None:
+                frame = pending_frame
+                pending_frame = None
+            else:
+                ok, frame = cap.read()
+                if not ok:
+                    time.sleep(0.01)
+                    continue
+                frame = limit_frame(frame)
 
             if tracker is None:
                 height, width = frame.shape[:2]
                 tracker = Tracker(
-                    width, height, threshold=0.6, max_threads=1, max_faces=1,
-                    discard_after=10, scan_every=3, silent=True,
+                    width, height, threshold=0.5, max_threads=2, max_faces=1,
+                    discard_after=15, scan_every=1, silent=True,
                     model_type=opts.model_type, model_dir=model_dir,
-                    no_gaze=False, detection_threshold=0.6,
+                    no_gaze=False, detection_threshold=0.4,
                     use_retinaface=0, max_feature_updates=900,
-                    static_model=False, try_hard=0)
+                    static_model=False, try_hard=0, bbox_growth=0.12)
+                # RetinaFace só entra quando o detector rápido não acha o rosto
+                # por alguns instantes (rosto pequeno/longe, pouca luz etc.).
+                tracker.retinaface.min_conf = 0.30
+                tracker.retinaface_scan.min_conf = 0.30
+
+            # Detector rápido primeiro; se demorar a achar, usa RetinaFace
+            # (640x640), que lida melhor com rostos pequenos e luz ruim.
+            if time.monotonic() - last_seen > 1.2:
+                tracker.use_retinaface = 1
+            else:
+                tracker.use_retinaface = 0
 
             faces = tracker.predict(frame)
             if not faces:
+                if was_found:
+                    log("rosto perdido; procurando novamente...")
+                    was_found = False
                 print(json.dumps({"found": 0}), flush=True)
                 continue
+
+            last_seen = time.monotonic()
+            if not was_found:
+                log("rosto encontrado.")
+                was_found = True
 
             f = faces[0]
             out = {"found": 1}

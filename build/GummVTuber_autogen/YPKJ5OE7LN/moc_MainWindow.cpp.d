@@ -1,6 +1,6 @@
-/home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/YPKJ5OE7LN/moc_MainWindow.cpp: /home/gumduck/Documentos/GitHub/seila\ kk/src/ui/MainWindow.h \
-  /home/gumduck/Documentos/GitHub/seila\ kk/build/GummVTuber_autogen/moc_predefs.h \
-  /home/gumduck/Documentos/GitHub/seila\ kk/src/config/AppConfig.h \
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/YPKJ5OE7LN/moc_MainWindow.cpp: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/MainWindow.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/build/GummVTuber_autogen/moc_predefs.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \

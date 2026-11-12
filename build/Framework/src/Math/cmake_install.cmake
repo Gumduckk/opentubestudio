@@ -1,4 +1,4 @@
-# Install script for directory: /home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework/src/Math
+# Install script for directory: /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Math
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,6 +45,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/src/Math/install_local_manifest.txt"
+  file(WRITE "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework/src/Math/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

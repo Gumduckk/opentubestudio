@@ -20,11 +20,29 @@ bool WebcamTracker::running() const
     return _proc && _proc->state() == QProcess::Running;
 }
 
+bool WebcamTracker::starting() const
+{
+    return _proc && _proc->state() == QProcess::Starting;
+}
+
+bool WebcamTracker::active() const
+{
+    return _proc && _proc->state() != QProcess::NotRunning;
+}
+
 void WebcamTracker::start(const QString& pythonExe, const QString& scriptPath,
                           const QString& modelPath, int cameraIndex,
                           int width, int height)
 {
+    // Já está ligado com a mesma configuração: não derruba a câmera de novo.
+    if (active() && _pythonExe == pythonExe && _scriptPath == scriptPath
+        && _modelPath == modelPath && _cameraIndex == cameraIndex
+        && _width == width && _height == height) {
+        return;
+    }
+
     stop();
+    _stopping = false;
     if (!QFileInfo::exists(scriptPath)) {
         emit failed(QStringLiteral("Script do rastreador não encontrado: %1").arg(scriptPath));
         return;
@@ -38,6 +56,21 @@ void WebcamTracker::start(const QString& pythonExe, const QString& scriptPath,
             this, &WebcamTracker::onReadyReadStderr);
     connect(_proc, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
             this, &WebcamTracker::onFinished);
+    connect(_proc, &QProcess::errorOccurred, this, [this](QProcess::ProcessError err) {
+        if (err == QProcess::FailedToStart) {
+            emit failed(QStringLiteral(
+                "Não foi possível executar o rastreador de webcam.\n"
+                "Verifique se o Python e o MediaPipe estão instalados "
+                "(rode ./setup.sh)."));
+        }
+    });
+
+    _pythonExe = pythonExe;
+    _scriptPath = scriptPath;
+    _modelPath = modelPath;
+    _cameraIndex = cameraIndex;
+    _width = width;
+    _height = height;
 
     QStringList args;
     args << scriptPath << QStringLiteral("--model") << modelPath
@@ -49,8 +82,9 @@ void WebcamTracker::start(const QString& pythonExe, const QString& scriptPath,
 
 void WebcamTracker::stop()
 {
+    _stopping = true;
     if (_proc) {
-        if (_proc->state() == QProcess::Running) {
+        if (_proc->state() != QProcess::NotRunning) {
             _proc->write("{\"cmd\":\"quit\"}\n");
             _proc->closeWriteChannel();
             if (!_proc->waitForFinished(1200)) {
@@ -64,6 +98,16 @@ void WebcamTracker::stop()
     _buf.clear();
     _face = FaceReading();
     _calibrating = false;
+    _pythonExe.clear();
+    _scriptPath.clear();
+    _modelPath.clear();
+    _cameraIndex = -1;
+    _width = _height = 0;
+    if (_lastFound) {
+        _lastFound = false;
+        emit faceFoundChanged(false);
+    }
+    _stopping = false;
 }
 
 void WebcamTracker::onReadyReadStdout()
@@ -89,15 +133,32 @@ void WebcamTracker::onReadyReadStderr()
         emit logLine(l);
 }
 
-void WebcamTracker::onFinished(int exitCode, QProcess::ExitStatus)
+void WebcamTracker::onFinished(int exitCode, QProcess::ExitStatus status)
 {
-    const bool failedStart = (exitCode == 2 || exitCode == 3);
-    if (failedStart) {
-        emit failed(QStringLiteral("O rastreador de webcam não iniciou "
-                                   "(verifique se mediapipe está instalado)."));
+    const bool wasStopping = _stopping;
+    if (!wasStopping) {
+        if (exitCode == 3) {
+            emit failed(QStringLiteral(
+                "Nenhuma câmera entregou imagem.\n"
+                "Se usa OBS Virtual Cam, inicie a câmera virtual no OBS; "
+                "se usa Iriun/telefone, conecte o celular.\n"
+                "Feche também VTube Studio/OpenSeeFace/OBS que estejam usando "
+                "a mesma câmera e escolha a correta na aba Rastreio."));
+        } else if (exitCode == 2) {
+            emit failed(QStringLiteral("O rastreador de webcam não iniciou "
+                                       "(verifique se mediapipe está instalado)."));
+        } else if (status == QProcess::CrashExit || exitCode != 0) {
+            emit failed(QStringLiteral(
+                "O rastreador de webcam encerrou inesperadamente (código %1).\n"
+                "Veja o terminal para detalhes do erro.").arg(exitCode));
+        }
     }
     _face = FaceReading();
     _calibrating = false;
+    if (_lastFound) {
+        _lastFound = false;
+        emit faceFoundChanged(false);
+    }
 }
 
 void WebcamTracker::parseLine(const QByteArray& line)

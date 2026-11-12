@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk"
+CMAKE_SOURCE_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/build"
+CMAKE_BINARY_DIR = "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build"
 
 # Utility rule file for Framework_autogen_timestamp_deps.
 
@@ -77,10 +77,10 @@ Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/build: Framework_autog
 .PHONY : Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/build
 
 Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/clean:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build/Framework" && $(CMAKE_COMMAND) -P CMakeFiles/Framework_autogen_timestamp_deps.dir/cmake_clean.cmake
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework" && $(CMAKE_COMMAND) -P CMakeFiles/Framework_autogen_timestamp_deps.dir/cmake_clean.cmake
 .PHONY : Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/clean
 
 Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/depend:
-	cd "/home/gumduck/Documentos/GitHub/seila kk/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gumduck/Documentos/GitHub/seila kk" "/home/gumduck/Documentos/GitHub/seila kk/third_party/CubismSdkForNative-5-r.5/Framework" "/home/gumduck/Documentos/GitHub/seila kk/build" "/home/gumduck/Documentos/GitHub/seila kk/build/Framework" "/home/gumduck/Documentos/GitHub/seila kk/build/Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/DependInfo.cmake" "--color=$(COLOR)" Framework_autogen_timestamp_deps
+	cd "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework" "/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/DependInfo.cmake" "--color=$(COLOR)" Framework_autogen_timestamp_deps
 .PHONY : Framework/CMakeFiles/Framework_autogen_timestamp_deps.dir/depend
 

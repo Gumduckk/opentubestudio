@@ -1,4 +1,5 @@
 #include "ModelView.h"
+#include "../track/FaceTrackerInput.h"
 
 #include <QOpenGLContext>
 #include <QMouseEvent>
@@ -342,19 +343,22 @@ Channels ModelView::composeChannels(float dt)
     Channels camCh;
     if (camActive) {
         const FaceNeutral n = _cam.neutral();
-        const float yawOff   = n.valid ? n.yaw   : _settings.calYaw;
+        const float faceXOff = n.valid ? n.yaw   : _settings.calYaw;   // yaw -> FaceAngleX
         const float pitchOff = n.valid ? n.pitch : _settings.calPitch;
         const float rollOff  = n.valid ? n.roll  : _settings.calRoll;
+        static float smX = 0.0f, smY = 0.0f, smZ = 0.0f;
         const float eyeXOff  = n.valid ? n.eyeX  : _settings.calEyeX;
         const float eyeYOff  = n.valid ? n.eyeY  : _settings.calEyeY;
         const float mouthOff = n.valid ? n.mouth : _settings.calMouth;
         const float browOff  = n.valid ? n.brow  : _settings.calBrow;
 
-        camCh.headX = clampf((f.yaw - yawOff) / 30.0f, -1.0f, 1.0f) * _settings.sensHead;
-        camCh.headY = clampf(-(f.pitch - pitchOff) / 20.0f, -1.0f, 1.0f) * _settings.sensHead;
-        camCh.headZ = clampf((f.roll - rollOff) / 30.0f, -1.0f, 1.0f) * _settings.sensHead;
+        FaceAngles fa = FaceTrackerInput::compute(f, n, _settings, smX, smY, smZ);
+        camCh.headX = fa.x;
+        camCh.headY = fa.y;
+        camCh.headZ = fa.z;
+
         camCh.bodyX = camCh.headX * 0.4f;
-        camCh.bodyY = camCh.headY * 0.4f;
+        camCh.bodyY = 0.0f;
         camCh.bodyZ = camCh.headZ * 0.4f;
         camCh.eyeOpenL = clampf(1.0f - f.blinkL * 1.4f, 0.0f, 1.0f);
         camCh.eyeOpenR = clampf(1.0f - f.blinkR * 1.4f, 0.0f, 1.0f);
@@ -376,7 +380,7 @@ Channels ModelView::composeChannels(float dt)
         mouCh.headY = clampf(_mouse.y() * _settings.sensHead * iy, -1.0f, 1.0f);
         mouCh.headZ = 0.0f;
         mouCh.bodyX = mouCh.headX * 0.4f;
-        mouCh.bodyY = mouCh.headY * 0.4f;
+        mouCh.bodyY = 0.0f;
         mouCh.bodyZ = mouCh.headZ * iz * 0.4f;
         mouCh.eyeBallX = clampf(_mouse.x() * _settings.sensEye * ix, -1.0f, 1.0f);
         mouCh.eyeBallY = clampf(_mouse.y() * _settings.sensEye * iy, -1.0f, 1.0f);
