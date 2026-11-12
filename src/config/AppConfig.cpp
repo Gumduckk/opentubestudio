@@ -149,6 +149,7 @@ QJsonObject AppSettings::toJson() const
     tr[QStringLiteral("oneEuroMinCutoff")] = oneEuroMinCutoff;
     tr[QStringLiteral("oneEuroBeta")] = oneEuroBeta;
     tr[QStringLiteral("sensPos")] = sensPos;
+    tr[QStringLiteral("smoothingScale")] = smoothingScale;
     tr[QStringLiteral("breathing")] = breathing;
     o[QStringLiteral("tracking")] = tr;
 
@@ -215,6 +216,7 @@ AppSettings AppSettings::fromJson(const QJsonObject& o)
     s.oneEuroMinCutoff = static_cast<float>(tr[QStringLiteral("oneEuroMinCutoff")].toDouble(1.0));
     s.oneEuroBeta      = static_cast<float>(tr[QStringLiteral("oneEuroBeta")].toDouble(0.5));
     s.sensPos          = static_cast<float>(tr[QStringLiteral("sensPos")].toDouble(1.0));
+    s.smoothingScale   = static_cast<float>(tr[QStringLiteral("smoothingScale")].toDouble(0.8));
     s.breathing    = tr[QStringLiteral("breathing")].toBool(true);
 
     const QJsonObject cal = o[QStringLiteral("calibration")].toObject();
@@ -375,6 +377,10 @@ int AppConfig::ensureTrackingMappings(AppSettings& settings,
     add(QStringLiteral("FacePositionX"), QStringLiteral("ParamPositionX"), -1, 1, -10, 10, 20);
     add(QStringLiteral("FacePositionY"), QStringLiteral("ParamPositionY"), -1, 1, -10, 10, 20);
     add(QStringLiteral("FacePositionZ"), QStringLiteral("ParamPositionZ"), -1, 1, -10, 10, 20);
+    // Extensões Akari (só ativam neste modelo — só ele tem esses parâmetros):
+    add(QStringLiteral("NoseSneer"),   QStringLiteral("ParamAngrySign"),   0.15f, 0.75f, 0, 1, 20);
+    add(QStringLiteral("CheekPuff"),   QStringLiteral("ParamShock"),       0.2f,  0.8f,  0, 1, 15);
+    add(QStringLiteral("CheekSquint"), QStringLiteral("ParamEyeXDVisible"), 0.45f, 0.9f,  0, 1, 15);
     return added;
 }
 

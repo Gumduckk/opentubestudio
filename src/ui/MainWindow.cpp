@@ -322,6 +322,7 @@ void MainWindow::buildTrackingTab()
     _sldSensHead = addSlider(QStringLiteral("Sensibilidade da cabeça"), 20, 300);
     _sldSensEye = addSlider(QStringLiteral("Sensibilidade dos olhos"), 20, 300);
     _sldSensPos = addSlider(QStringLiteral("Sensibilidade do corpo/lean (posição 3D)"), 20, 300);
+    _sldSmoothing = addSlider(QStringLiteral("Suavização dos parâmetros (menor = mais rápido)"), 20, 200);
     _sldMicGain = addSlider(QStringLiteral("Ganho do microfone (boca)"), 10, 200);
     _sldMicThreshold = addSlider(QStringLiteral("Limiar de ruído (mais alto = menos falso-trigger)"), 0, 200);
 
@@ -396,6 +397,11 @@ void MainWindow::buildTrackingTab()
     });
     connect(_sldSensPos, &QSlider::valueChanged, this, [this](int v2) {
         _settings.sensPos = v2 / 100.0f; _persistDebounce.start();
+    });
+    connect(_sldSmoothing, &QSlider::valueChanged, this, [this](int v2) {
+        _settings.smoothingScale = v2 / 100.0f;
+        applySettings();
+        _persistDebounce.start();
     });
     connect(_sldMicGain, &QSlider::valueChanged, this, [this](int v2) {
         _settings.micGain = v2 / 10.0f; applySettings();
@@ -1007,6 +1013,7 @@ void MainWindow::applySettings()
     _sldSensHead->setValue(qRound(_settings.sensHead * 100));
     _sldSensEye->setValue(qRound(_settings.sensEye * 100));
     _sldSensPos->setValue(qRound(_settings.sensPos * 100));
+    _sldSmoothing->setValue(qRound(_settings.smoothingScale * 100));
     _sldMicGain->setValue(qRound(_settings.micGain * 10));
     _sldMicThreshold->setValue(qRound(_settings.micThreshold * 1000));
     _bgSolid->setChecked(!_settings.transparentBackground);

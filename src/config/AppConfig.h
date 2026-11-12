@@ -127,6 +127,8 @@ struct AppSettings
     float   oneEuroBeta      = 0.5f;
     // sensibilidade da posição 3D do rosto (lean)
     float   sensPos          = 1.0f;
+    // fator global dos "smoothing" dos mappings (1.0 padrão, menor = mais rápido)
+    float   smoothingScale   = 0.8f;
     bool    breathing    = true;
 
     // Calibração da webcam (offsets neutros)

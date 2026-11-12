@@ -55,10 +55,16 @@ else
   echo "-> Modelo de rastreio facial já baixado ✓"
 fi
 
-# 3) Ambiente Python (OpenSeeFace) em um venv dedicado ----------------------
+CUBEM_SILENT_YESNO="${1:-}"  # use: ./setup.sh yes -> aceita tudo sem perguntar
+
+# 3) Ambiente Python (OpenSeeFace + MediaPipe) em um venv dedicado -----------
 # O sistema pode bloquear pip no Python global (PEP 668, ex.: Arch/Fedora).
 # Criamos um venv dentro de tools/venv que o app usa automaticamente.
-read -r -p "-> Instalar o rastreio facial (OpenSeeFace)? [S/n] " resp
+if [ "$CUBEM_SILENT_YESNO" = "yes" ]; then
+  resp="s"
+else
+  read -r -p "-> Instalar o rastreio facial (OpenSeeFace + MediaPipe)? [S/n] " resp
+fi
 if [ -z "$resp" ] || [ "$resp" = "s" ] || [ "$resp" = "S" ]; then
   VENV="tools/venv"
   if [ ! -x "$VENV/bin/python" ]; then
@@ -77,9 +83,9 @@ if [ -z "$resp" ] || [ "$resp" = "s" ] || [ "$resp" = "S" ]; then
       }
     fi
     if "$VENV/bin/python" -m pip --version >/dev/null 2>&1; then
-      echo "-> Instalando dependências do OpenSeeFace (onnxruntime, opencv...) ..."
+      echo "-> Instalando dependências do rastreio (mediapipe, opencv...) ..."
       "$VENV/bin/python" -m pip install --upgrade pip >/dev/null 2>&1 || true
-      "$VENV/bin/python" -m pip install onnxruntime opencv-python pillow numpy \
+      "$VENV/bin/python" -m pip install mediapipe onnxruntime opencv-python pillow numpy \
         || echo "   AVISO: não instalou. Webcam fica desativada."
     fi
   fi
@@ -108,7 +114,7 @@ fi
 
 # 6) Atalho no menu do sistema ----------------------------------------------
 mkdir -p "$HOME/.local/share/applications"
-cp -f "Gum/icon.png" build/gummvtuber-icon.png 2>/dev/null || true
+cp -f "Models/Gum/icon.png" build/gummvtuber-icon.png 2>/dev/null || true
 cat > "$HOME/.local/share/applications/gummvtuber.desktop" << EOF
 [Desktop Entry]
 Type=Application

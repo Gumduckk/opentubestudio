@@ -226,26 +226,56 @@ DEBUG_CAM_ACTIVE = DEBUG_CAM
 DEBUG_FAILED = False       # a janela do OpenCV falhou; a UI continua funcionando
 LAST_UI_SENT = 0.0
 
+try:
+    from facemesh_connections import (
+        FACEMESH_LIPS, FACEMESH_LEFT_EYE, FACEMESH_RIGHT_EYE,
+        FACEMESH_LEFT_EYEBROW, FACEMESH_RIGHT_EYEBROW,
+        FACEMESH_LEFT_IRIS, FACEMESH_RIGHT_IRIS,
+        FACEMESH_FACE_OVAL, FACEMESH_NOSE, FACEMESH_TESSELATION,
+    )
+    HAVE_MESH_CONN = True
+except Exception as e:  # sem ele, o debug cai no modo "pontinhos"
+    log("facemesh_connections ausente (%s); debug sem contornos" % e)
+    HAVE_MESH_CONN = False
+
+
+def _draw_conn(frame, conn, lm, w, h, color, thick=1):
+    for a, b in conn:
+        ax, ay = int(lm[a].x * w), int(lm[a].y * h)
+        bx, by = int(lm[b].x * w), int(lm[b].y * h)
+        cv2.line(frame, (ax, ay), (bx, by), color, thick, cv2.LINE_AA)
+
 
 def overlay_debug(frame, lm):
-    """Desenha a malha e os valores em cima do frame (sempre funciona)."""
+    """Desenha a malha e os valores em cima do frame (sempre funciona).
+
+    Cores por região (como o demo oficial do MediaPipe):
+      malha inteira    - cinza bem mais claro (fundo)
+      contorno do rosto- branco
+      nariz            - verde
+      lábios           - vermelho
+      olhos            - ciano
+      íris             - verde claro
+      sobrancelhas     - amarelo
+    """
     h, w = frame.shape[:2]
 
-    def px(i):
-        return int(lm[i].x * w), int(lm[i].y * h)
-
-    # malha facial como pontinhos
-    for i in range(0, 468):
-        x, y = px(i)
-        cv2.circle(frame, (x, y), 1, (160, 200, 255), -1, cv2.LINE_AA)
-    # sobrancelhas em amarelo
-    for i in (105, 334):
-        x, y = px(i)
-        cv2.circle(frame, (x, y), 4, (0, 220, 255), -1, cv2.LINE_AA)
-    # íris em verde (+468..477 quando refinado)
-    for i in range(468, min(len(lm), 478)):
-        x, y = px(i)
-        cv2.circle(frame, (x, y), 3, (80, 255, 80), -1, cv2.LINE_AA)
+    if HAVE_MESH_CONN:
+        # malha "tessada" ao fundo (discreta, como o site)
+        _draw_conn(frame, FACEMESH_TESSELATION, lm, w, h, (70, 70, 70), 1)
+        _draw_conn(frame, FACEMESH_FACE_OVAL, lm, w, h, (210, 210, 210), 1)
+        _draw_conn(frame, FACEMESH_NOSE, lm, w, h, (80, 255, 160), 1)
+        _draw_conn(frame, FACEMESH_LIPS, lm, w, h, (60, 60, 255), 2)
+        _draw_conn(frame, FACEMESH_LEFT_EYE, lm, w, h, (255, 220, 80), 1)
+        _draw_conn(frame, FACEMESH_RIGHT_EYE, lm, w, h, (255, 220, 80), 1)
+        _draw_conn(frame, FACEMESH_LEFT_EYEBROW, lm, w, h, (60, 220, 255), 2)
+        _draw_conn(frame, FACEMESH_RIGHT_EYEBROW, lm, w, h, (60, 220, 255), 2)
+        _draw_conn(frame, FACEMESH_LEFT_IRIS, lm, w, h, (120, 255, 80), 1)
+        _draw_conn(frame, FACEMESH_RIGHT_IRIS, lm, w, h, (120, 255, 80), 1)
+    else:  # fallback simples (pontinhos)
+        for i in range(0, 468):
+            x, y = int(lm[i].x * w), int(lm[i].y * h)
+            cv2.circle(frame, (x, y), 1, (160, 200, 255), -1, cv2.LINE_AA)
 
 
 def overlay_texts(frame, out):

@@ -64,6 +64,8 @@ void ModelView::updateSettings(const AppSettings& s)
     const QString oldCamDev = _settings.webcamDevice;
     _settings = s;
     _mic.setParams(s.micThreshold, s.micGain);
+    if (_model)
+        _model->setSmoothingScale(s.smoothingScale);
 
     // Modo transparente: o QOpenGLWidget precisa de fundo translúcido para o
     // alpha do clear aparecer.
@@ -120,6 +122,7 @@ QString ModelView::loadModel(const QString& model3Path)
     // que só é garantido dentro de initializeGL/paintGL: se ainda não temos
     // contexto, marcamos para inicializar no próximo frame.
     _model = std::move(m);
+    _model->setSmoothingScale(_settings.smoothingScale);
 
     if (context() && context()->isValid()) {
         makeCurrent();

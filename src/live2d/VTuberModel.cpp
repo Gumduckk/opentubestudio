@@ -378,10 +378,13 @@ void VTuberModel::applyMappings(const Channels& channels,
             target = qBound(lo, target, hi);
         }
 
-        // Suavização exponencial (quanto maior o "smoothing", mais lento)
+        // Suavização exponencial (quanto maior o "smoothing", mais lento).
+        // Ajustado para uma curva BEM mais rápida que antes: smoothing 100
+        // (máximo) hoje corresponde ao tempo de resposta do antigo ~30.
         float cur = _smoothedValues.value(m.output, target);
         if (m.smoothing > 0.0f) {
-            const float k = 15.0f / (1.0f + m.smoothing * 0.35f);
+            const float eff = m.smoothing * _smoothingScale;
+            const float k = 40.0f / (1.0f + eff * 0.15f);
             const float alpha = 1.0f - std::exp(-dt * k);
             cur += (target - cur) * alpha;
         } else {
@@ -538,4 +541,9 @@ QStringList VTuberModel::motionGroups() const
             out.append(QLatin1String(g));
     }
     return out;
+}
+
+void VTuberModel::setSmoothingScale(float scale)
+{
+    _smoothingScale = scale > 0.01f ? scale : 0.01f;
 }

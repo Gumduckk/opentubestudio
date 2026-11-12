@@ -34,6 +34,9 @@ public:
     // Chamado por frame: movimento ocioso -> tracking -> expressões -> física.
     void Update(const Channels& channels, const QVector<ParamMapping>& mappings,
                 float dtSeconds);
+    // Fator global de suavização dos mappings (1.0 = padrão; menor = mais
+    // rápido/responsivo). Aplica-se ao k de cada vínculo por frame.
+    void setSmoothingScale(float scale);
 
     // Desenha com zoom/pan/aspecto (chamar com contexto GL corrente).
     void Draw(float viewW, float viewH, float zoom, float panX, float panY);
@@ -83,6 +86,7 @@ private:
     QStringList _expressionNames;
     QHash<QString, int> _paramIndexCache;
     QHash<QString, float> _smoothedValues;
+    float _smoothingScale = 0.8f;   // 1.0 = padrão, menor = mais rápido
 
     QVector<Csm::ACubismMotion*> _idleMotions;
     bool  _hasIdle = false;

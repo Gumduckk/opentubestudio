@@ -88,6 +88,7 @@ private:
     QSlider*   _sldSensHead = nullptr;
     QSlider*   _sldSensEye = nullptr;
     QSlider*   _sldSensPos = nullptr;
+    QSlider*   _sldSmoothing = nullptr;
     QSlider*   _sldMicGain = nullptr;
     QSlider*   _sldMicThreshold = nullptr;
     QCheckBox* _chkInvertX = nullptr;

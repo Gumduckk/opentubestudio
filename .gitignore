@@ -4,3 +4,12 @@ tools/OpenSeeFace/
 
 # Modelos Live2D (locais, pesados; não versionar)
 Models/
+
+# Artefatos de build
+build/
+tools/venv/
+
+# Lixo de editor/pycache
+*.kate-swp
+*.swp
+__pycache__/
