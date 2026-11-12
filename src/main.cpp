@@ -76,7 +76,7 @@ int main(int argc, char** argv)
     fmt.setRenderableType(QSurfaceFormat::OpenGL);
     fmt.setDepthBufferSize(24);
     fmt.setStencilBufferSize(8);
-    fmt.setAlphaBufferSize(0);
+    fmt.setAlphaBufferSize(8);   // precisamos de canal alpha para fundo transparente funcionar
     fmt.setSamples(0);
     fmt.setSwapInterval(1);
     QSurfaceFormat::setDefaultFormat(fmt);

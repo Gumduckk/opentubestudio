@@ -209,7 +209,7 @@ AppSettings AppSettings::fromJson(const QJsonObject& o)
     s.micThreshold = static_cast<float>(tr[QStringLiteral("micThreshold")].toDouble(0.025));
     s.micGain      = static_cast<float>(tr[QStringLiteral("micGain")].toDouble(6.0));
     s.invertHeadX  = tr[QStringLiteral("invertHeadX")].toBool(false);
-    s.invertHeadY  = tr[QStringLiteral("invertHeadY")].toBool(true);
+    s.invertHeadY  = tr[QStringLiteral("invertHeadY")].toBool(false);
     s.invertHeadZ  = tr[QStringLiteral("invertHeadZ")].toBool(false);
     s.sensHead     = static_cast<float>(tr[QStringLiteral("sensHead")].toDouble(1.0));
     s.sensEye      = static_cast<float>(tr[QStringLiteral("sensEye")].toDouble(1.0));

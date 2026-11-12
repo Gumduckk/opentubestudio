@@ -128,15 +128,16 @@ SetupWizard::SetupWizard(const QStringList& cameraNames,
         page->setTitle(QStringLiteral("Rastreio (como o modelo te segue)"));
         auto* v = new QVBoxLayout(page);
         auto* label = new QLabel(
-            QStringLiteral("Dá pra usar tudo junto: a webcam tem prioridade sobre o "
-                           "mouse quando ela encontra seu rosto."), page);
+            QStringLiteral("A webcam rastreia seu rosto (cabeça, olhos, boca e expressões)."), page);
         label->setWordWrap(true);
         v->addWidget(label);
 
         _chkMouse = new QCheckBox(QStringLiteral("Mouse (cabeça e olhos seguem o cursor)"), page);
         _chkMouse->setChecked(true);
+        _chkMouse->setVisible(false); // escondido: rastreio de mouse removido da UI
         _chkMic = new QCheckBox(QStringLiteral("Microfone (boca abre quando você fala)"), page);
         _chkMic->setChecked(true);
+        _chkMic->setVisible(false);   // escondido: rastreio de microfone removido da UI
         _chkWebcam = new QCheckBox(QStringLiteral("Webcam (rastreio facial completo)"), page);
         v->addWidget(_chkMouse);
         v->addWidget(_chkMic);
@@ -154,7 +155,14 @@ SetupWizard::SetupWizard(const QStringList& cameraNames,
         if (_comboMic->count() == 0)
             _comboMic->addItem(QStringLiteral("(nenhum microfone encontrado)"));
         form->addRow(QStringLiteral("Câmera:"), _comboCam);
-        form->addRow(QStringLiteral("Microfone:"), _comboMic);
+        {
+            auto* micRow = new QWidget(page);
+            auto* micForm = new QFormLayout(micRow);
+            micForm->addRow(QStringLiteral("Microfone:"), _comboMic);
+            micForm->setContentsMargins(0, 0, 0, 0);
+            micRow->setVisible(false);
+            form->addRow(micRow);
+        }
         v->addLayout(form);
 
         auto* h = new QHBoxLayout;

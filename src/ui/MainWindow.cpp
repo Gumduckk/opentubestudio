@@ -116,10 +116,7 @@ t = f.found
         } else if (_view->webcam()->starting()) {
             t = QStringLiteral("Webcam: iniciando...");
         } else {
-            t = (_settings.mouseEnabled ? QStringLiteral("Mouse ") : QString())
-                + (_settings.micEnabled ? QStringLiteral("+ Microfone") : QString());
-            if (t.isEmpty())
-                t = QStringLiteral("Sem rastreio");
+            t = QStringLiteral("Rastreio pronto (ative a webcam)");
         }
         _lblTracking->setText(t);
     });
@@ -284,8 +281,8 @@ void MainWindow::buildTrackingTab()
     _chkMic = new QCheckBox(QStringLiteral("🎤 Microfone (lip sync pela voz)"), page);
     _chkWebcam = new QCheckBox(QStringLiteral("📷 Webcam (rastreio facial)"), page);
     _chkDebugCam = new QCheckBox(QStringLiteral("🔬 Mostrar debug do rastreio (janela com a câmera e os pontos)"), page);
-    v->addWidget(_chkMouse);
-    v->addWidget(_chkMic);
+    _chkMouse->setVisible(false);
+    _chkMic->setVisible(false);
     v->addWidget(_chkWebcam);
     v->addWidget(_chkDebugCam);
 
@@ -307,10 +304,9 @@ void MainWindow::buildTrackingTab()
 
     _comboCam = new QComboBox(page);
     _comboMic = new QComboBox(page);
+    _comboMic->setVisible(false);
     v->addWidget(new QLabel(QStringLiteral("Câmera:"), page));
     v->addWidget(_comboCam);
-    v->addWidget(new QLabel(QStringLiteral("Microfone:"), page));
-    v->addWidget(_comboMic);
 
     auto addSlider = [&](const QString& title, int min, int max) {
         v->addWidget(new QLabel(title, page));
@@ -323,11 +319,19 @@ void MainWindow::buildTrackingTab()
     _sldSensEye = addSlider(QStringLiteral("Sensibilidade dos olhos"), 20, 300);
     _sldSensPos = addSlider(QStringLiteral("Sensibilidade do corpo/lean (posição 3D)"), 20, 300);
     _sldSmoothing = addSlider(QStringLiteral("Suavização dos parâmetros (menor = mais rápido)"), 20, 200);
-    _sldMicGain = addSlider(QStringLiteral("Ganho do microfone (boca)"), 10, 200);
-    _sldMicThreshold = addSlider(QStringLiteral("Limiar de ruído (mais alto = menos falso-trigger)"), 0, 200);
 
-    _chkInvertX = new QCheckBox(QStringLiteral("Inverter eixo X (esquerda/direita)"), page);
-    _chkInvertY = new QCheckBox(QStringLiteral("Inverter eixo Y (cima/baixo)"), page);
+    // Mic: mantidos como membros para o código funcionar, mas escondidos na UI
+    _sldMicGain = new QSlider(Qt::Horizontal, this);
+    _sldMicGain->setRange(10, 200);
+    _sldMicGain->setVisible(false);
+    _sldMicThreshold = new QSlider(Qt::Horizontal, this);
+    _sldMicThreshold->setRange(0, 200);
+    _sldMicThreshold->setVisible(false);
+
+    _chkInvertX = new QCheckBox(QStringLiteral("Inverter eixo X (movendo p/ direita, olha p/ esquerda)"), page);
+    _chkInvertX->setVisible(false);
+    _chkInvertY = new QCheckBox(QStringLiteral("Inverter eixo Y (movendo p/ cima, olha p/ baixo)"), page);
+    _chkInvertY->setVisible(false);
     _chkBreath = new QCheckBox(QStringLiteral("Respiração automática"), page);
     v->addWidget(_chkInvertX);
     v->addWidget(_chkInvertY);
@@ -600,8 +604,11 @@ void MainWindow::buildBackgroundTab()
     v->addWidget(_chkAlwaysOnTop);
 
     // Seletor de monitor usado pelo rastreio de mouse (multi-monitor).
-    v->addWidget(new QLabel(QStringLiteral("Monitor usado pelo rastreio (mouse):"), page));
+    auto* mouseMonLbl = new QLabel(QStringLiteral("Monitor usado pelo rastreio (mouse):"), page);
+    mouseMonLbl->setVisible(false);
     _comboScreen = new QComboBox(page);
+    _comboScreen->setVisible(false);
+    v->addWidget(mouseMonLbl);
     v->addWidget(_comboScreen);
 
     auto* h2 = new QHBoxLayout;

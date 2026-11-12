@@ -116,8 +116,8 @@ struct AppSettings
     QString micDevice;                    // deviceId do microfone
     float   micThreshold = 0.025f;
     float   micGain      = 6.0f;
-    bool    invertHeadX  = false;
-    bool    invertHeadY  = true;          // mouse: Y invertido por padrão (sobe olha pra cima)
+    bool    invertHeadX  = false;         // mouse: X direto (movendo p/ direita, olha p/ direita)
+    bool    invertHeadY  = false;         // mouse: desmarcado = sobe olha p/ cima; marcado = invertido
     bool    invertHeadZ  = false;
     float   sensHead     = 1.0f;
     float   sensEye      = 1.0f;

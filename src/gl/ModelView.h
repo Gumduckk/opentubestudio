@@ -81,7 +81,8 @@ private:
     bool _blinkClosedL = false;
     bool _blinkClosedR = false;
 
-    QTimer        _timer;
+    QTimer _timer;
+    QTimer _mouseTimer;   // poll do mouse global mesmo com app sem foco
     QElapsedTimer _clock;
     float _lastT = -1.0f;
     float _fps = 0.0f;

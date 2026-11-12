@@ -30,6 +30,9 @@ ModelView::ModelView(QWidget* parent)
 
     // Leitura global do cursor via evdev (funciona fora da janela no Wayland).
     if (_evdev.open() > 0) {
+        // Semeia a posição a partir do cursor do Qt (válida no arranque,
+        // quando a janela está focada) — evita o acumulador começar em (0,0).
+        _evdev.setPos(QCursor::pos());
         if (qEnvironmentVariableIsSet("GUMM_DEBUG"))
             fprintf(stderr, "[evdev] mouses: %s\n",
                     qPrintable(_evdev.deviceNames().join(QStringLiteral(", "))));
@@ -39,6 +42,14 @@ ModelView::ModelView(QWidget* parent)
 
     connect(&_timer, &QTimer::timeout, this, [this]() { update(); });
     _timer.start(16); // ~60 fps
+
+    // O mouse global precisa ser lido mesmo quando o app sai de foco
+    // (o paintGL só roda enquanto a janela está visível).
+    connect(&_mouseTimer, &QTimer::timeout, this, [this]() {
+        if (_settings.mouseEnabled) pollGlobalMouse();
+    });
+    _mouseTimer.start(16);
+    if (_settings.mouseEnabled) pollGlobalMouse();
 
     connect(&_cam, &WebcamTracker::logLine, this, [](const QString& l) {
         qInfo("[webcam] %s", qPrintable(l));
@@ -68,8 +79,9 @@ void ModelView::updateSettings(const AppSettings& s)
         _model->setSmoothingScale(s.smoothingScale);
 
     // Modo transparente: o QOpenGLWidget precisa de fundo translúcido para o
-    // alpha do clear aparecer.
+    // alpha do clear aparecer. Além disso desativa o fundo do sistema.
     setAttribute(Qt::WA_TranslucentBackground, s.transparentBackground);
+    setAttribute(Qt::WA_NoSystemBackground, s.transparentBackground);
     update();
 
     // Microfone: liga/desliga conforme configuração
@@ -267,9 +279,10 @@ void ModelView::pollGlobalMouse()
     if (_evdev.running()) {
         // Caminho Wayland: posição global reconstruída pelo evdev. O Qt não
         // atualiza QCursor::pos() fora da janela, então usamos o acumulador.
-        // Enquanto o cursor está sob a janela, o Qt é autoridade e mantém o
-        // acumulador calibrado (evita deriva).
-        const bool overWindow = underMouse() || rect().contains(mapFromGlobal(QCursor::pos()));
+        // Enquanto o cursor está sob a janela E a janela tem foco, o Qt é a
+        // autoridade e mantém o acumulador calibrado (evita deriva).
+        const bool overWindow = this->isActiveWindow()
+                             && (underMouse() || rect().contains(mapFromGlobal(QCursor::pos())));
         if (overWindow) {
             const QPoint qt = QCursor::pos();
             _evdev.setPos(qt);
@@ -430,8 +443,9 @@ Channels ModelView::composeChannels(float dt)
     // ---- Mouse ----
     Channels mouCh;
     if (_settings.mouseEnabled) {
+        // Mouse Y: desmarcado = padrão (sobe olha p/ cima); marcado = invertido
         const float ix = _settings.invertHeadX ? -1.0f : 1.0f;
-        const float iy = _settings.invertHeadY ? -1.0f : 1.0f;
+        const float iy = _settings.invertHeadY ? 1.0f : -1.0f;
         const float iz = _settings.invertHeadZ ? -1.0f : 1.0f;
         mouCh.headX = clampf(_mouse.x() * _settings.sensHead * ix, -1.0f, 1.0f);
         mouCh.headY = clampf(_mouse.y() * _settings.sensHead * iy, -1.0f, 1.0f);
