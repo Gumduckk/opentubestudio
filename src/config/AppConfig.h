@@ -27,6 +27,8 @@ struct Channels
     float bodyZ     = 0.0f;
     float eyeOpenL  = 1.0f;   // 0..1
     float eyeOpenR  = 1.0f;   // 0..1
+    float eyeSmileL = 0.0f;   // 0..1 (olho feliz)
+    float eyeSmileR = 0.0f;   // 0..1
     float eyeBallX  = 0.0f;   // -1..1
     float eyeBallY  = 0.0f;   // -1..1
     float brows     = 0.5f;   // 0..1 (0.5 = neutro)
@@ -39,6 +41,14 @@ struct Channels
     float jawSide   = 0.0f;   // -1..1 (mandíbula p/ a lateral)
     float frown     = 0.0f;   // 0..1 (cantos da boca para baixo)
     float mouthStretch = 0.0f;// 0..1 (boca esticada horizontalmente)
+    float tongueOut = 0.0f;   // 0..1
+    float facePosX = 0.0f;    // -1..1 (deslocamento lateral do rosto)
+    float facePosY = 0.0f;    // -1..1 (sobe/desce)
+    float facePosZ = 0.0f;    // -1..1 (aproxima/afasta)
+    float cheekSquint = 0.0f; // 0..1
+    float noseSneer   = 0.0f; // 0..1
+    float mouthDimple = 0.0f; // 0..1
+    float mouthPress  = 0.0f; // 0..1
     float breath    = 0.0f;   // 0..1 (procedural)
 
     // Escala nominal de cada entrada (ex.: FaceAngleX vai de -30..30).
@@ -110,6 +120,8 @@ struct AppSettings
     // suave parado; beta maior = menos lag em movimentos rápidos.
     float   oneEuroMinCutoff = 1.0f;
     float   oneEuroBeta      = 0.5f;
+    // sensibilidade da posição 3D do rosto (lean)
+    float   sensPos          = 1.0f;
     bool    breathing    = true;
 
     // Calibração da webcam (offsets neutros)
@@ -150,4 +162,11 @@ public:
     static QString buildAutoConfig(const QString& model3Path,
                                    AppSettings& settings,
                                    const QStringList& modelParamIds);
+
+    // Adiciona (só os que faltam) os vínculos dos canais novos de tracking a
+    // um modelo que já tem mappings salvos. Não toca em nada que já dirija o
+    // mesmo parâmetro — evita conflito de "último escreve ganha".
+    // Retorna quantos vínculos foram adicionados.
+    static int ensureTrackingMappings(AppSettings& settings,
+                                      const QStringList& modelParamIds);
 };

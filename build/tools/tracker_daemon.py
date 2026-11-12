@@ -189,6 +189,34 @@ def euler_deg(R):
     return yaw, pitch, roll
 
 
+# Blendshape suavizado com One Euro (min_cutoff/beta): suaviza muito em
+# repouso e quase nada em movimento. Reduz o "serra" dos sinais fracos.
+class OneEuro:
+    def __init__(self, min_cutoff=1.0, beta=0.2, d_cutoff=1.0):
+        self.min_cutoff = min_cutoff
+        self.beta = beta
+        self.d_cutoff = d_cutoff
+        self.x_prev = None
+        self.dx_prev = 0.0
+
+    @staticmethod
+    def _alpha(cutoff, dt):
+        tau = 1.0 / (2.0 * math.pi * cutoff)
+        return 1.0 / (1.0 + tau / dt)
+
+    def __call__(self, x, dt):
+        if self.x_prev is None:
+            self.x_prev = x
+            return x
+        dx = (x - self.x_prev) / max(dt, 1e-3)
+        a_dx = self._alpha(self.d_cutoff, dt)
+        self.dx_prev = a_dx * dx + (1.0 - a_dx) * self.dx_prev
+        cutoff = self.min_cutoff + self.beta * abs(self.dx_prev)
+        a = self._alpha(cutoff, dt)
+        self.x_prev = a * x + (1.0 - a) * self.x_prev
+        return self.x_prev
+
+
 def main():
     opts = parse_args()
 
@@ -196,11 +224,11 @@ def main():
         base_options=BaseOptions(model_asset_path=opts.model),
         running_mode=vision.RunningMode.VIDEO,
         num_faces=1,
-        # Limiares mais tolerantes: ajuda com rosto pequeno, de lado ou com
-        # pouca luz. O mapeamento de parâmetros já suaviza falsos positivos.
-        min_face_detection_confidence=0.3,
-        min_face_presence_confidence=0.3,
-        min_tracking_confidence=0.3,
+        # Confiança mais alta: menos "pula" de detecção. Em compensação,
+        # exige boa luz e o rosto minimamente frontal.
+        min_face_detection_confidence=0.5,
+        min_face_presence_confidence=0.5,
+        min_tracking_confidence=0.5,
         output_face_blendshapes=True,
         output_facial_transformation_matrixes=True,
     )
@@ -216,6 +244,14 @@ def main():
     print(json.dumps({"ok": 1}), flush=True)  # handshake
 
     last_ts = -1
+    last_frame_t = time.time()
+    # Filtros One Euro dos blendshapes (bochechas, boca, sobrancelha etc.).
+    # min_cutoff 1 Hz, beta 0.2: parado fica colado, movimento rápido não atrasa.
+    f1 = {k: OneEuro(1.0, 0.2) for k in (
+        "jaw", "smile", "pucker", "funnel", "cheek", "browDown", "frown",
+        "stretch", "cheekSquint", "noseSneer", "mouthDimple", "mouthPress",
+        "tongueOut", "brow",
+    )}
     stdin_fd = sys.stdin.fileno()
     pending = first
     try:
@@ -277,6 +313,17 @@ def main():
             yaw, pitch, roll = euler_deg(R)
             out["yaw"], out["pitch"], out["roll"] = yaw, pitch, roll
 
+            # --- posição 3D (translação + escala da matriz) ---
+            # Unidades métricas (cm) relativas à câmera. A escala embutida
+            # na matriz (norma da 1ª coluna = fator uniforme) dá a altura
+            # do rosto em centímetros — o C++ usa isso pra normalizar as
+            # posições independente da distância da câmera.
+            s_vec = (float(M[0][0]) ** 2 + float(M[1][0]) ** 2 + float(M[2][0]) ** 2)
+            out["faceScale"] = math.sqrt(s_vec)
+            out["faceX"] = float(M[0][3])
+            out["faceY"] = float(M[1][3])
+            out["faceZ"] = float(M[2][3])
+
             # --- blendshapes (olhos, boca, sobrancelhas) ---
             bs = {}
             for b in result.face_blendshapes[0]:
@@ -285,24 +332,61 @@ def main():
                                 + 0.5 * bs.get("eyeSquintLeft", 0.0))
             out["blinkR"] = min(1.0, bs.get("eyeBlinkRight", 0.0)
                                 + 0.5 * bs.get("eyeSquintRight", 0.0))
-            out["jaw"] = min(1.0, bs.get("jawOpen", 0.0))
-            out["smile"] = min(1.0, (bs.get("mouthSmileLeft", 0.0)
-                                     + bs.get("mouthSmileRight", 0.0)) / 2.0)
-            out["brow"] = min(1.0, bs.get("browInnerUp", 0.0)
-                              + 0.5 * bs.get("browOuterUpLeft", 0.0))
+            # dt desta amostra (para os filtros One Euro dos blendshapes)
+            now = time.time()
+            # (last_frame_t é definido antes do loop)
+            bdt = max(1e-3, min(0.2, now - last_frame_t))
+            last_frame_t = now
+
+            def _f(key, value):
+                # One Euro desacopla o tremido de repouso do lag no movimento
+                return f1[key](value, bdt) if key in f1 else value
+
+            # Olho feliz/apertado: alimenta ParamEyeLSmile/RSmile (Hiyori/Gum)
+            out["eyeSmileL"] = min(1.0, bs.get("eyeSquintLeft", 0.0))
+            out["eyeSmileR"] = min(1.0, bs.get("eyeSquintRight", 0.0))
+            out["jaw"] = _f("jaw", min(1.0, bs.get("jawOpen", 0.0)))
+            out["smile"] = _f("smile", min(1.0, (bs.get("mouthSmileLeft", 0.0)
+                                     + bs.get("mouthSmileRight", 0.0)) / 2.0))
+            # Sobrancelhas: altura pela GEOMETRIA dos landmarks (razão
+            # distância sobrancelha-pálpebra / largura do olho). O blendshape
+            # browInnerUp quase nunca dispara; assim sobe de verdade.
+            try:
+                def _p3(i):
+                    return (lm[i].x, lm[i].y, lm[i].z)
+
+                def _d3(a, b):
+                    return math.dist(_p3(a), _p3(b))
+
+                brow_l = _d3(105, 159) / (_d3(33, 133) + 1e-6)
+                brow_r = _d3(334, 386) / (_d3(362, 263) + 1e-6)
+                out["brow"] = (brow_l + brow_r) / 2.0
+            except IndexError:
+                out["brow"] = min(1.0, bs.get("browInnerUp", 0.0)
+                                  + 0.5 * bs.get("browOuterUpLeft", 0.0))
             # --- expressões extras (biquinho, bochecha, sobrancelha baixa,
             # mandíbula lateral, careta, arqueamento lateral da boca) ---
-            out["pucker"] = min(1.0, bs.get("mouthPucker", 0.0))
-            out["funnel"] = min(1.0, bs.get("mouthFunnel", 0.0))
-            out["cheek"] = min(1.0, bs.get("cheekPuff", 0.0))
-            out["browDown"] = min(1.0, (bs.get("browDownLeft", 0.0)
-                                        + bs.get("browDownRight", 0.0)) / 2.0)
+            out["pucker"] = _f("pucker", min(1.0, bs.get("mouthPucker", 0.0)))
+            out["funnel"] = _f("funnel", min(1.0, bs.get("mouthFunnel", 0.0)))
+            out["cheek"] = _f("cheek", min(1.0, bs.get("cheekPuff", 0.0)))
+            out["browDown"] = _f("browDown", min(1.0, (bs.get("browDownLeft", 0.0)
+                                        + bs.get("browDownRight", 0.0)) / 2.0))
             out["jawSide"] = max(-1.0, min(1.0, bs.get("jawRight", 0.0)
                                            - bs.get("jawLeft", 0.0)))
-            out["frown"] = min(1.0, (bs.get("mouthFrownLeft", 0.0)
-                                     + bs.get("mouthFrownRight", 0.0)) / 2.0)
-            out["stretch"] = min(1.0, (bs.get("mouthStretchLeft", 0.0)
-                                       + bs.get("mouthStretchRight", 0.0)) / 2.0)
+            out["tongueOut"] = _f("tongueOut", min(1.0, bs.get("tongueOut", 0.0)))
+            out["frown"] = _f("frown", min(1.0, (bs.get("mouthFrownLeft", 0.0)
+                                     + bs.get("mouthFrownRight", 0.0)) / 2.0))
+            out["stretch"] = _f("stretch", min(1.0, (bs.get("mouthStretchLeft", 0.0)
+                                       + bs.get("mouthStretchRight", 0.0)) / 2.0))
+            # --- canais ARKit extras ---
+            out["cheekSquint"] = _f("cheekSquint", min(1.0, (bs.get("cheekSquintLeft", 0.0)
+                                        + bs.get("cheekSquintRight", 0.0)) / 2.0))
+            out["noseSneer"] = _f("noseSneer", min(1.0, (bs.get("noseSneerLeft", 0.0)
+                                        + bs.get("noseSneerRight", 0.0)) / 2.0))
+            out["mouthDimple"] = _f("mouthDimple", min(1.0, (bs.get("mouthDimpleLeft", 0.0)
+                                        + bs.get("mouthDimpleRight", 0.0)) / 2.0))
+            out["mouthPress"] = _f("mouthPress", min(1.0, (bs.get("mouthPressLeft", 0.0)
+                                        + bs.get("mouthPressRight", 0.0)) / 2.0))
 
             # --- íris (para onde os olhos olham) ---
             try:

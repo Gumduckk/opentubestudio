@@ -1,3 +1,6 @@
 
 build/tools/OpenSeeFace/
 tools/OpenSeeFace/
+
+# Modelos Live2D (locais, pesados; não versionar)
+Models/

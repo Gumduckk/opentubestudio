@@ -32,6 +32,18 @@ float Channels::valueFor(const QString& input) const
     if (input == QLatin1String("BodyAngleZ"))  return bodyZ * inputScale(input);
     if (input == QLatin1String("EyeOpenLeft"))  return eyeOpenL;
     if (input == QLatin1String("EyeOpenRight")) return eyeOpenR;
+    if (input == QLatin1String("EyeSmileL"))    return eyeSmileL;
+    if (input == QLatin1String("EyeSmileR"))    return eyeSmileR;
+    if (input == QLatin1String("TongueOut"))    return tongueOut;
+    // Alias histórico do .vtube.json da Akari: MouthX = mandíbula lateral
+    if (input == QLatin1String("MouthX"))       return jawSide;
+    if (input == QLatin1String("FacePositionX")) return facePosX;
+    if (input == QLatin1String("FacePositionY")) return facePosY;
+    if (input == QLatin1String("FacePositionZ")) return facePosZ;
+    if (input == QLatin1String("CheekSquint"))   return cheekSquint;
+    if (input == QLatin1String("NoseSneer"))     return noseSneer;
+    if (input == QLatin1String("MouthDimple"))   return mouthDimple;
+    if (input == QLatin1String("MouthPress"))    return mouthPress;
     if (input == QLatin1String("EyeRightX"))    return eyeBallX;
     if (input == QLatin1String("EyeRightY"))    return eyeBallY;
     if (input == QLatin1String("Brows"))        return brows;
@@ -54,12 +66,18 @@ QStringList Channels::allInputs()
              QStringLiteral("FaceAngleZ"), QStringLiteral("BodyAngleX"),
              QStringLiteral("BodyAngleY"), QStringLiteral("BodyAngleZ"),
              QStringLiteral("EyeOpenLeft"), QStringLiteral("EyeOpenRight"),
+             QStringLiteral("EyeSmileL"), QStringLiteral("EyeSmileR"),
              QStringLiteral("EyeRightX"), QStringLiteral("EyeRightY"),
              QStringLiteral("Brows"), QStringLiteral("MouthOpen"),
              QStringLiteral("MouthSmile"), QStringLiteral("MouthPucker"),
              QStringLiteral("MouthFunnel"), QStringLiteral("CheekPuff"),
              QStringLiteral("BrowDown"), QStringLiteral("JawSide"),
              QStringLiteral("Frown"), QStringLiteral("MouthStretch"),
+             QStringLiteral("TongueOut"), QStringLiteral("MouthX"),
+             QStringLiteral("FacePositionX"), QStringLiteral("FacePositionY"),
+             QStringLiteral("FacePositionZ"),
+             QStringLiteral("CheekSquint"), QStringLiteral("NoseSneer"),
+             QStringLiteral("MouthDimple"), QStringLiteral("MouthPress"),
              QStringLiteral("Breathing") };
 }
 
@@ -124,6 +142,7 @@ QJsonObject AppSettings::toJson() const
     tr[QStringLiteral("sensEye")] = sensEye;
     tr[QStringLiteral("oneEuroMinCutoff")] = oneEuroMinCutoff;
     tr[QStringLiteral("oneEuroBeta")] = oneEuroBeta;
+    tr[QStringLiteral("sensPos")] = sensPos;
     tr[QStringLiteral("breathing")] = breathing;
     o[QStringLiteral("tracking")] = tr;
 
@@ -188,6 +207,7 @@ AppSettings AppSettings::fromJson(const QJsonObject& o)
     s.sensEye      = static_cast<float>(tr[QStringLiteral("sensEye")].toDouble(1.0));
     s.oneEuroMinCutoff = static_cast<float>(tr[QStringLiteral("oneEuroMinCutoff")].toDouble(1.0));
     s.oneEuroBeta      = static_cast<float>(tr[QStringLiteral("oneEuroBeta")].toDouble(0.5));
+    s.sensPos          = static_cast<float>(tr[QStringLiteral("sensPos")].toDouble(1.0));
     s.breathing    = tr[QStringLiteral("breathing")].toBool(true);
 
     const QJsonObject cal = o[QStringLiteral("calibration")].toObject();
@@ -285,6 +305,13 @@ static QVector<ParamMapping> defaultMappings(const QSet<QString>& have)
     add(makeMapping(QStringLiteral("FaceAngleZ"), QStringLiteral("ParamBodyAngleZ"), -30, 30, -10, 10, 20));
     add(makeMapping(QStringLiteral("EyeOpenLeft"),  QStringLiteral("ParamEyeLOpen"), 0, 1, 0, 1, 10));
     add(makeMapping(QStringLiteral("EyeOpenRight"), QStringLiteral("ParamEyeROpen"), 0, 1, 0, 1, 10));
+    add(makeMapping(QStringLiteral("EyeSmileL"),    QStringLiteral("ParamEyeLSmile"), 0, 1, 0, 1, 10));
+    add(makeMapping(QStringLiteral("EyeSmileR"),    QStringLiteral("ParamEyeRSmile"), 0, 1, 0, 1, 10));
+    // Sobrancelha franzida -> ângulos internos (inclinado pra baixo no meio = raiva)
+    add(makeMapping(QStringLiteral("BrowDown"),     QStringLiteral("ParamBrowLAngle"), 0, 1, 0, -1, 10));
+    add(makeMapping(QStringLiteral("BrowDown"),     QStringLiteral("ParamBrowRAngle"), 0, 1, 0, 1, 10));
+    // Mandíbula lateral -> posição X da boca (só existe em modelos como a Hiyori)
+    add(makeMapping(QStringLiteral("JawSide"),      QStringLiteral("ParamMouthX"), -1, 1, -1, 1, 10));
     add(makeMapping(QStringLiteral("EyeRightX"), QStringLiteral("ParamEyeBallX"), -1, 1, -1, 1, 8));
     add(makeMapping(QStringLiteral("EyeRightY"), QStringLiteral("ParamEyeBallY"), -1, 1, 1, -1, 8));
     add(makeMapping(QStringLiteral("Brows"), QStringLiteral("ParamBrowLY"), 0, 1, 1, -1, 10));
@@ -300,6 +327,48 @@ static QVector<ParamMapping> defaultMappings(const QSet<QString>& have)
     add(makeMapping(QStringLiteral("CheekPuff"),   QStringLiteral("ParamCheek"),       0, 1, 0, 1, 10));
     add(makeMapping(QStringLiteral("Breathing"),  QStringLiteral("ParamBreath"), 0, 1, 0, 1, 0));
     return v;
+}
+
+int AppConfig::ensureTrackingMappings(AppSettings& settings,
+                                      const QStringList& modelParamIds)
+{
+    QSet<QString> have;
+    for (const QString& id : modelParamIds)
+        have.insert(id);
+    QSet<QString> driven;
+    for (const ParamMapping& m : settings.mappings)
+        driven.insert(m.output);
+
+    int added = 0;
+    auto add = [&](const QString& input, const QString& output,
+                   float inMin, float inMax,
+                   float outMin, float outMax, float smoothing) {
+        if (!have.contains(output))
+            return;
+        if (driven.contains(output))
+            return; // já comandado por outro input; respeita o existente
+        settings.mappings.append(makeMapping(input, output, inMin, inMax,
+                                             outMin, outMax, smoothing));
+        driven.insert(output);
+        ++added;
+    };
+
+    add(QStringLiteral("EyeSmileL"), QStringLiteral("ParamEyeLSmile"), 0, 1, 0, 1, 10);
+    add(QStringLiteral("EyeSmileR"), QStringLiteral("ParamEyeRSmile"), 0, 1, 0, 1, 10);
+    add(QStringLiteral("BrowDown"),  QStringLiteral("ParamBrowLAngle"), 0, 1, 0, -1, 10);
+    add(QStringLiteral("BrowDown"),  QStringLiteral("ParamBrowRAngle"), 0, 1, 0, 1, 10);
+    add(QStringLiteral("JawSide"),   QStringLiteral("ParamMouthX"),    -1, 1, -1, 1, 10);
+    add(QStringLiteral("CheekPuff"), QStringLiteral("ParamCheek"),      0, 1, 0, 1, 10);
+    // Bochecha cora no sorriso (igual ao .vtube.json oficial da Gum) quando
+    // NADA dirige ParamCheek ainda.
+    add(QStringLiteral("MouthSmile"), QStringLiteral("ParamCheek"),     0, 1, 0, 1, 15);
+    // Posição 3D do rosto (lean in/out) -> ParamPositionX/Y/Z. Range
+    // conservador (±10, como os BodyAngle); ajuste na UI se o modelo
+    // expuser outra convenção.
+    add(QStringLiteral("FacePositionX"), QStringLiteral("ParamPositionX"), -1, 1, -10, 10, 20);
+    add(QStringLiteral("FacePositionY"), QStringLiteral("ParamPositionY"), -1, 1, -10, 10, 20);
+    add(QStringLiteral("FacePositionZ"), QStringLiteral("ParamPositionZ"), -1, 1, -10, 10, 20);
+    return added;
 }
 
 // Importa configuração do VTube Studio (.vtube.json), se existir.
@@ -340,6 +409,21 @@ static bool importVTubeJson(const QString& vtubePath, const QSet<QString>& have,
         mappings.append(m);
         ++imported;
     }
+
+    // Desativa vínculos cujos inputs não existem em nossas entradas
+    // (ficariam mortos para sempre, mexendo com ninguém; melhor visível e
+    // desmarcados na UI do que aparentar configurar de verdade).
+    int disabled = 0;
+    const QStringList known = Channels::allInputs();
+    for (ParamMapping& mapping : mappings) {
+        if (!known.contains(mapping.input)) {
+            mapping.enabled = false;
+            ++disabled;
+        }
+    }
+    if (disabled > 0)
+        summary += QStringLiteral("• %1 vínculos desativados (entradas não suportadas)\n")
+                       .arg(disabled);
 
     // ---- Expressões (hotkeys do VTS, na ordem) ----
     const QJsonArray hotkeys = root[QStringLiteral("Hotkeys")].toArray();

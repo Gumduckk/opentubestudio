@@ -18,19 +18,26 @@ struct FaceReading
     bool  found = false;
     float yaw = 0, pitch = 0, roll = 0;   // graus
     float blinkL = 0, blinkR = 0;          // 0..1 (1 = fechado)
+    float eyeSmileL = 0, eyeSmileR = 0;    // 0..1 (olho feliz/apertado)
+    float tongueOut = 0;                    // 0..1
     float jaw = 0;                          // 0..1
     float smile = 0;                        // 0..1
     float brow = 0;                         // 0..1
     float eyeX = 0, eyeY = 0;               // deslocamento da íris (-1..1)
+    // posição 3D (métrica, cm) + escala uniforme da matriz
+    float faceX = 0, faceY = 0, faceZ = 0, faceScale = 1.0f;
     // expressões extras (0..1; jawSide é -1..1)
     float pucker = 0, funnel = 0, cheek = 0, browDown = 0;
     float jawSide = 0, frown = 0, stretch = 0;
+    // canais ARKit extras
+    float cheekSquint = 0, noseSneer = 0, mouthDimple = 0, mouthPress = 0;
 };
 
 struct FaceNeutral
 {
     float yaw = 0, pitch = 0, roll = 0;
     float eyeX = 0, eyeY = 0, mouth = 0, brow = 0;
+    float faceX = 0, faceY = 0, faceZ = 0, faceScale = 1.0f;
     bool  valid = false;
 };
 
@@ -93,5 +100,6 @@ private:
     // canal (robusta a frames com o rosto parcialmente detectado).
     QVector<float> _calYaw, _calPitch, _calRoll;
     QVector<float> _calEyeX, _calEyeY, _calMouth, _calBrow;
+    QVector<float> _calFaceX, _calFaceY, _calFaceZ, _calFaceScale;
     FaceNeutral _neutral;
 };

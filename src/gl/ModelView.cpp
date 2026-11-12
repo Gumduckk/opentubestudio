@@ -350,6 +350,8 @@ Channels ModelView::composeChannels(float dt)
 
         _faceInput.setFilterParams(_settings.oneEuroMinCutoff, _settings.oneEuroBeta);
         FaceAngles fa = _faceInput.compute(f, n, _settings, dt);
+        // Posição 3D do rosto (lean in/out e lateral)
+        const FaceAngles fp = _faceInput.computePosition(f, n, _settings.sensPos, dt);
         camCh.headX = fa.x;
         camCh.headY = fa.y;
         camCh.headZ = fa.z;
@@ -369,18 +371,30 @@ Channels ModelView::composeChannels(float dt)
         };
         camCh.eyeOpenL = eyeOpenHyst(f.blinkL, _blinkClosedL);
         camCh.eyeOpenR = eyeOpenHyst(f.blinkR, _blinkClosedR);
+        camCh.eyeSmileL = clampf(f.eyeSmileL, 0.0f, 1.0f);
+        camCh.eyeSmileR = clampf(f.eyeSmileR, 0.0f, 1.0f);
         // Íris: deadzone circular (ignora micro-tremor quando olhando reto)
         float ex = (f.eyeX - eyeXOff) * 4.0f;
         float ey = -(f.eyeY - eyeYOff) * 4.0f;
         if (std::hypot(ex, ey) < 0.22f) { ex = 0.0f; ey = 0.0f; }
         camCh.eyeBallX = clampf(ex, -1.0f, 1.0f) * _settings.sensEye;
         camCh.eyeBallY = clampf(ey, -1.0f, 1.0f) * _settings.sensEye;
-        camCh.brows    = clampf(0.5f + (f.brow - browOff) * 1.2f, 0.0f, 1.0f);
+        // brow agora é uma razão de distâncias (~0.4..0.8); ganho calibrado
+        // pelo neutro salvo. Sensibilidade alta, clamps seguram os limites.
+        camCh.brows    = clampf(0.5f + (f.brow - browOff) * 7.0f, 0.0f, 1.0f);
         camCh.mouthOpen= clampf((f.jaw - mouthOff) / 0.55f, 0.0f, 1.0f);
         camCh.mouthSmile = clampf(0.5f + f.smile, 0.0f, 1.0f);
         camCh.mouthPucker  = clampf(f.pucker, 0.0f, 1.0f);
         camCh.mouthFunnel  = clampf(f.funnel, 0.0f, 1.0f);
         camCh.cheekPuff    = clampf(f.cheek, 0.0f, 1.0f);
+        camCh.facePosX = fp.x;
+        camCh.facePosY = fp.y;
+        camCh.facePosZ = fp.z;
+        camCh.cheekSquint = clampf(f.cheekSquint, 0.0f, 1.0f);
+        camCh.noseSneer   = clampf(f.noseSneer, 0.0f, 1.0f);
+        camCh.mouthDimple = clampf(f.mouthDimple, 0.0f, 1.0f);
+        camCh.mouthPress  = clampf(f.mouthPress, 0.0f, 1.0f);
+        camCh.tongueOut   = clampf(f.tongueOut, 0.0f, 1.0f);
         camCh.browDown     = clampf(f.browDown, 0.0f, 1.0f);
         camCh.jawSide      = clampf(f.jawSide, -1.0f, 1.0f);
         camCh.frown        = clampf(f.frown, 0.0f, 1.0f);
@@ -422,6 +436,8 @@ Channels ModelView::composeChannels(float dt)
     c.bodyZ     = mouCh.bodyZ * (1 - a) + camCh.bodyZ * a;
     c.eyeOpenL  = mouCh.eyeOpenL * (1 - a) + camCh.eyeOpenL * a;
     c.eyeOpenR  = mouCh.eyeOpenR * (1 - a) + camCh.eyeOpenR * a;
+    c.eyeSmileL = camCh.eyeSmileL * a;
+    c.eyeSmileR = camCh.eyeSmileR * a;
     c.eyeBallX  = mouCh.eyeBallX * (1 - a) + camCh.eyeBallX * a;
     c.eyeBallY  = mouCh.eyeBallY * (1 - a) + camCh.eyeBallY * a;
     c.brows     = 0.5f * (1 - a) + camCh.brows * a;
@@ -431,6 +447,14 @@ Channels ModelView::composeChannels(float dt)
     c.cheekPuff    = camCh.cheekPuff * a;
     c.browDown     = camCh.browDown * a;
     c.jawSide      = camCh.jawSide * a;
+    c.tongueOut    = camCh.tongueOut * a;
+    c.facePosX     = camCh.facePosX * a;
+    c.facePosY     = camCh.facePosY * a;
+    c.facePosZ     = camCh.facePosZ * a;
+    c.cheekSquint  = camCh.cheekSquint * a;
+    c.noseSneer    = camCh.noseSneer * a;
+    c.mouthDimple  = camCh.mouthDimple * a;
+    c.mouthPress   = camCh.mouthPress * a;
     c.frown        = camCh.frown * a;
     c.mouthStretch = camCh.mouthStretch * a;
     c.mouthOpen = qMax(micMouth, camCh.mouthOpen * a);

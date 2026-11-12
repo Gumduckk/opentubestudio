@@ -177,11 +177,22 @@ void WebcamTracker::parseLine(const QByteArray& line)
         f.roll  = static_cast<float>(o[QStringLiteral("roll")].toDouble());
         f.blinkL= static_cast<float>(o[QStringLiteral("blinkL")].toDouble());
         f.blinkR= static_cast<float>(o[QStringLiteral("blinkR")].toDouble());
+        f.eyeSmileL = static_cast<float>(o[QStringLiteral("eyeSmileL")].toDouble());
+        f.eyeSmileR = static_cast<float>(o[QStringLiteral("eyeSmileR")].toDouble());
+        f.tongueOut = static_cast<float>(o[QStringLiteral("tongueOut")].toDouble());
         f.jaw   = static_cast<float>(o[QStringLiteral("jaw")].toDouble());
         f.smile = static_cast<float>(o[QStringLiteral("smile")].toDouble());
         f.brow  = static_cast<float>(o[QStringLiteral("brow")].toDouble());
         f.eyeX  = static_cast<float>(o[QStringLiteral("eyeX")].toDouble());
         f.eyeY  = static_cast<float>(o[QStringLiteral("eyeY")].toDouble());
+        f.faceX = static_cast<float>(o[QStringLiteral("faceX")].toDouble());
+        f.faceY = static_cast<float>(o[QStringLiteral("faceY")].toDouble());
+        f.faceZ = static_cast<float>(o[QStringLiteral("faceZ")].toDouble());
+        f.faceScale = static_cast<float>(o[QStringLiteral("faceScale")].toDouble(1.0));
+        f.cheekSquint = static_cast<float>(o[QStringLiteral("cheekSquint")].toDouble());
+        f.noseSneer   = static_cast<float>(o[QStringLiteral("noseSneer")].toDouble());
+        f.mouthDimple = static_cast<float>(o[QStringLiteral("mouthDimple")].toDouble());
+        f.mouthPress  = static_cast<float>(o[QStringLiteral("mouthPress")].toDouble());
         f.pucker   = static_cast<float>(o[QStringLiteral("pucker")].toDouble());
         f.funnel   = static_cast<float>(o[QStringLiteral("funnel")].toDouble());
         f.cheek    = static_cast<float>(o[QStringLiteral("cheek")].toDouble());
@@ -201,6 +212,8 @@ void WebcamTracker::parseLine(const QByteArray& line)
         _calYaw << f.yaw;   _calPitch << f.pitch; _calRoll << f.roll;
         _calEyeX << f.eyeX; _calEyeY << f.eyeY;
         _calMouth << f.jaw; _calBrow << f.brow;
+        _calFaceX << f.faceX; _calFaceY << f.faceY; _calFaceZ << f.faceZ;
+        _calFaceScale << f.faceScale;
     }
 
     if (_calibrating && _calTimer.hasExpired(1500)) {
@@ -221,10 +234,15 @@ void WebcamTracker::parseLine(const QByteArray& line)
             n.eyeY  = median(std::move(_calEyeY));
             n.mouth = median(std::move(_calMouth));
             n.brow  = median(std::move(_calBrow));
+            n.faceX = median(std::move(_calFaceX));
+            n.faceY = median(std::move(_calFaceY));
+            n.faceZ = median(std::move(_calFaceZ));
+            n.faceScale = median(std::move(_calFaceScale));
             n.valid = true;
         } else {
             _calYaw.clear(); _calPitch.clear(); _calRoll.clear();
             _calEyeX.clear(); _calEyeY.clear(); _calMouth.clear(); _calBrow.clear();
+            _calFaceX.clear(); _calFaceY.clear(); _calFaceZ.clear(); _calFaceScale.clear();
         }
         _neutral = n;
         emit neutralCaptured(n);
@@ -239,5 +257,6 @@ void WebcamTracker::calibrate(int ms)
     _calibrating = true;
     _calYaw.clear(); _calPitch.clear(); _calRoll.clear();
     _calEyeX.clear(); _calEyeY.clear(); _calMouth.clear(); _calBrow.clear();
+    _calFaceX.clear(); _calFaceY.clear(); _calFaceZ.clear(); _calFaceScale.clear();
     Q_UNUSED(ms); // janela fixa de 1500 ms (constante interna)
 }

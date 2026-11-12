@@ -44,6 +44,9 @@ public:
         _fx.reset();
         _fy.reset();
         _fz.reset();
+        _px.reset();
+        _py.reset();
+        _pz.reset();
     }
 
     FaceAngles compute(const FaceReading& f, const FaceNeutral& n,
@@ -87,6 +90,48 @@ public:
         return a;
     }
 
+    // Posição 3D do rosto (lean in/out, andar pro lado). Normaliza pelas
+    // MEDIDAS DO NEUTRO: altura do rosto = 15.7 cm × escala da matriz de
+    // calibração (a matriz é R·S uniforme), então comparações são de
+    // "fração de rosto". sensPos multiplica o alcance final.
+    // Retorna x = lateral, y = vertical, z = aproximar (positivo = mais perto).
+    FaceAngles computePosition(const FaceReading& f, const FaceNeutral& n,
+                               float sensPos, float dt)
+    {
+        const float fw = (n.valid && n.faceScale > 1e-3f)
+                             ? 15.7f * n.faceScale
+                             : (f.faceScale > 1e-3f ? 15.7f * f.faceScale : 15.7f);
+        const float nx = n.valid ? n.faceX : 0.0f;
+        const float ny = n.valid ? n.faceY : 0.0f;
+        const float nz = n.valid ? n.faceZ : 0.0f;
+
+        float dx = (f.faceX - nx) / fw;   // fração de rosto
+        float dy = (f.faceY - ny) / fw;
+        float dz = -(f.faceZ - nz) / fw;
+
+        // deadzone pequena
+        if (std::fabs(dx) < 0.04f) dx = 0.0f;
+        if (std::fabs(dy) < 0.04f) dy = 0.0f;
+        if (std::fabs(dz) < 0.04f) dz = 0.0f;
+
+        const float px = _px.filter(dx, dt);
+        const float py = _py.filter(dy, dt);
+        const float pz = _pz.filter(dz, dt);
+
+        FaceAngles a;
+        a.x = clampf(px * sensPos, -1.0f, 1.0f);
+        a.y = clampf(py * sensPos, -1.0f, 1.0f);
+        a.z = clampf(pz * sensPos, -1.0f, 1.0f);
+        return a;
+    }
+
+    void resetPosition()
+    {
+        _px.reset();
+        _py.reset();
+        _pz.reset();
+    }
+
 private:
     static float clampf(float v, float lo, float hi)
     {
@@ -96,6 +141,7 @@ private:
     }
 
     OneEuroFilter _fx, _fy, _fz;
+    OneEuroFilter _px, _py, _pz;
 };
 
 // Compatibilidade com o nome antigo (uso interno).
