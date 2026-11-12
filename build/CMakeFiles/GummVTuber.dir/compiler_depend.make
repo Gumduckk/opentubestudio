@@ -15,10 +15,12 @@ GummVTuber_autogen/timestamp: /home/gumduck/Documentos/GitHub/seila\ kk/opentube
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/main.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/OneEuroFilter.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/MainWindow.cpp \
@@ -1086,7 +1088,9 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o: GummVTuber_
   GummVTuber_autogen/YPKJ5OE7LN/moc_SetupWizard.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/live2d/VTuberModel.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/OneEuroFilter.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
@@ -2169,10 +2173,11 @@ CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o: /home/gumduck/Documentos/G
 
 CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/gl/ModelView.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.h \
-  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/gl/ModelView.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/live2d/VTuberModel.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/OneEuroFilter.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
@@ -5632,6 +5637,7 @@ CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o: /home/gumduck/Documento
   /usr/include/qt6/QtCore/QJsonObject \
   /usr/include/qt6/QtCore/QObject \
   /usr/include/qt6/QtCore/QProcess \
+  /usr/include/qt6/QtCore/QVector \
   /usr/include/qt6/QtCore/q17memory.h \
   /usr/include/qt6/QtCore/q20bit.h \
   /usr/include/qt6/QtCore/q20functional.h \
@@ -5771,6 +5777,7 @@ CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o: /home/gumduck/Documento
   /usr/include/qt6/QtCore/quuid.h \
   /usr/include/qt6/QtCore/qvariant.h \
   /usr/include/qt6/QtCore/qvarlengtharray.h \
+  /usr/include/qt6/QtCore/qvector.h \
   /usr/include/qt6/QtCore/qversiontagging.h \
   /usr/include/qt6/QtCore/qxptype_traits.h \
   /usr/include/qt6/QtCore/qyieldcpu.h \
@@ -5798,7 +5805,9 @@ CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o: /home/gumduck/Documento
 CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o: /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/MainWindow.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/live2d/VTuberModel.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/OneEuroFilter.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
@@ -7675,6 +7684,8 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/16/codecvt:
 
+/usr/include/c++/16/bits/quoted_string.h:
+
 /usr/include/qt6/QtGui/qtguiglobal.h:
 
 /usr/include/qt6/QtWidgets/QApplication:
@@ -7723,6 +7734,10 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/16/bits/stl_algobase.h:
 
+/usr/include/c++/16/bits/ostream_print.h:
+
+/usr/include/qt6/QtCore/qtversion.h:
+
 /usr/include/qt6/QtCore/qversiontagging.h:
 
 /usr/include/c++/16/list:
@@ -7766,12 +7781,6 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o:
 /usr/include/qt6/QtCore/QCoreApplication:
 
 /usr/include/qt6/QtCore/qswap.h:
-
-/usr/lib/libgobject-2.0.so.0:
-
-/usr/include/qt6/QtWidgets/QDockWidget:
-
-/usr/include/assert.h:
 
 /usr/include/qt6/QtCore/qstringfwd.h:
 
@@ -8143,6 +8152,16 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/16/climits:
 
+/usr/include/c++/16/ios:
+
+/usr/include/c++/16/ratio:
+
+/usr/include/qt6/QtCore/qtnoop.h:
+
+/usr/include/qt6/QtCore/qsize.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginAdditionalTargetInfo.cmake:
+
 /usr/include/c++/16/string_view:
 
 /usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake:
@@ -8162,8 +8181,6 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o:
 /usr/include/bits/types/FILE.h:
 
 /usr/lib/cmake/Qt6/QtPublicCMakeIncludeGuardHelpers.cmake:
-
-/usr/include/qt6/QtCore/qiodevice.h:
 
 /usr/include/qt6/QtCore/QIODevice:
 
@@ -8260,10 +8277,6 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o:
 /usr/include/qt6/QtCore/qdatastream.h:
 
 /usr/include/bits/iscanonical.h:
-
-/usr/include/qt6/QtCore/qtaggedpointer.h:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/ACubismMotion.hpp:
 
 /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginConfig.cmake:
 
@@ -8383,17 +8396,19 @@ CMakeFiles/4.4.5/CMakeSystem.cmake:
 
 /usr/include/bits/types/struct_FILE.h:
 
-/usr/lib/libgomp.so.1:
-
-/usr/include/qt6/QtWidgets/QMenu:
-
-/usr/include/c++/16/bits/streambuf_iterator.h:
-
 /usr/include/qt6/QtCore/q23utility.h:
 
 /usr/include/bits/struct_mutex.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargetsPrecheck.cmake:
+
+/usr/lib/libblkid.so.1:
+
+/usr/include/qt6/QtCore/qstdlibdetection.h:
+
+/usr/lib/cmake/Qt6Network/Qt6NetworkDependencies.cmake:
+
+/usr/include/bits/errno.h:
 
 /usr/include/bits/posix2_lim.h:
 
@@ -8469,6 +8484,18 @@ CMakeFiles/4.4.5/CMakeSystem.cmake:
 
 /usr/include/stdio.h:
 
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/ACubismMotion.hpp:
+
+/usr/include/qt6/QtCore/qtaggedpointer.h:
+
+/usr/include/qt6/QtCore/qiodevice.h:
+
+/usr/lib/libgomp.so.1:
+
+/usr/include/qt6/QtWidgets/QMenu:
+
+/usr/include/c++/16/bits/streambuf_iterator.h:
+
 /usr/include/qt6/QtCore/q20type_traits.h:
 
 /usr/include/c++/16/unordered_set:
@@ -8486,6 +8513,12 @@ CMakeFiles/4.4.5/CMakeSystem.cmake:
 /usr/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake:
 
 /usr/include/qt6/QtCore/qbytearray.h:
+
+/usr/lib/libgobject-2.0.so.0:
+
+/usr/include/qt6/QtWidgets/QDockWidget:
+
+/usr/include/assert.h:
 
 /usr/include/qt6/QtCore/qsysinfo.h:
 
@@ -8522,6 +8555,92 @@ CMakeFiles/4.4.5/CMakeSystem.cmake:
 /usr/include/c++/16/bits/functional_hash.h:
 
 /usr/include/c++/16/bits/stl_bvector.h:
+
+/usr/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/OneEuroFilter.h:
+
+/usr/include/c++/16/bits/stdexcept_except.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/libatomic_asneeded.so:
+
+/usr/include/c++/16/bits/stl_relops.h:
+
+/usr/include/c++/16/bits/stl_iterator_base_types.h:
+
+/usr/lib32/libXau.so.6:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.cpp:
+
+/usr/include/c++/16/bits/predefined_ops.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake:
+
+/usr/include/qt6/QtCore/qtmocconstants.h:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmVector.hpp:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.hpp:
+
+/usr/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake:
+
+/usr/include/qt6/QtCore/qiterable.h:
+
+GummVTuber_autogen/moc_predefs.h:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.h:
+
+/usr/include/qt6/QtCore/qsystemdetection.h:
+
+/usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake:
+
+/usr/include/asm/posix_types.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6ShmServerBufferPluginConfig.cmake:
+
+/usr/include/qt6/QtCore/qobject.h:
+
+/usr/include/qt6/QtWidgets/qstyleoption.h:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/gl/ModelView.h:
+
+/usr/lib/libdbus-1.so.3:
+
+/usr/include/c++/16/cerrno:
+
+/usr/include/bits/stdint-intn.h:
+
+/usr/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake:
+
+/usr/include/bits/wctype-wchar.h:
+
+/usr/include/c++/16/ext/alloc_traits.h:
+
+/usr/lib/cmake/Qt6/QtPublicTargetHelpers.cmake:
+
+/usr/lib32/libpsl.so.5:
+
+/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfig.cmake:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginConfig.cmake:
+
+/usr/include/qt6/QtCore/QJsonArray:
+
+/usr/include/c++/16/bits/unordered_map.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginTargets.cmake:
+
+/usr/include/c++/16/cctype:
+
+/usr/lib/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismDebug.hpp:
+
+/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargetsPrecheck.cmake:
+
+/usr/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake:
 
 CMakeFiles/4.4.5/CMakeCCompiler.cmake:
 
@@ -8581,95 +8700,11 @@ CMakeFiles/4.4.5/CMakeCCompiler.cmake:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginTargetsPrecheck.cmake:
 
-/usr/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/16/libatomic_asneeded.so:
-
-/usr/include/c++/16/bits/stl_relops.h:
-
-/usr/include/c++/16/bits/stl_iterator_base_types.h:
-
-/usr/lib32/libXau.so.6:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.cpp:
-
-/usr/include/c++/16/bits/predefined_ops.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake:
-
-/usr/include/qt6/QtCore/qtmocconstants.h:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmVector.hpp:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Rendering/OpenGL/CubismOffscreenManager_OpenGLES2.hpp:
-
-/usr/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake:
-
-/usr/include/qt6/QtCore/qiterable.h:
-
-GummVTuber_autogen/moc_predefs.h:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.h:
-
-/usr/include/qt6/QtCore/qsystemdetection.h:
-
-/usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake:
-
-/usr/include/asm/posix_types.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6ShmServerBufferPluginConfig.cmake:
-
-/usr/include/qt6/QtCore/qobject.h:
-
-/usr/include/qt6/QtWidgets/qstyleoption.h:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/gl/ModelView.h:
-
-/usr/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake:
-
-/usr/include/bits/wctype-wchar.h:
-
-/usr/include/c++/16/ext/alloc_traits.h:
-
-/usr/lib/cmake/Qt6/QtPublicTargetHelpers.cmake:
-
-/usr/lib32/libpsl.so.5:
-
-/usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfig.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginConfig.cmake:
-
-/usr/include/qt6/QtCore/QJsonArray:
-
-/usr/include/c++/16/bits/unordered_map.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginTargets.cmake:
-
-/usr/include/c++/16/cctype:
-
-/usr/lib/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismDebug.hpp:
-
-/usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargetsPrecheck.cmake:
-
-/usr/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake:
-
 /usr/include/qt6/QtCore/qlatin1stringview.h:
 
 /usr/include/bits/types/__FILE.h:
 
 /usr/include/c++/16/bits/stl_tree.h:
-
-/usr/lib/libdbus-1.so.3:
-
-/usr/include/bits/stdint-intn.h:
-
-/usr/include/c++/16/cerrno:
-
-/usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginAdditionalTargetInfo.cmake:
 
 /usr/include/qt6/QtCore/qminmax.h:
 
@@ -8731,16 +8766,6 @@ GummVTuber_autogen/moc_predefs.h:
 
 /usr/include/bits/long-double.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
-
-/usr/include/c++/16/x86_64-pc-linux-gnu/bits/cpu_defines.h:
-
-/usr/lib/libblkid.so.1:
-
-/usr/include/qt6/QtCore/qstdlibdetection.h:
-
-/usr/lib/cmake/Qt6Network/Qt6NetworkDependencies.cmake:
-
 /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismUserModel.hpp:
 
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginAdditionalTargetInfo.cmake:
@@ -8755,8 +8780,6 @@ GummVTuber_autogen/moc_predefs.h:
 
 /usr/lib/cmake/Qt6/QtFeature.cmake:
 
-/usr/include/bits/errno.h:
-
 /usr/share/cmake/Modules/CheckIncludeFile.cmake:
 
 /usr/include/c++/16/bits/stl_map.h:
@@ -8764,8 +8787,6 @@ GummVTuber_autogen/moc_predefs.h:
 /usr/include/bits/types/cookie_io_functions_t.h:
 
 /usr/include/c++/16/bits/memory_resource.h:
-
-/usr/include/c++/16/bits/stdexcept_except.h:
 
 /usr/include/qt6/QtGui/qguiapplication_platform.h:
 
@@ -8867,14 +8888,6 @@ GummVTuber_autogen/moc_predefs.h:
 
 /usr/include/c++/16/bits/uses_allocator_args.h:
 
-/usr/include/c++/16/ios:
-
-/usr/include/c++/16/ratio:
-
-/usr/include/qt6/QtCore/qtnoop.h:
-
-/usr/include/qt6/QtCore/qsize.h:
-
 /usr/lib/libgcc_s.so.1:
 
 /usr/include/qt6/QtCore/quuid.h:
@@ -8963,9 +8976,9 @@ CMakeFiles/GummVTuber.dir/src/track/MicTracker.cpp.o:
 
 /usr/include/c++/16/cstring:
 
-/usr/include/bits/types/__locale_t.h:
-
 /usr/lib/cmake/Qt6OpenGLWidgets/Qt6OpenGLWidgetsVersionlessAliasTargets.cmake:
+
+/usr/include/bits/types/__locale_t.h:
 
 /usr/include/qt6/QtWidgets/qtwidgetsexports.h:
 
@@ -9177,6 +9190,10 @@ CMakeFiles/GummVTuber.dir/src/live2d/VTuberModel.cpp.o:
 
 /usr/include/c++/16/bits/version.h:
 
+/usr/include/c++/16/x86_64-pc-linux-gnu/bits/cpu_defines.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
+
 /usr/lib32/libngtcp2.so.16:
 
 /usr/include/qt6/QtMultimedia/QMediaDevices:
@@ -9381,11 +9398,11 @@ CMakeFiles/4.4.5/CMakeCXXCompiler.cmake:
 
 /usr/lib/cmake/Qt6Concurrent/Qt6ConcurrentTargets-relwithdebinfo.cmake:
 
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h:
-
 /usr/include/qt6/QtCore/qstringview.h:
 
 /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismPose.hpp:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h:
 
 /usr/lib/cmake/Qt6Concurrent/Qt6ConcurrentVersionlessAliasTargets.cmake:
 
@@ -10152,9 +10169,3 @@ GummVTuber_autogen/YPKJ5OE7LN/moc_SetupWizard.cpp:
 /usr/include/c++/16/bits/locale_facets.tcc:
 
 /usr/include/c++/16/bits/locale_facets_nonio.tcc:
-
-/usr/include/qt6/QtCore/qtversion.h:
-
-/usr/include/c++/16/bits/ostream_print.h:
-
-/usr/include/c++/16/bits/quoted_string.h:

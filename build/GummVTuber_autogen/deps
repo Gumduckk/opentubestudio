@@ -13,10 +13,12 @@ GummVTuber_autogen/timestamp: \
 	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/main.cpp \
 	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.cpp \
 	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.h \
+	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h \
 	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.cpp \
 	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.h \
 	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.cpp \
 	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.h \
+	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/OneEuroFilter.h \
 	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.cpp \
 	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
 	/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/MainWindow.cpp \

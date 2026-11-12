@@ -3,8 +3,10 @@
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/config/AppConfig.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/live2d/VTuberModel.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/OneEuroFilter.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Core/include/Live2DCubismCore.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismFramework.hpp \

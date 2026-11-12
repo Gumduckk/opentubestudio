@@ -15,10 +15,12 @@ GummVTuber_autogen/timestamp: /home/gumduck/Documentos/GitHub/seila\ kk/opentube
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/main.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/EvdevMouse.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MicTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.h \
+  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/OneEuroFilter.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.cpp \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
   /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/MainWindow.cpp \
@@ -1712,6 +1714,10 @@ GummVTuber_autogen/timestamp: /home/gumduck/Documentos/GitHub/seila\ kk/opentube
 
 /usr/include/qt6/QtMultimedia/QMediaDevices:
 
+/usr/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
+
+/usr/include/qt6/QtMultimedia/QAudioSource:
+
 /usr/include/c++/16/bits/version.h:
 
 /usr/include/c++/16/bits/unique_ptr.h:
@@ -1940,10 +1946,6 @@ GummVTuber_autogen/timestamp: /home/gumduck/Documentos/GitHub/seila\ kk/opentube
 
 /usr/include/qt6/QtCore/quuid.h:
 
-/usr/include/qt6/QtCore/qsize.h:
-
-/usr/include/qt6/QtCore/qtnoop.h:
-
 /usr/include/c++/16/bits/uses_allocator_args.h:
 
 /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/live2d/VTuberModel.cpp:
@@ -2028,10 +2030,6 @@ GummVTuber_autogen/timestamp: /home/gumduck/Documentos/GitHub/seila\ kk/opentube
 
 /usr/include/bits/wchar.h:
 
-/usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake:
-
-/usr/include/c++/16/bits/stdexcept_except.h:
-
 /usr/include/c++/16/bits/memory_resource.h:
 
 /usr/include/bits/types/cookie_io_functions_t.h:
@@ -2042,15 +2040,15 @@ GummVTuber_autogen/timestamp: /home/gumduck/Documentos/GitHub/seila\ kk/opentube
 
 /usr/include/bits/types/__sigset_t.h:
 
-/usr/include/bits/errno.h:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.h:
+/usr/include/bits/types/__locale_t.h:
 
 /usr/lib/cmake/Qt6/QtFeature.cmake:
 
 /usr/include/qt6/QtWidgets/QWizard:
 
 /usr/include/qt6/QtGui/qpaintdevice.h:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/MouseTracker.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginConfig.cmake:
 
@@ -2061,12 +2059,6 @@ GummVTuber_autogen/timestamp: /home/gumduck/Documentos/GitHub/seila\ kk/opentube
 /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginAdditionalTargetInfo.cmake:
 
 /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Model/CubismUserModel.hpp:
-
-/usr/lib/cmake/Qt6Network/Qt6NetworkDependencies.cmake:
-
-/usr/include/qt6/QtCore/qstdlibdetection.h:
-
-/usr/include/c++/16/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6ShmServerBufferPluginTargetsPrecheck.cmake:
 
@@ -2132,12 +2124,6 @@ GummVTuber_autogen/timestamp: /home/gumduck/Documentos/GitHub/seila\ kk/opentube
 
 /usr/include/qt6/QtCore/qminmax.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginAdditionalTargetInfo.cmake:
-
-/usr/lib/cmake/Qt6/QtPublicSbomGenerationCycloneDXHelpers.cmake:
-
-/usr/include/c++/16/cerrno:
-
 /usr/include/c++/16/bits/stl_tree.h:
 
 /usr/include/bits/types/__FILE.h:
@@ -2145,6 +2131,46 @@ GummVTuber_autogen/timestamp: /home/gumduck/Documentos/GitHub/seila\ kk/opentube
 /usr/include/qt6/QtCore/q20iterator.h:
 
 /usr/include/features.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginTargetsPrecheck.cmake:
+
+/usr/include/bits/setjmp.h:
+
+/usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++config.h:
+
+/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismModelSettingJson.hpp:
+
+/usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake:
+
+/usr/include/c++/16/bits/stl_pair.h:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Physics/CubismPhysics.hpp:
+
+/usr/include/qt6/QtCore/qstringtokenizer.h:
+
+/usr/include/c++/16/bits/parse_numbers.h:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/SetupWizard.cpp:
+
+/usr/share/cmake/Modules/FindPackageMessage.cmake:
+
+/usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargetsPrecheck.cmake:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionQueueManager.hpp:
+
+/usr/lib/cmake/Qt6Gui/Qt6QWaylandFullScreenShellV1IntegrationPluginTargetsPrecheck.cmake:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/SetupWizard.h:
+
+/usr/share/cmake/Modules/FindOpenGL.cmake:
+
+/usr/include/bits/types/struct___jmp_buf_tag.h:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmRectF.hpp:
+
+CMakeFiles/4.4.5/CMakeCCompiler.cmake:
 
 /usr/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake:
 
@@ -2206,51 +2232,17 @@ GummVTuber_autogen/moc_predefs.h:
 
 /usr/include/c++/16/bits/stl_relops.h:
 
+/usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake:
+
+/usr/include/c++/16/bits/stdexcept_except.h:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/OneEuroFilter.h:
+
 /usr/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake:
 
 /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake:
 
 CMakeFiles/4.4.5/CMakeCXXCompiler.cmake:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginTargetsPrecheck.cmake:
-
-/usr/include/bits/setjmp.h:
-
-/usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++config.h:
-
-/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/CubismModelSettingJson.hpp:
-
-/usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake:
-
-/usr/include/c++/16/bits/stl_pair.h:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Physics/CubismPhysics.hpp:
-
-/usr/include/qt6/QtCore/qstringtokenizer.h:
-
-/usr/include/c++/16/bits/parse_numbers.h:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/SetupWizard.cpp:
-
-/usr/share/cmake/Modules/FindPackageMessage.cmake:
-
-/usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargetsPrecheck.cmake:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Motion/CubismMotionQueueManager.hpp:
-
-/usr/lib/cmake/Qt6Gui/Qt6QWaylandFullScreenShellV1IntegrationPluginTargetsPrecheck.cmake:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/ui/SetupWizard.h:
-
-/usr/share/cmake/Modules/FindOpenGL.cmake:
-
-/usr/include/bits/types/struct___jmp_buf_tag.h:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Type/csmRectF.hpp:
-
-CMakeFiles/4.4.5/CMakeCCompiler.cmake:
 
 /usr/include/c++/16/bits/stl_bvector.h:
 
@@ -2282,10 +2274,6 @@ CMakeFiles/4.4.5/CMakeCCompiler.cmake:
 
 /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/live2d/VTuberModel.h:
 
-/usr/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake:
-
-/usr/include/qt6/QtMultimedia/QAudioSource:
-
 /usr/lib/cmake/Qt6/QtInstallPaths.cmake:
 
 /usr/include/bits/types/clockid_t.h:
@@ -2298,6 +2286,10 @@ CMakeFiles/4.4.5/CMakeCCompiler.cmake:
 
 /usr/include/qt6/QtCore/qsysinfo.h:
 
+/usr/include/qt6/QtCore/qstringmatcher.h:
+
+/usr/include/assert.h:
+
 /usr/include/qt6/QtCore/qbytearray.h:
 
 /usr/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake:
@@ -2309,6 +2301,20 @@ CMakeFiles/4.4.5/CMakeCCompiler.cmake:
 /usr/include/c++/16/unordered_set:
 
 /usr/include/qt6/QtCore/q20type_traits.h:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h:
+
+/usr/include/c++/16/bits/streambuf_iterator.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/qt6/QtCore/qiodevice.h:
+
+/usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginConfig.cmake:
+
+/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismPose.hpp:
+
+/usr/include/qt6/QtCore/qtaggedpointer.h:
 
 /usr/include/stdio.h:
 
@@ -2376,6 +2382,14 @@ CMakeFiles/4.4.5/CMakeCCompiler.cmake:
 
 /usr/include/bits/posix2_lim.h:
 
+/usr/include/bits/errno.h:
+
+/usr/lib/cmake/Qt6Network/Qt6NetworkDependencies.cmake:
+
+/usr/include/c++/16/x86_64-pc-linux-gnu/bits/cpu_defines.h:
+
+/usr/include/qt6/QtCore/qstdlibdetection.h:
+
 /usr/lib/cmake/Qt6Gui/Qt6DmaBufServerBufferPluginTargetsPrecheck.cmake:
 
 /usr/include/bits/struct_mutex.h:
@@ -2385,8 +2399,6 @@ CMakeFiles/4.4.5/CMakeCCompiler.cmake:
 /usr/lib/cmake/Qt6DBus/Qt6DBusVersionlessAliasTargets.cmake:
 
 /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Utils/CubismDebug.hpp:
-
-/usr/include/c++/16/bits/streambuf_iterator.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
@@ -2618,16 +2630,6 @@ CMakeFiles/4.4.5/CMakeSystem.cmake:
 
 /usr/include/qt6/QtCore/QIODevice:
 
-/usr/include/bits/types.h:
-
-/usr/include/qt6/QtCore/qiodevice.h:
-
-/usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginConfig.cmake:
-
-/home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/third_party/CubismSdkForNative-5-r.5/Framework/src/Effect/CubismPose.hpp:
-
-/usr/include/qt6/QtCore/qtaggedpointer.h:
-
 /usr/lib/cmake/Qt6/QtPublicCMakeIncludeGuardHelpers.cmake:
 
 /usr/include/bits/types/FILE.h:
@@ -2646,7 +2648,15 @@ CMakeFiles/4.4.5/CMakeSystem.cmake:
 
 /usr/include/c++/16/string_view:
 
-/usr/include/bits/types/__locale_t.h:
+/usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginAdditionalTargetInfo.cmake:
+
+/usr/lib/cmake/Qt6/QtPublicSbomGenerationCycloneDXHelpers.cmake:
+
+/usr/include/c++/16/cerrno:
+
+/usr/include/qt6/QtCore/qsize.h:
+
+/usr/include/qt6/QtCore/qtnoop.h:
 
 /usr/include/c++/16/climits:
 
@@ -3089,10 +3099,6 @@ CMakeFiles/4.4.5/CMakeSystem.cmake:
 /usr/include/qt6/QtCore/qstringfwd.h:
 
 /usr/include/qt6/QtCore/qstringlist.h:
-
-/usr/include/assert.h:
-
-/usr/include/qt6/QtCore/qstringmatcher.h:
 
 /usr/lib/cmake/Qt6Gui/Qt6QWaylandXdgShellIntegrationPluginTargets-relwithdebinfo.cmake:
 

@@ -7,7 +7,9 @@ a webcam e emitir, uma linha JSON por frame, os dados usados pelo app:
 
   {"found":1,"yaw":-3.2,"pitch":1.1,"roll":0.4,
    "blinkL":0.05,"blinkR":0.04,"jaw":0.0,"smile":0.1,"brow":0.2,
-   "eyeX":-0.02,"eyeY":0.01}
+   "eyeX":-0.02,"eyeY":0.01,
+   "pucker":0.0,"funnel":0.0,"cheek":0.0,"browDown":0.1,
+   "jawSide":0.0,"frown":0.0,"stretch":0.0}
 
 - yaw/pitch/roll: ângulos da cabeça em graus (calibração remove o offset).
 - blink*: 0 = olho aberto, 1 = fechado.
@@ -152,17 +154,39 @@ def open_camera(index, width, height):
 
 
 def euler_deg(R):
-    """Extrai yaw/pitch/roll (graus) da matriz de rotação 3x3."""
+    """Extrai yaw/pitch/roll (graus) SEMÂNTICOS da matriz de rotação 3x3.
+
+    O modelo canônico do MediaPipe é (x direita, y pra cima, z saindo da tela
+    em direção ao rosto), então:
+      - virar a cabeça  -> rotação sobre Y
+      - inclinar o queixo (nod) -> rotação sobre X
+      - deitar a cabeça (tilt)  -> rotação sobre Z
+
+    A decomposição crua (ZYX intrínseca) devolve os eixos na ordem trocada;
+    aqui remapeamos para os nomes corretos, com os sinais no padrão do
+    VTube Studio (o mesmo usado pelo lilacs-vts-tracker):
+      yaw   = -rotação_Y   (FaceAngleX)
+      pitch = -rotação_X   (FaceAngleY)
+      roll  = +rotação_Z   (FaceAngleZ)
+    """
     sy = math.sqrt(R[0][0] ** 2 + R[1][0] ** 2)
     if sy > 1e-6:
-        pitch = math.atan2(-R[2][0], sy)
-        yaw = math.atan2(R[1][0], R[0][0])
-        roll = math.atan2(R[2][1], R[2][2])
+        rot_y = math.atan2(-R[2][0], sy)
+        rot_z = math.atan2(R[1][0], R[0][0])
+        rot_x = math.atan2(R[2][1], R[2][2])
     else:
-        pitch = math.atan2(R[0][1], R[1][1])
-        yaw = math.atan2(-R[2][0], sy)
-        roll = 0.0
-    return math.degrees(yaw), math.degrees(pitch), math.degrees(roll)
+        rot_y = math.atan2(R[0][1], R[1][1])
+        rot_z = math.atan2(-R[2][0], sy)
+        rot_x = 0.0
+    yaw = -math.degrees(rot_y)
+    pitch = -math.degrees(rot_x)
+    roll = math.degrees(rot_z)
+    if os.environ.get("GUMM_POSE_DEBUG") == "1":
+        now = time.time()
+        if now - getattr(euler_deg, "_last_log", 0.0) >= 1.0:
+            euler_deg._last_log = now
+            log("pose yaw=%.1f pitch=%.1f roll=%.1f" % (yaw, pitch, roll))
+    return yaw, pitch, roll
 
 
 def main():
@@ -240,10 +264,13 @@ def main():
             out = {"found": 1}
 
             # --- cabeça ---
-            # MediaPipe novo entrega .data como memoryview; np.asarray
-            # garante o reshape independente da versão do pacote.
-            M = np.asarray(result.facial_transformation_matrixes[0].data,
-                           dtype=np.float32).reshape(4, 4)
+            # mediapipe >= 0.10 devolve um np.ndarray 4x4 row-major direto;
+            # versões antigas devolvem MatrixData com o buffer em .data.
+            tm = result.facial_transformation_matrixes[0]
+            try:
+                M = np.asarray(tm, dtype=np.float32).reshape(4, 4)
+            except Exception:
+                M = np.asarray(tm.data, dtype=np.float32).reshape(4, 4)
             R = [[float(M[0][0]), float(M[0][1]), float(M[0][2])],
                  [float(M[1][0]), float(M[1][1]), float(M[1][2])],
                  [float(M[2][0]), float(M[2][1]), float(M[2][2])]]
@@ -263,6 +290,19 @@ def main():
                                      + bs.get("mouthSmileRight", 0.0)) / 2.0)
             out["brow"] = min(1.0, bs.get("browInnerUp", 0.0)
                               + 0.5 * bs.get("browOuterUpLeft", 0.0))
+            # --- expressões extras (biquinho, bochecha, sobrancelha baixa,
+            # mandíbula lateral, careta, arqueamento lateral da boca) ---
+            out["pucker"] = min(1.0, bs.get("mouthPucker", 0.0))
+            out["funnel"] = min(1.0, bs.get("mouthFunnel", 0.0))
+            out["cheek"] = min(1.0, bs.get("cheekPuff", 0.0))
+            out["browDown"] = min(1.0, (bs.get("browDownLeft", 0.0)
+                                        + bs.get("browDownRight", 0.0)) / 2.0)
+            out["jawSide"] = max(-1.0, min(1.0, bs.get("jawRight", 0.0)
+                                           - bs.get("jawLeft", 0.0)))
+            out["frown"] = min(1.0, (bs.get("mouthFrownLeft", 0.0)
+                                     + bs.get("mouthFrownRight", 0.0)) / 2.0)
+            out["stretch"] = min(1.0, (bs.get("mouthStretchLeft", 0.0)
+                                       + bs.get("mouthStretchRight", 0.0)) / 2.0)
 
             # --- íris (para onde os olhos olham) ---
             try:

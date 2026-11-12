@@ -16,10 +16,12 @@
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/main.cpp
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/EvdevMouse.cpp
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/EvdevMouse.h
+ /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/FaceTrackerInput.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MicTracker.cpp
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MicTracker.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MouseTracker.cpp
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MouseTracker.h
+ /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/OneEuroFilter.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/WebcamTracker.cpp
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/WebcamTracker.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/MainWindow.cpp
@@ -1088,7 +1090,9 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/build/GummVTuber_autogen/YPKJ5OE7LN/moc_SetupWizard.cpp
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/config/AppConfig.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/live2d/VTuberModel.h
+ /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/OneEuroFilter.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/EvdevMouse.h
+ /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/FaceTrackerInput.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MicTracker.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MouseTracker.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/WebcamTracker.h
@@ -2173,10 +2177,11 @@ CMakeFiles/GummVTuber.dir/src/config/AppConfig.cpp.o
 CMakeFiles/GummVTuber.dir/src/gl/ModelView.cpp.o
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/gl/ModelView.cpp
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/config/AppConfig.h
- /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/FaceTrackerInput.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/gl/ModelView.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/live2d/VTuberModel.h
+ /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/OneEuroFilter.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/EvdevMouse.h
+ /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/FaceTrackerInput.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MicTracker.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MouseTracker.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/WebcamTracker.h
@@ -5642,6 +5647,7 @@ CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o
  /usr/include/qt6/QtCore/QJsonObject
  /usr/include/qt6/QtCore/QObject
  /usr/include/qt6/QtCore/QProcess
+ /usr/include/qt6/QtCore/QVector
  /usr/include/qt6/QtCore/q17memory.h
  /usr/include/qt6/QtCore/q20bit.h
  /usr/include/qt6/QtCore/q20functional.h
@@ -5781,6 +5787,7 @@ CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o
  /usr/include/qt6/QtCore/quuid.h
  /usr/include/qt6/QtCore/qvariant.h
  /usr/include/qt6/QtCore/qvarlengtharray.h
+ /usr/include/qt6/QtCore/qvector.h
  /usr/include/qt6/QtCore/qversiontagging.h
  /usr/include/qt6/QtCore/qxptype_traits.h
  /usr/include/qt6/QtCore/qyieldcpu.h
@@ -5809,7 +5816,9 @@ CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/ui/MainWindow.cpp
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/config/AppConfig.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/live2d/VTuberModel.h
+ /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/OneEuroFilter.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/EvdevMouse.h
+ /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/FaceTrackerInput.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MicTracker.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MouseTracker.h
  /home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/WebcamTracker.h

@@ -15,6 +15,7 @@
 #include "track/EvdevMouse.h"
 #include "track/MicTracker.h"
 #include "track/WebcamTracker.h"
+#include "track/FaceTrackerInput.h"
 
 class ModelView : public QOpenGLWidget
 {
@@ -74,6 +75,11 @@ private:
     EvdevMouse    _evdev;
     MicTracker    _mic;
     WebcamTracker _cam;
+    FaceInput     _faceInput;   // filtros One Euro da pose da cabeça
+
+    // histerese de piscada (fecha com valor alto, abre com valor baixo)
+    bool _blinkClosedL = false;
+    bool _blinkClosedR = false;
 
     QTimer        _timer;
     QElapsedTimer _clock;

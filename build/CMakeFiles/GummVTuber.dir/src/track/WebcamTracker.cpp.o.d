@@ -291,8 +291,8 @@ CMakeFiles/GummVTuber.dir/src/track/WebcamTracker.cpp.o: \
  /usr/include/qt6/QtCore/q20iterator.h \
  /usr/include/qt6/QtCore/qshareddata.h \
  /usr/include/qt6/QtCore/QElapsedTimer \
- /usr/include/qt6/QtCore/qelapsedtimer.h \
- /usr/include/qt6/QtCore/QJsonDocument \
+ /usr/include/qt6/QtCore/qelapsedtimer.h /usr/include/qt6/QtCore/QVector \
+ /usr/include/qt6/QtCore/qvector.h /usr/include/qt6/QtCore/QJsonDocument \
  /usr/include/qt6/QtCore/qjsondocument.h \
  /usr/include/qt6/QtCore/qjsonparseerror.h \
  /usr/include/qt6/QtCore/QJsonObject \

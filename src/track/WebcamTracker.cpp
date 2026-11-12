@@ -3,6 +3,8 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QFileInfo>
+#include <QVector>
+#include <algorithm>
 #include <cmath>
 
 WebcamTracker::WebcamTracker(QObject* parent)
@@ -180,6 +182,13 @@ void WebcamTracker::parseLine(const QByteArray& line)
         f.brow  = static_cast<float>(o[QStringLiteral("brow")].toDouble());
         f.eyeX  = static_cast<float>(o[QStringLiteral("eyeX")].toDouble());
         f.eyeY  = static_cast<float>(o[QStringLiteral("eyeY")].toDouble());
+        f.pucker   = static_cast<float>(o[QStringLiteral("pucker")].toDouble());
+        f.funnel   = static_cast<float>(o[QStringLiteral("funnel")].toDouble());
+        f.cheek    = static_cast<float>(o[QStringLiteral("cheek")].toDouble());
+        f.browDown = static_cast<float>(o[QStringLiteral("browDown")].toDouble());
+        f.jawSide  = static_cast<float>(o[QStringLiteral("jawSide")].toDouble());
+        f.frown    = static_cast<float>(o[QStringLiteral("frown")].toDouble());
+        f.stretch  = static_cast<float>(o[QStringLiteral("stretch")].toDouble());
     }
     _face = f;
 
@@ -189,29 +198,35 @@ void WebcamTracker::parseLine(const QByteArray& line)
     }
 
     if (_calibrating && f.found) {
-        _sumYaw += f.yaw;   _sumPitch += f.pitch; _sumRoll += f.roll;
-        _sumEyeX += f.eyeX; _sumEyeY += f.eyeY;
-        _sumMouth += f.jaw; _sumBrow += f.brow;
-        ++_calSamples;
+        _calYaw << f.yaw;   _calPitch << f.pitch; _calRoll << f.roll;
+        _calEyeX << f.eyeX; _calEyeY << f.eyeY;
+        _calMouth << f.jaw; _calBrow << f.brow;
     }
 
     if (_calibrating && _calTimer.hasExpired(1500)) {
         _calibrating = false;
         FaceNeutral n;
-        if (_calSamples > 5) {
-            const double inv = 1.0 / _calSamples;
-            n.yaw   = static_cast<float>(_sumYaw * inv);
-            n.pitch = static_cast<float>(_sumPitch * inv);
-            n.roll  = static_cast<float>(_sumRoll * inv);
-            n.eyeX  = static_cast<float>(_sumEyeX * inv);
-            n.eyeY  = static_cast<float>(_sumEyeY * inv);
-            n.mouth = static_cast<float>(_sumMouth * inv);
-            n.brow  = static_cast<float>(_sumBrow * inv);
+        const int samples = _calYaw.size();
+        if (samples > 5) {
+            auto median = [](QVector<float> v) {
+                std::sort(v.begin(), v.end());
+                const int m = v.size() / 2;
+                return (v.size() % 2) ? v[m]
+                                      : 0.5f * (v[m - 1] + v[m]);
+            };
+            n.yaw   = median(std::move(_calYaw));
+            n.pitch = median(std::move(_calPitch));
+            n.roll  = median(std::move(_calRoll));
+            n.eyeX  = median(std::move(_calEyeX));
+            n.eyeY  = median(std::move(_calEyeY));
+            n.mouth = median(std::move(_calMouth));
+            n.brow  = median(std::move(_calBrow));
             n.valid = true;
+        } else {
+            _calYaw.clear(); _calPitch.clear(); _calRoll.clear();
+            _calEyeX.clear(); _calEyeY.clear(); _calMouth.clear(); _calBrow.clear();
         }
         _neutral = n;
-        _sumYaw = _sumPitch = _sumRoll = _sumEyeX = _sumEyeY = _sumMouth = _sumBrow = 0;
-        _calSamples = 0;
         emit neutralCaptured(n);
     }
 }
@@ -222,7 +237,7 @@ void WebcamTracker::calibrate(int ms)
         return;
     _calTimer.start();
     _calibrating = true;
-    _sumYaw = _sumPitch = _sumRoll = _sumEyeX = _sumEyeY = _sumMouth = _sumBrow = 0;
-    _calSamples = 0;
+    _calYaw.clear(); _calPitch.clear(); _calRoll.clear();
+    _calEyeX.clear(); _calEyeY.clear(); _calMouth.clear(); _calBrow.clear();
     Q_UNUSED(ms); // janela fixa de 1500 ms (constante interna)
 }

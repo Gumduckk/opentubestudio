@@ -660,6 +660,12 @@
 			null
 		],
 		[
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/FaceTrackerInput.h",
+			"Mu",
+			"UCUPM3LNIJ/moc_FaceTrackerInput.cpp",
+			null
+		],
+		[
 			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MicTracker.h",
 			"Mu",
 			"UCUPM3LNIJ/moc_MicTracker.cpp",
@@ -669,6 +675,12 @@
 			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/MouseTracker.h",
 			"Mu",
 			"UCUPM3LNIJ/moc_MouseTracker.cpp",
+			null
+		],
+		[
+			"/home/gumduck/Documentos/GitHub/seila kk/opentubestudio/src/track/OneEuroFilter.h",
+			"Mu",
+			"UCUPM3LNIJ/moc_OneEuroFilter.cpp",
 			null
 		],
 		[

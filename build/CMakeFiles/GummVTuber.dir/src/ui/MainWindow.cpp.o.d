@@ -425,6 +425,8 @@ CMakeFiles/GummVTuber.dir/src/ui/MainWindow.cpp.o: \
  /usr/include/qt6/QtCore/qiodevice.h /usr/include/qt6/QtCore/QIODevice \
  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
  /usr/include/qt6/QtCore/QProcess /usr/include/qt6/QtCore/qprocess.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/../track/OneEuroFilter.h \
  /usr/include/qt6/QtWidgets/QApplication \
  /usr/include/qt6/QtWidgets/qapplication.h \
  /usr/include/qt6/QtCore/qcoreapplication.h \

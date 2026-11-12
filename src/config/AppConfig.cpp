@@ -37,6 +37,13 @@ float Channels::valueFor(const QString& input) const
     if (input == QLatin1String("Brows"))        return brows;
     if (input == QLatin1String("MouthOpen"))    return mouthOpen;
     if (input == QLatin1String("MouthSmile"))   return mouthSmile;
+    if (input == QLatin1String("MouthPucker"))  return mouthPucker;
+    if (input == QLatin1String("MouthFunnel"))  return mouthFunnel;
+    if (input == QLatin1String("CheekPuff"))    return cheekPuff;
+    if (input == QLatin1String("BrowDown"))     return browDown;
+    if (input == QLatin1String("JawSide"))      return jawSide;
+    if (input == QLatin1String("Frown"))        return frown;
+    if (input == QLatin1String("MouthStretch")) return mouthStretch;
     if (input == QLatin1String("Breathing"))    return breath;
     return 0.0f;
 }
@@ -49,7 +56,11 @@ QStringList Channels::allInputs()
              QStringLiteral("EyeOpenLeft"), QStringLiteral("EyeOpenRight"),
              QStringLiteral("EyeRightX"), QStringLiteral("EyeRightY"),
              QStringLiteral("Brows"), QStringLiteral("MouthOpen"),
-             QStringLiteral("MouthSmile"), QStringLiteral("Breathing") };
+             QStringLiteral("MouthSmile"), QStringLiteral("MouthPucker"),
+             QStringLiteral("MouthFunnel"), QStringLiteral("CheekPuff"),
+             QStringLiteral("BrowDown"), QStringLiteral("JawSide"),
+             QStringLiteral("Frown"), QStringLiteral("MouthStretch"),
+             QStringLiteral("Breathing") };
 }
 
 // ---------------------------------------------------------------------------
@@ -111,6 +122,8 @@ QJsonObject AppSettings::toJson() const
     tr[QStringLiteral("invertHeadZ")] = invertHeadZ;
     tr[QStringLiteral("sensHead")] = sensHead;
     tr[QStringLiteral("sensEye")] = sensEye;
+    tr[QStringLiteral("oneEuroMinCutoff")] = oneEuroMinCutoff;
+    tr[QStringLiteral("oneEuroBeta")] = oneEuroBeta;
     tr[QStringLiteral("breathing")] = breathing;
     o[QStringLiteral("tracking")] = tr;
 
@@ -173,6 +186,8 @@ AppSettings AppSettings::fromJson(const QJsonObject& o)
     s.invertHeadZ  = tr[QStringLiteral("invertHeadZ")].toBool(false);
     s.sensHead     = static_cast<float>(tr[QStringLiteral("sensHead")].toDouble(1.0));
     s.sensEye      = static_cast<float>(tr[QStringLiteral("sensEye")].toDouble(1.0));
+    s.oneEuroMinCutoff = static_cast<float>(tr[QStringLiteral("oneEuroMinCutoff")].toDouble(1.0));
+    s.oneEuroBeta      = static_cast<float>(tr[QStringLiteral("oneEuroBeta")].toDouble(0.5));
     s.breathing    = tr[QStringLiteral("breathing")].toBool(true);
 
     const QJsonObject cal = o[QStringLiteral("calibration")].toObject();
@@ -278,6 +293,11 @@ static QVector<ParamMapping> defaultMappings(const QSet<QString>& have)
     add(makeMapping(QStringLiteral("Brows"), QStringLiteral("ParamBrowRForm"), 0, 1, -1, 1, 15));
     add(makeMapping(QStringLiteral("MouthOpen"),  QStringLiteral("ParamMouthOpenY"), 0, 1, 0, 1.3f, 5));
     add(makeMapping(QStringLiteral("MouthSmile"), QStringLiteral("ParamMouthForm"), 0, 1, -1, 1, 10));
+    // Expressões extras: só quando o modelo realmente tiver o parâmetro
+    add(makeMapping(QStringLiteral("MouthPucker"), QStringLiteral("ParamMouthPucker"), 0, 1, 0, 1, 10));
+    add(makeMapping(QStringLiteral("MouthFunnel"), QStringLiteral("ParamMouthFunnel"), 0, 1, 0, 1, 10));
+    add(makeMapping(QStringLiteral("CheekPuff"),   QStringLiteral("ParamCheekPuff"),   0, 1, 0, 1, 10));
+    add(makeMapping(QStringLiteral("CheekPuff"),   QStringLiteral("ParamCheek"),       0, 1, 0, 1, 10));
     add(makeMapping(QStringLiteral("Breathing"),  QStringLiteral("ParamBreath"), 0, 1, 0, 1, 0));
     return v;
 }

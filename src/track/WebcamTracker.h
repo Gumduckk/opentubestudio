@@ -11,6 +11,7 @@
 #include <QObject>
 #include <QProcess>
 #include <QElapsedTimer>
+#include <QVector>
 
 struct FaceReading
 {
@@ -21,6 +22,9 @@ struct FaceReading
     float smile = 0;                        // 0..1
     float brow = 0;                         // 0..1
     float eyeX = 0, eyeY = 0;               // deslocamento da íris (-1..1)
+    // expressões extras (0..1; jawSide é -1..1)
+    float pucker = 0, funnel = 0, cheek = 0, browDown = 0;
+    float jawSide = 0, frown = 0, stretch = 0;
 };
 
 struct FaceNeutral
@@ -85,8 +89,9 @@ private:
 
     bool _calibrating = false;
     QElapsedTimer _calTimer;
-    double _sumYaw = 0, _sumPitch = 0, _sumRoll = 0;
-    double _sumEyeX = 0, _sumEyeY = 0, _sumMouth = 0, _sumBrow = 0;
-    int    _calSamples = 0;
+    // Amostras brutas da janela de calibração; o neutro é a MEDIANA de cada
+    // canal (robusta a frames com o rosto parcialmente detectado).
+    QVector<float> _calYaw, _calPitch, _calRoll;
+    QVector<float> _calEyeX, _calEyeY, _calMouth, _calBrow;
     FaceNeutral _neutral;
 };

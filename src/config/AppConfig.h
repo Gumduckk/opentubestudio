@@ -32,6 +32,13 @@ struct Channels
     float brows     = 0.5f;   // 0..1 (0.5 = neutro)
     float mouthOpen = 0.0f;   // 0..1
     float mouthSmile= 0.5f;   // 0..1 (0.5 = neutro)
+    float mouthPucker = 0.0f; // 0..1 (biquinho)
+    float mouthFunnel = 0.0f; // 0..1 (boca em "o")
+    float cheekPuff= 0.0f;    // 0..1 (bochechas infladas)
+    float browDown  = 0.0f;   // 0..1 (sobrancelhas baixas/franzidas)
+    float jawSide   = 0.0f;   // -1..1 (mandíbula p/ a lateral)
+    float frown     = 0.0f;   // 0..1 (cantos da boca para baixo)
+    float mouthStretch = 0.0f;// 0..1 (boca esticada horizontalmente)
     float breath    = 0.0f;   // 0..1 (procedural)
 
     // Escala nominal de cada entrada (ex.: FaceAngleX vai de -30..30).
@@ -99,6 +106,10 @@ struct AppSettings
     bool    invertHeadZ  = false;
     float   sensHead     = 1.0f;
     float   sensEye      = 1.0f;
+    // One Euro Filter (acompanhamento da cabeça): minCutoff menor = mais
+    // suave parado; beta maior = menos lag em movimentos rápidos.
+    float   oneEuroMinCutoff = 1.0f;
+    float   oneEuroBeta      = 0.5f;
     bool    breathing    = true;
 
     // Calibração da webcam (offsets neutros)

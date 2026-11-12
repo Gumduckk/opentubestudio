@@ -343,16 +343,13 @@ Channels ModelView::composeChannels(float dt)
     Channels camCh;
     if (camActive) {
         const FaceNeutral n = _cam.neutral();
-        const float faceXOff = n.valid ? n.yaw   : _settings.calYaw;   // yaw -> FaceAngleX
-        const float pitchOff = n.valid ? n.pitch : _settings.calPitch;
-        const float rollOff  = n.valid ? n.roll  : _settings.calRoll;
-        static float smX = 0.0f, smY = 0.0f, smZ = 0.0f;
         const float eyeXOff  = n.valid ? n.eyeX  : _settings.calEyeX;
         const float eyeYOff  = n.valid ? n.eyeY  : _settings.calEyeY;
         const float mouthOff = n.valid ? n.mouth : _settings.calMouth;
         const float browOff  = n.valid ? n.brow  : _settings.calBrow;
 
-        FaceAngles fa = FaceTrackerInput::compute(f, n, _settings, smX, smY, smZ);
+        _faceInput.setFilterParams(_settings.oneEuroMinCutoff, _settings.oneEuroBeta);
+        FaceAngles fa = _faceInput.compute(f, n, _settings, dt);
         camCh.headX = fa.x;
         camCh.headY = fa.y;
         camCh.headZ = fa.z;
@@ -360,13 +357,34 @@ Channels ModelView::composeChannels(float dt)
         camCh.bodyX = camCh.headX * 0.4f;
         camCh.bodyY = 0.0f;
         camCh.bodyZ = camCh.headZ * 0.4f;
-        camCh.eyeOpenL = clampf(1.0f - f.blinkL * 1.4f, 0.0f, 1.0f);
-        camCh.eyeOpenR = clampf(1.0f - f.blinkR * 1.4f, 0.0f, 1.0f);
-        camCh.eyeBallX = clampf((f.eyeX - eyeXOff) * 4.0f, -1.0f, 1.0f) * _settings.sensEye;
-        camCh.eyeBallY = clampf(-(f.eyeY - eyeYOff) * 4.0f, -1.0f, 1.0f) * _settings.sensEye;
+        // Histerese de piscada: quando aberto, fecha com blink ≥ 0.55;
+        // quando fechado, só reabre com blink ≤ 0.30. As curvas de abertura
+        // são deslocadas junto, então a transição é suave e sem tremor no limiar.
+        auto eyeOpenHyst = [](float v, bool& closed) {
+            if (!closed && v >= 0.55f) closed = true;
+            else if (closed && v <= 0.30f) closed = false;
+            const float lo = closed ? 0.30f : 0.15f;  // faixa de fechamento
+            const float hi = closed ? 0.70f : 0.55f;
+            return clampf(1.0f - (v - lo) / (hi - lo), 0.0f, 1.0f);
+        };
+        camCh.eyeOpenL = eyeOpenHyst(f.blinkL, _blinkClosedL);
+        camCh.eyeOpenR = eyeOpenHyst(f.blinkR, _blinkClosedR);
+        // Íris: deadzone circular (ignora micro-tremor quando olhando reto)
+        float ex = (f.eyeX - eyeXOff) * 4.0f;
+        float ey = -(f.eyeY - eyeYOff) * 4.0f;
+        if (std::hypot(ex, ey) < 0.22f) { ex = 0.0f; ey = 0.0f; }
+        camCh.eyeBallX = clampf(ex, -1.0f, 1.0f) * _settings.sensEye;
+        camCh.eyeBallY = clampf(ey, -1.0f, 1.0f) * _settings.sensEye;
         camCh.brows    = clampf(0.5f + (f.brow - browOff) * 1.2f, 0.0f, 1.0f);
         camCh.mouthOpen= clampf((f.jaw - mouthOff) / 0.55f, 0.0f, 1.0f);
         camCh.mouthSmile = clampf(0.5f + f.smile, 0.0f, 1.0f);
+        camCh.mouthPucker  = clampf(f.pucker, 0.0f, 1.0f);
+        camCh.mouthFunnel  = clampf(f.funnel, 0.0f, 1.0f);
+        camCh.cheekPuff    = clampf(f.cheek, 0.0f, 1.0f);
+        camCh.browDown     = clampf(f.browDown, 0.0f, 1.0f);
+        camCh.jawSide      = clampf(f.jawSide, -1.0f, 1.0f);
+        camCh.frown        = clampf(f.frown, 0.0f, 1.0f);
+        camCh.mouthStretch = clampf(f.stretch, 0.0f, 1.0f);
         camCh.breath   = c.breath;
     }
 
@@ -408,6 +426,13 @@ Channels ModelView::composeChannels(float dt)
     c.eyeBallY  = mouCh.eyeBallY * (1 - a) + camCh.eyeBallY * a;
     c.brows     = 0.5f * (1 - a) + camCh.brows * a;
     c.mouthSmile= 0.5f * (1 - a) + camCh.mouthSmile * a;
+    c.mouthPucker  = camCh.mouthPucker * a;
+    c.mouthFunnel  = camCh.mouthFunnel * a;
+    c.cheekPuff    = camCh.cheekPuff * a;
+    c.browDown     = camCh.browDown * a;
+    c.jawSide      = camCh.jawSide * a;
+    c.frown        = camCh.frown * a;
+    c.mouthStretch = camCh.mouthStretch * a;
     c.mouthOpen = qMax(micMouth, camCh.mouthOpen * a);
     return c;
 }

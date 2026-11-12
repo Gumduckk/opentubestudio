@@ -56,6 +56,8 @@ add_executable(GummVTuber
   src/track/MicTracker.cpp
   src/track/WebcamTracker.h
   src/track/WebcamTracker.cpp
+  src/track/FaceTrackerInput.h
+  src/track/OneEuroFilter.h
   src/ui/MainWindow.h
   src/ui/MainWindow.cpp
   src/ui/SetupWizard.h

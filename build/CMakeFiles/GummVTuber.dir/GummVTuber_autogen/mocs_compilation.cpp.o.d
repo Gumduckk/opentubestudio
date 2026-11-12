@@ -419,6 +419,8 @@ CMakeFiles/GummVTuber.dir/GummVTuber_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt6/QtCore/qiodevice.h /usr/include/qt6/QtCore/QIODevice \
  /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/WebcamTracker.h \
  /usr/include/qt6/QtCore/QProcess /usr/include/qt6/QtCore/qprocess.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/FaceTrackerInput.h \
+ /home/gumduck/Documentos/GitHub/seila\ kk/opentubestudio/src/track/../track/OneEuroFilter.h \
  /usr/include/qt6/QtCore/qtmochelpers.h \
  /usr/include/qt6/QtCore/qtmocconstants.h \
  /usr/include/qt6/QtCore/q20algorithm.h \
