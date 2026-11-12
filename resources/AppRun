@@ -1,0 +1,12 @@
+#!/bin/bash
+# AppRun do OpentubeStudio — monta o ambiente do AppImage e abre o app.
+HERE="$(dirname "$(readlink -f "${0}")")"
+export LD_LIBRARY_PATH="${HERE}/usr/lib:${HERE}/usr/lib/x86_64-linux-gnu:${LD_LIBRARY_PATH:-}"
+# Plugins do Qt (platforms, multimídia, imageformats, tls...)
+export QT_PLUGIN_PATH="${HERE}/usr/plugins:${QT_PLUGIN_PATH:-}"
+export QT_QPA_PLATFORM_PLUGIN_PATH="${HERE}/usr/plugins/platforms"
+# Python portátil + mediapipe embutidos no AppImage
+export GUMM_PYTHON="${HERE}/opt/python/bin/python3"
+export PYTHONDONTWRITEBYTECODE=1
+# Relaxa problemas de fontes em ambiente limpo
+exec "${HERE}/usr/bin/OpentubeStudio" "$@"

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=OpentubeStudio
+Comment=Anime seu avatar Live2D no Linux (estilo VTube Studio), offline e grátis
+Exec=OpentubeStudio %u
+Icon=opentubestudio
+Terminal=false
+Categories=AudioVideo;Graphics;GTK;
+StartupNotify=true
+MimeType=application/x-model3+json;

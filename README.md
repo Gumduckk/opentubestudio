@@ -70,3 +70,30 @@ EAR/MAR/sobrancelha).
 - `tools/facemesh_connections.py`: código de conexões da malha facial
   (`FACEMESH_*`), © Google, licença Apache-2.0 (mantida no cabeçalho).
 - Demais dependências: verificar `third_party/` após instalar.
+
+## Gerar a versão AppImage
+
+Requer `libfuse2`, `curl` e `patchelf`. Na primeira execução baixa o
+`linuxdeploy` + `linuxdeploy-plugin-qt` (ficam em `build/appimage-tools/`).
+
+```bash
+./tools/appimage.sh        # compila e empacota em ./dist/OpentubeStudio-x86_64.AppImage
+```
+
+O script faz tudo sozinho:
+
+1. Compila o app em Release.
+2. Monta um AppDir em `dist/OpentubeStudio.AppDir/` (binário + shaders do
+   Cubism Framework + daemon Python do rastreio + modelo `.task` do MediaPipe).
+3. Exclui do pacote dois plugins do Qt que não servem / quebram aqui:
+   - `imageformats/kimg_jxr.so` (libjpegxr ausente neste ambiente)
+   - `multimedia/libffmpegmediaplugin.so` (**causa SIGSEGV** no dlopen dentro do AppImage;
+     o áudio funciona normalmente via backend PulseAudio do Qt)
+4. Resolve as dependências Qt com `linuxdeploy` + staging de plugins próprio
+   (sem caminhos com espaço, senão o parser do plugin come todos os paths).
+
+`dist/` e `build/appimage-tools/` ficam no `.gitignore` — não versionar o AppImage.
+
+O AppImage agora inclui o rastreio facial completo (mediapipe, python portátil e todos
+os shaders) — o app abre e já vem com o que o rastreador precisa. Basta um modelo
+Live2D (o usuário abre a pasta do modelo no primeiro start).

@@ -13,3 +13,7 @@ tools/venv/
 *.kate-swp
 *.swp
 __pycache__/
+
+# AppImage e ferramentas de empacotamento
+dist/
+build/appimage-tools/
